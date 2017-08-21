@@ -622,11 +622,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1727966850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.17, y: -4.785, z: 0}
+  m_LocalPosition: {x: -0.04, y: -5.17, z: 0}
   m_LocalScale: {x: 6.105675, y: 0.5000013, z: 1}
   m_Children: []
   m_Father: {fileID: 228143659}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1727966852
 BoxCollider2D:
