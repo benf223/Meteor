@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 1104533380}
   - component: {fileID: 1104533382}
   - component: {fileID: 1104533381}
+  - component: {fileID: 1104533383}
   m_Layer: 0
   m_Name: Village
   m_TagString: Untagged
@@ -327,6 +328,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!50 &1104533383
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1104533379}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1249108488 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4737520929444756, guid: 98281432dc95d8643942b903fb356333,
@@ -433,7 +454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7f921dcf468468fa06f39e3a20604c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fWidth: 9
 --- !u!1001 &1541278354
 Prefab:
   m_ObjectHideFlags: 0
