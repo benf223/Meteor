@@ -588,9 +588,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 0d3cf834-d20f-45e5-b106-acb04c9fa7c1
-  projectName: Meteor (1)
-  organizationId: illyrius_dev
+  cloudProjectId: 8bdc3a2d-1c4a-4354-b02b-704224c30b23
+  projectName: Meteor
+  organizationId: callibates
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
