@@ -17,9 +17,10 @@ public class GameController : MonoBehaviour {
 	public void AddScore() {
 		score++;
 		Debug.Log ("Score: " + score);
-}
-	public void AddScore(int num) {
+    }
+
+    public void AddScore(int num) {
 		score += num;
 		Debug.Log ("Score: " + score);
-}
+    }
 }
