@@ -29,11 +29,16 @@ public class DifficultyManagerControl : MonoBehaviour
         }
     }
 
-    int difficultyAlgorithm()
+    bool DifficultyTimeFrame()
     {
-
-
-        return 1;
+        if (seconds == 30)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void StartTimer()
