@@ -5,15 +5,19 @@ using UnityEngine.UI;
 
 public class DifficultyManagerControl : MonoBehaviour
 {
-    public float startTimer;
-    public Text timerText;
+    private float startTimer;
+    private float countTime;
+
     public bool timeFlowing;
+
+    int hours;
+    int minutes;
+    int seconds;
 
     // Use this for initialization
     void Start()
     {
-        timerText.text = "0";
-        StartTimer();
+        timeFlowing = false;
     }
 
     // Update is called once per frame
@@ -21,53 +25,46 @@ public class DifficultyManagerControl : MonoBehaviour
     {
         if (timeFlowing)
         {
-
+            UpdateTime();
         }
     }
 
-    void StartTimer()
+    int difficultyAlgorithm()
     {
-        startTimer = Time.time;
-        float countTime = Time.time - startTimer;
 
-        //string hours = 
-        string minutes = ((int)countTime / 99).ToString("f0");
-        string seconds = (countTime % 99).ToString("f0");
 
-        if (System.Convert.ToInt32(minutes) < 10)
-        {
-            timerText.text = "0";
-        }
-
-        if (System.Convert.ToInt32(seconds) < 10)
-        {
-            timerText.text += minutes + "0" + seconds;
-        }
-        else
-        {
-            timerText.text += minutes + seconds;
-        }
+        return 1;
     }
 
-    void PauseTimer()
-    {
-        timeFlowing = false;
-    }
-
-    void ResumeTimer()
+    public void StartTimer()
     {
         timeFlowing = true;
+        startTimer = Time.time;
     }
 
-    void StopTimer()
+    public void UpdateTime()
+    {
+        countTime = Time.time - startTimer;
+
+        hours = ((int)countTime / 360);
+        minutes = ((int)countTime / 60);
+        seconds = ((int)countTime % 60);
+    }
+
+    public void PauseTimer()
     {
         timeFlowing = false;
     }
 
-    void RestartTimer()
+    public void ResumeTimer()
     {
-        StopTimer();
-        StartTimer();
+        timeFlowing = true;
+        startTimer = Time.time - countTime;
     }
 
+    public void ResetTimer()
+    {
+        timeFlowing = false;
+        countTime = 0;
+    }
 }
