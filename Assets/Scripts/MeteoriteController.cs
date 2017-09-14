@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MeteoriteController : MonoBehaviour {
     
+<<<<<<< HEAD
 	private GameObject difficultyManager;
 	private DifficultyManagerController difficultyManagerController;
 
