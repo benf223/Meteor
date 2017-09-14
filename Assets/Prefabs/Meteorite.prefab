@@ -89,8 +89,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e019b60f6935f8041b7b471bb21c3dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   minGravityScale: 0.75
   maxGravityScale: 0.8
+=======
+>>>>>>> master
 --- !u!212 &212488209702916204
 SpriteRenderer:
   m_ObjectHideFlags: 1

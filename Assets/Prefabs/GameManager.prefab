@@ -19,7 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4970085500274608}
+<<<<<<< HEAD
   - component: {fileID: 114831057639246678}
+=======
+>>>>>>> master
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -40,6 +43,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &114831057639246678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,3 +56,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diffucltyManager: {fileID: 0}
+=======
+>>>>>>> master

@@ -19,7 +19,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4334961972355382}
+<<<<<<< HEAD
   - component: {fileID: 114682808172622096}
+=======
+  - component: {fileID: 114438452277761622}
+>>>>>>> master
   m_Layer: 0
   m_Name: DifficultyManager
   m_TagString: Untagged
@@ -40,7 +44,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &114682808172622096
+=======
+--- !u!114 &114438452277761622
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -51,4 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300ea0cfe05c6c3439c31cdd794823c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   timeFlowing: 0
+=======
+>>>>>>> master

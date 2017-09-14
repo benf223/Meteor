@@ -146,6 +146,21 @@ GameObject:
   m_PrefabParentObject: {fileID: 1284525091757060, guid: 14958cc3649084746aa4f8ccc64baecb,
     type: 2}
   m_PrefabInternal: {fileID: 2107261295}
+<<<<<<< HEAD
+=======
+--- !u!114 &256551095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256551094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300ea0cfe05c6c3439c31cdd794823c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeFlowing: 0
+>>>>>>> master
 --- !u!1001 &694565755
 Prefab:
   m_ObjectHideFlags: 0
@@ -277,6 +292,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4970085500274608, guid: 282b1e7f8c90d4adbae7a9e24f281e1d, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114831057639246678, guid: 282b1e7f8c90d4adbae7a9e24f281e1d,
@@ -293,6 +309,29 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 846041052}
   m_Script: {fileID: 11500000, guid: 80b8ef5f990a641499114dfb2650ade3, type: 3}
+=======
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 282b1e7f8c90d4adbae7a9e24f281e1d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &846041053 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1596819542543672, guid: 282b1e7f8c90d4adbae7a9e24f281e1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 846041052}
+--- !u!114 &846041054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 846041053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b8ef5f990a641499114dfb2650ade3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> master
 --- !u!4 &1104533380 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4511021152923106, guid: 7df2e1f29a52649159336a392a4fdc04,
@@ -560,8 +599,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4334961972355382, guid: 14958cc3649084746aa4f8ccc64baecb, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+=======
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114438452277761622, guid: 14958cc3649084746aa4f8ccc64baecb,
+        type: 2}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114438452277761622, guid: 14958cc3649084746aa4f8ccc64baecb, type: 2}
+>>>>>>> master
   m_ParentPrefab: {fileID: 100100000, guid: 14958cc3649084746aa4f8ccc64baecb, type: 2}
   m_IsPrefabParent: 0
