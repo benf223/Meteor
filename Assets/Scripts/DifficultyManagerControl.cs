@@ -61,7 +61,7 @@ public class DifficultyManagerControl : MonoBehaviour
     // this decreases from 0.75 to 0.25 using 0.05 for every difficulty time frame.
     public double MeteoriteSpawnDelayMultiplier()
     {
-        // when 30 seconds is up this condition hits
+        // when 20 seconds is up this condition hits
         if (DifficultyTimeFrame() && spawnDelay >= 0.25f)
         {
             spawnDelay -= 0.05f;
