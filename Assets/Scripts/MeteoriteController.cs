@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MeteoriteController : MonoBehaviour {
     
-<<<<<<< HEAD
 	private GameObject difficultyManager;
 	private DifficultyManagerController difficultyManagerController;
 
@@ -19,11 +18,6 @@ public class MeteoriteController : MonoBehaviour {
 		difficultyManager = GameObject.Find("DifficultyManager");
 		difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
 		InitializeSpeed();
-=======
-	// Use this for initialization
-	void Start () {
-		
->>>>>>> master
 	}
 	
 	// Update is called once per frame
@@ -33,7 +27,6 @@ public class MeteoriteController : MonoBehaviour {
 
     public void BlowUp()
     {
-<<<<<<< HEAD
         // Debug.Log("boom");
         Destroy(gameObject);
     }
@@ -51,9 +44,4 @@ public class MeteoriteController : MonoBehaviour {
 	}
 
 	
-=======
-        Debug.Log("boom");
-        Destroy(gameObject);
-    }
->>>>>>> master
 }
