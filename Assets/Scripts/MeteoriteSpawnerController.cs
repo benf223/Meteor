@@ -6,18 +6,28 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 
 	private Collider2D cd;
 	public GameObject meteorite;
+	public GameObject diffucltyManager;
+	private DifficultyManagerController diffucltyManagerControl;
 	
 	private float startSpawnTime = 1.0f;
-	public float timeBetweenSpawn = 0.4f;
+	public float timeBetweenSpawn;
 
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log("Spawn Rate: " + timeBetweenSpawn);
 		cd = GetComponent<BoxCollider2D>();
+		diffucltyManagerControl = diffucltyManager.GetComponent<DifficultyManagerController>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		// If difficulty has been updated, then update.
+		if (diffucltyManagerControl.MeteorSpawnDelayDifficultyUpdated()) {
+			timeBetweenSpawn *= diffucltyManagerControl.GetMeteoriteSpawnDelayMultiplier();
+			Debug.Log("Spawn Rate: " + timeBetweenSpawn);
+		}
+
 		if (Time.time >= startSpawnTime) {
 			SpawnMeteorites();
 			startSpawnTime = Time.time + timeBetweenSpawn;
@@ -46,4 +56,6 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 		Vector3 dir = Quaternion.AngleAxis(angle, Vector3.up) * Vector3.right;
 		rb.AddForce(dir * 150);
 	}
+
+
 }
