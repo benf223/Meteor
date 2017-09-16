@@ -18,7 +18,7 @@ public class MeteoriteDespawnerController : MonoBehaviour {
 		if (other.gameObject.tag == "Meteorite") {
 			Destroy(other.gameObject);
 			gameCont.AddScore (2);
-			Debug.Log ("Destroyed");
+			//Debug.Log ("Destroyed");
 		}
 	}
 }
