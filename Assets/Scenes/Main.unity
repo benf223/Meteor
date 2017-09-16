@@ -284,6 +284,11 @@ Prefab:
       propertyPath: diffucltyManager
       value: 
       objectReference: {fileID: 256551094}
+    - target: {fileID: 114831057639246678, guid: 282b1e7f8c90d4adbae7a9e24f281e1d,
+        type: 2}
+      propertyPath: difficultyManager
+      value: 
+      objectReference: {fileID: 256551094}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 282b1e7f8c90d4adbae7a9e24f281e1d, type: 2}
   m_IsPrefabParent: 0

@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     int score = 0;
-    public GameObject diffucltyManager;
+    public GameObject difficultyManager;
     private DifficultyManagerController difficultyManagerControl;
 
     // Use this for initialization
     void Start()
     {
-        difficultyManagerControl = diffucltyManager.GetComponent<DifficultyManagerController>();
+        difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();
         difficultyManagerControl.StartTimer();
     }
 
