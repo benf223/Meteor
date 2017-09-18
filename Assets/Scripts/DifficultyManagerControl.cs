@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DifficultyManagerControl : MonoBehaviour
 {
+	public GameController gameCont;
+
     private float startTimer;
     private float countTime;
 
@@ -35,6 +37,8 @@ public class DifficultyManagerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		gameCont.AddScore (1);
+
         if (timeFlowing)
         {
             UpdateTime();

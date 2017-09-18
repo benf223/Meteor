@@ -18,16 +18,17 @@ public class GameController : MonoBehaviour
     {
 
     }
-
+	//this method is not being called
     public void AddScore()
     {
-        score++;
+        score+=10;
         Debug.Log("Score: " + score);
     }
 
     public void AddScore(int num)
-    {
+	{
         score += num;
-        Debug.Log("Score: " + score);
+       // Debug.Log("Score: " + score);
     }
 }
+		
