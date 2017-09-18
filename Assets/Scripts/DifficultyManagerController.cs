@@ -76,7 +76,7 @@ public class DifficultyManagerController : MonoBehaviour
             // To further optimize, this section should call a method from the spawner
             // Alvin will be keen to refactor these sections of code after main game is completed
             if (spawnDelayMultiplier >= 0.25f) {
-                spawnDelayMultiplier -= 0.15f;
+                spawnDelayMultiplier -= 0.05f;
                 Debug.Log("Meteor spawn delay decreased");
             }
 
