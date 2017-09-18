@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     int score = 0;
+    public Text gameOverText;
 
     // Use this for initialization
     void Start()
     {
-
+        gameOverText.gameObject.SetActive(false);
+        StartCoroutine(MyCoroutine());
     }
 
     // Update is called once per frame
@@ -29,5 +31,19 @@ public class GameController : MonoBehaviour
     {
         score += num;
         Debug.Log("Score: " + score);
+    }
+
+    IEnumerator MyCoroutine()
+    {
+        yield return new WaitForSeconds(10);
+    }
+
+    public void GameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
+        // float waitStartTime = Time.time;
+        
+
+        Application.LoadLevel(Application.loadedLevel);
     }
 }

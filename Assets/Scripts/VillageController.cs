@@ -5,6 +5,7 @@ using UnityEngine;
 public class VillageController : MonoBehaviour {
 
     public bool isDestroyed = false;
+    public GameObject gameManager;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,9 @@ public class VillageController : MonoBehaviour {
             meteorite.BlowUp();
             isDestroyed = true;
             Destroy(gameObject);
+
+            GameController gameController = gameManager.GetComponent<GameController>();
+            gameController.GameOver();
         }
     }
 }
