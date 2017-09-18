@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
     {
 
     }
-	//this method is not being called
+	//this method is not being called (I know its just for later in case we decide we want it)
     public void AddScore()
     {
         score+=10;
@@ -31,7 +31,9 @@ public class GameController : MonoBehaviour
 		scoreText.text = score.ToString ();
         //Debug.Log("Score: " + score);
     }
-
+	/**
+	 * This method is the current method being called to add to the score, which is now displayed on the screen
+	 * */
     public void AddScore(int num)
 	{
         score += num;
