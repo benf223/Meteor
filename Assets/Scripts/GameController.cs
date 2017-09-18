@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     int score = 0;
     public GameObject difficultyManager;
     private DifficultyManagerController difficultyManagerControl;
+	public Text scoreText;
 
     // Use this for initialization
     void Start()
@@ -27,12 +28,14 @@ public class GameController : MonoBehaviour
         score+=10;
         Debug.Log("Score: " + score);
         score++;
+		scoreText.text = score.ToString ();
         //Debug.Log("Score: " + score);
     }
 
     public void AddScore(int num)
 	{
         score += num;
+		scoreText.text = score.ToString ();
        // Debug.Log("Score: " + score);
         //Debug.Log("Score: " + score);
     }
