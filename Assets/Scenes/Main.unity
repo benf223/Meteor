@@ -188,7 +188,7 @@ Prefab:
     - target: {fileID: 114096267534733502, guid: 6c362790855d3054292a499fbd14798e,
         type: 2}
       propertyPath: gameCont
-      value: 
+      value:
       objectReference: {fileID: 846041054}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c362790855d3054292a499fbd14798e, type: 2}
@@ -282,12 +282,12 @@ Prefab:
     - target: {fileID: 114831057639246678, guid: 282b1e7f8c90d4adbae7a9e24f281e1d,
         type: 2}
       propertyPath: diffucltyManager
-      value: 
+      value:
       objectReference: {fileID: 256551094}
     - target: {fileID: 114831057639246678, guid: 282b1e7f8c90d4adbae7a9e24f281e1d,
         type: 2}
       propertyPath: difficultyManager
-      value: 
+      value:
       objectReference: {fileID: 256551094}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 282b1e7f8c90d4adbae7a9e24f281e1d, type: 2}
@@ -481,7 +481,7 @@ Prefab:
     - target: {fileID: 114193161327393866, guid: 87dae5fe6764b5948802eeb16a518f60,
         type: 2}
       propertyPath: diffucltyManager
-      value: 
+      value:
       objectReference: {fileID: 256551094}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87dae5fe6764b5948802eeb16a518f60, type: 2}
