@@ -146,22 +146,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1284525091757060, guid: 14958cc3649084746aa4f8ccc64baecb,
     type: 2}
   m_PrefabInternal: {fileID: 2107261295}
-<<<<<<< HEAD
---- !u!114 &256551095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 256551094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 300ea0cfe05c6c3439c31cdd794823c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameCont: {fileID: 846041054}
-  timeFlowing: 0
-=======
->>>>>>> master
 --- !u!1001 &694565755
 Prefab:
   m_ObjectHideFlags: 0
@@ -204,7 +188,7 @@ Prefab:
     - target: {fileID: 114096267534733502, guid: 6c362790855d3054292a499fbd14798e,
         type: 2}
       propertyPath: gameCont
-      value: 
+      value:
       objectReference: {fileID: 846041054}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c362790855d3054292a499fbd14798e, type: 2}
@@ -298,12 +282,12 @@ Prefab:
     - target: {fileID: 114831057639246678, guid: 282b1e7f8c90d4adbae7a9e24f281e1d,
         type: 2}
       propertyPath: diffucltyManager
-      value: 
+      value:
       objectReference: {fileID: 256551094}
     - target: {fileID: 114831057639246678, guid: 282b1e7f8c90d4adbae7a9e24f281e1d,
         type: 2}
       propertyPath: difficultyManager
-      value: 
+      value:
       objectReference: {fileID: 256551094}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 282b1e7f8c90d4adbae7a9e24f281e1d, type: 2}
@@ -497,7 +481,7 @@ Prefab:
     - target: {fileID: 114193161327393866, guid: 87dae5fe6764b5948802eeb16a518f60,
         type: 2}
       propertyPath: diffucltyManager
-      value: 
+      value:
       objectReference: {fileID: 256551094}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87dae5fe6764b5948802eeb16a518f60, type: 2}

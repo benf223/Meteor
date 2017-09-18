@@ -24,23 +24,17 @@ public class GameController : MonoBehaviour
 	//this method is not being called
     public void AddScore()
     {
-<<<<<<< HEAD
         score+=10;
         Debug.Log("Score: " + score);
-=======
         score++;
         //Debug.Log("Score: " + score);
->>>>>>> master
     }
 
     public void AddScore(int num)
 	{
         score += num;
-<<<<<<< HEAD
        // Debug.Log("Score: " + score);
-=======
         //Debug.Log("Score: " + score);
->>>>>>> master
     }
 }
 		
