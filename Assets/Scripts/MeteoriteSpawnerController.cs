@@ -9,7 +9,7 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 	public GameObject diffucltyManager;
 	private DifficultyManagerController difficultyManagerController;
 	
-	private float startSpawnTime = 1.0f;
+	private float startSpawnTime = 0.75f;
 	public float timeBetweenSpawn;
 
 
@@ -51,10 +51,23 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 		GameObject spawned = Instantiate(meteorite, spawnLocation, Quaternion.identity);
 		Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
 
-		// Randomize Angle
-		float angle = Random.Range(0, 359);
+        // Randomize Angle
+        float angle = 0;
+        int randomNum = Random.Range(0, 2);
+        Debug.Log("RNG: " + randomNum);
+        if (randomNum == 0)
+        {
+            angle = 0;
+        }
+        else {
+            angle = 180;
+        }
+
+        float addedForce = Random.Range(50, 1000);
+
+        Debug.Log("Angle is " + angle);
 		Vector3 dir = Quaternion.AngleAxis(angle, Vector3.up) * Vector3.right;
-		rb.AddForce(dir * 150);
+		rb.AddForce(dir * addedForce);
 	}
 
 

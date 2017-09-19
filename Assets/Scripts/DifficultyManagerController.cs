@@ -14,7 +14,7 @@ public class DifficultyManagerController : MonoBehaviour
     private int minutes;
     private int seconds;
 
-    private int interval = 2; // Time to update (seconds)
+    private int interval = 1; // Time to update (seconds)
     private float elapsedTime = 0;
 
     private int secondsToIncreaseDifficulty;
@@ -56,7 +56,7 @@ public class DifficultyManagerController : MonoBehaviour
 
     // Called Every Second
     private void UpdateEverySecond() {
-		gameCont.AddScore (1);
+		gameCont.AddScore(1);
         secondsToIncreaseDifficulty++; // Used for the difficulty increase interval
         // Debug.Log("Reset seconds = " +secondsToIncreaseDifficulty);
     }
@@ -72,12 +72,12 @@ public class DifficultyManagerController : MonoBehaviour
                 timeRemoved += 1;
             }
 
-          /* Modify spawn delay multiplier
-             NOTE THIS CAN CHANGE
-             we think 0.75 is the optimal range for each meteorite to spawn
-             this decreases from 1 to 0.75 using 0.025 for every difficulty time frame.
-             To further optimize, this section should call a method from the spawner
-             Alvin will be keen to refactor these sections of code after main game is completed */
+            /* Modify spawn delay multiplier
+               NOTE THIS CAN CHANGE
+               we think 0.75 is the optimal range for each meteorite to spawn
+               this decreases from 0.75 to 0.40 using 0.035 for every difficulty time frame.
+               To further optimize, this section should call a method from the spawner
+               Alvin will be keen to refactor these sections of code after main game is completed */
             if (spawnDelayMultiplier >= 0.40f) {
                 spawnDelayMultiplier -= 0.035f;
                 Debug.Log("Meteor spawn delay decreased: "+spawnDelayMultiplier);
