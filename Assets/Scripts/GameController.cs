@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     int score = 0;
+    int finalScore;
     bool gameOver;
     public Text gameOverText;
     public float resetDelay;
@@ -14,6 +15,7 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        finalScore = 0;
         gameOver = false;
         gameOverText.gameObject.SetActive(false);
     }
@@ -44,6 +46,7 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         gameOver = true;
+        finalScore = score;
         gameOverText.gameObject.SetActive(true);
         waitStartTime = Time.time;//when the village is destroyed
        
