@@ -24,7 +24,7 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 	void Update () {
 		// If difficulty has been updated, then update.
 		if (difficultyManagerController.MeteorSpawnDelayDifficultyUpdated()) {
-			timeBetweenSpawn *= difficultyManagerController.GetMeteoriteSpawnDelayMultiplier();
+			timeBetweenSpawn = difficultyManagerController.GetMeteoriteSpawnDelayMultiplier();
 			Debug.Log("Spawn Rate: " + timeBetweenSpawn);
 		}
 

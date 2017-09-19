@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1781707287931946}
+  m_RootGameObject: {fileID: 1539988541665868}
   m_IsPrefabParent: 1
---- !u!1 &1781707287931946
+--- !u!1 &1539988541665868
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4727886215356788}
-  - component: {fileID: 212823462603708248}
+  - component: {fileID: 4950659309191464}
+  - component: {fileID: 212779394779909526}
   m_Layer: 0
   m_Name: Island
   m_TagString: Untagged
@@ -27,25 +27,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4727886215356788
+--- !u!4 &4950659309191464
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1781707287931946}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.009, y: -4.95, z: 0}
-  m_LocalScale: {x: 2.5378146, y: 0.7102011, z: 1}
+  m_GameObject: {fileID: 1539988541665868}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.001, y: -4.944, z: 0}
+  m_LocalScale: {x: 2.37509, y: 0.7102, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &212823462603708248
+--- !u!212 &212779394779909526
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1781707287931946}
+  m_GameObject: {fileID: 1539988541665868}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

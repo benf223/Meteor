@@ -34,9 +34,10 @@ public class MeteoriteController : MonoBehaviour {
 	private void InitializeSpeed() {
 		rb = GetComponent<Rigidbody2D>();
 
-		maxGravityScale *= difficultyManagerController.GetMeteoriteSpeedMultiplier();
-		float gravityScale = Random.Range(minGravityScale, maxGravityScale);
-		rb.gravityScale = gravityScale;
+		maxGravityScale = difficultyManagerController.GetMeteoriteSpeedMultiplier();
+        //float gravityScale = Random.Range(minGravityScale, maxGravityScale);
+        float gravityScale = Random.Range(maxGravityScale, maxGravityScale);
+        rb.gravityScale = gravityScale;
 
 		Debug.Log("Min Gravity Scale: "+ minGravityScale);
 		Debug.Log("Max Gravity Scale: "+ maxGravityScale);
