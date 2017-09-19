@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDestroyed: 0
+  diff: {fileID: 0}
 --- !u!212 &212591069772638360
 SpriteRenderer:
   m_ObjectHideFlags: 1
