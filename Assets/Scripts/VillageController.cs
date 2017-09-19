@@ -24,6 +24,8 @@ public class VillageController : MonoBehaviour {
             meteorite.BlowUp();
             isDestroyed = true;
             Destroy(gameObject);
+	        
+	        UnityEngine.SceneManagement.SceneManager.LoadScene("Game End");
         }
     }
 }

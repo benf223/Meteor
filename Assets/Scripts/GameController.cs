@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    int score = 0;
+    int score;
     public GameObject difficultyManager;
     private DifficultyManagerController difficultyManagerControl;
 
@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Main Menu");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
         }
     }
 
@@ -35,5 +35,10 @@ public class GameController : MonoBehaviour
     {
         score += num;
         //Debug.Log("Score: " + score);
+    }
+
+    private void OnDestroy()
+    {
+        PlayerPrefs.SetString("score", "Score: " + score);
     }
 }

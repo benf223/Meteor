@@ -1,43 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
-public class MeteoriteSpawnerController : MonoBehaviour
+public class EndGameSpawner : MonoBehaviour
 {
-	private Collider2D cd;
 	public GameObject meteorite;
-	public GameObject diffucltyManager;
-	private DifficultyManagerController difficultyManagerController;
-
-	private float startSpawnTime = 1.0f;
-	public float timeBetweenSpawn;
-
-
-	// Use this for initialization
+	
+	private Collider2D cd;
+	private bool spawn;
+	
 	void Start()
 	{
-		Debug.Log("Spawn Rate: " + timeBetweenSpawn);
+		spawn = false;
 		cd = GetComponent<BoxCollider2D>();
-		difficultyManagerController = diffucltyManager.GetComponent<DifficultyManagerController>();
 	}
 
-	// Update is called once per frame
 	void Update()
 	{
-		// If difficulty has been updated, then update.
-		if (difficultyManagerController.MeteorSpawnDelayDifficultyUpdated())
-		{
-			timeBetweenSpawn *= difficultyManagerController.GetMeteoriteSpawnDelayMultiplier();
-			Debug.Log("Spawn Rate: " + timeBetweenSpawn);
-		}
-
-		if (Time.time >= startSpawnTime)
+		if (spawn)
 		{
 			SpawnMeteorites();
-			startSpawnTime = Time.time + timeBetweenSpawn;
 		}
-	}
 
+		spawn = !spawn;
+	}
+	
 	void SpawnMeteorites()
 	{
 		Bounds spawnBounds = cd.bounds;
