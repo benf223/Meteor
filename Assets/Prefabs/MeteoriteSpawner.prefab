@@ -27,7 +27,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4574874492273064
 Transform:
   m_ObjectHideFlags: 1
@@ -78,5 +78,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meteorite: {fileID: 1852739411863102, guid: be049906cd62d4b4faabff5b700cc254, type: 2}
-  diffucltyManager: {fileID: 0}
+  diffucltyManager: {fileID: 1284525091757060, guid: 14958cc3649084746aa4f8ccc64baecb,
+    type: 2}
   timeBetweenSpawn: 1.5
