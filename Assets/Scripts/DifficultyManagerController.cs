@@ -4,6 +4,7 @@ public class DifficultyManagerController : MonoBehaviour
 {
     private float startTimer;
     private float countTime;
+	public GameController gameCont;
 
     // condition to keep the time continuing
     public bool timeFlowing;
@@ -55,6 +56,7 @@ public class DifficultyManagerController : MonoBehaviour
 
     // Called Every Second
     private void UpdateEverySecond() {
+		gameCont.AddScore (1);
         secondsToIncreaseDifficulty++; // Used for the difficulty increase interval
         // Debug.Log("Reset seconds = " +secondsToIncreaseDifficulty);
     }
@@ -91,6 +93,7 @@ public class DifficultyManagerController : MonoBehaviour
             secondsToIncreaseDifficulty = 0; // Reset countdown timer for difficulty change
             Debug.Log("Difficulty Time Frame Activated");
             meteorSpawnDelayDifficultyUpdated = true; // Notifies that difficulty has changed
+
         }
     }
 
@@ -148,4 +151,8 @@ public class DifficultyManagerController : MonoBehaviour
         timeFlowing = false;
         countTime = 0;
     }
+
+	public int GetSeconds() {
+		return seconds;
+	}
 }
