@@ -58,7 +58,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ef86eb221fa4a724fb253033f83a86ad, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -86,12 +86,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1852739411863102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e019b60f6935f8041b7b471bb21c3dc9, type: 3}
+  m_Script: {fileID: 11500000, guid: a2ba0c420e0b07a40840d56f24a91ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minGravityScale: 0.75
-  maxGravityScale: 0.8
-  lowBounce: {fileID: 0}
+  maxGravityScale: 0.85
+  lowBounce: {fileID: 6200000, guid: 060ac08daa253b14db8b1ea4aebac2b2, type: 2}
   minBounciness: 0
 --- !u!212 &212488209702916204
 SpriteRenderer:

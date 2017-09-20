@@ -16,8 +16,6 @@ public class MeteoriteController : MonoBehaviour {
 	private bool touching; // State in which meteorite is in process of flick
 	private bool touched; // State in which meteorite HAS BEEN touched
 
-	public float minBounciness;
-
 	private GameObject touchObject;
 
 	// Use this for initialization
@@ -63,7 +61,7 @@ public class MeteoriteController : MonoBehaviour {
 	public void SetTouched(GameObject touchObject) {
 		this.touchObject = touchObject;
 		touching = true;
-		gameObject.GetComponent<Renderer>().material.color = Color.gray; // Indicates when touched. Instead would need to change sprite when we actually have art
+	//	gameObject.GetComponent<Renderer>().material.color = Color.gray; // Indicates when touched. Instead would need to change sprite when we actually have art
 		CircleCollider2D cd = GetComponent<CircleCollider2D>();
 		cd.sharedMaterial = lowBounce;
 	}
