@@ -8,8 +8,9 @@ public class TouchController : MonoBehaviour {
     public GameObject touchObject;
     public Text debugText;
 
-    public float flickForce; // force of the flick
+    public float flickForceMultiplier; // force of the flick
     public float dragTime; // in seconds, max duration of each flick
+    public float maxFlickForce;
 
     private bool dragging;
 
@@ -29,7 +30,6 @@ public class TouchController : MonoBehaviour {
                 dragging = true;  
             }
             else if (touch.phase == TouchPhase.Moved) {
-                
             } else if (touch.phase == TouchPhase.Ended) {
                 dragging = false;
             }

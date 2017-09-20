@@ -71,7 +71,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1852739411863102}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ef86eb221fa4a724fb253033f83a86ad, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -91,6 +91,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGravityScale: 0.75
   maxGravityScale: 0.8
+  lowBounce: {fileID: 6200000, guid: 4cab3eaba8092054ab13aa9314178f0a, type: 2}
+  minBounciness: 0
 --- !u!212 &212488209702916204
 SpriteRenderer:
   m_ObjectHideFlags: 1

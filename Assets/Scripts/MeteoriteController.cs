@@ -14,8 +14,12 @@ public class MeteoriteController : MonoBehaviour {
 	public float minGravityScale;
 	public float maxGravityScale;
 
+	public PhysicsMaterial2D lowBounce;
+
 	private bool touching; // State in which meteorite is in process of flick
 	private bool touched; // State in which meteorite HAS BEEN touched
+
+	public float minBounciness;
 
 	private GameObject touchObject;
 
@@ -61,29 +65,37 @@ public class MeteoriteController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag("Touch") && !touched) {
-			SetTouched(other.gameObject);
+			//SetTouched(other.gameObject);
 		}
 	}
 
-	void FixedUpdate() {
-		if (touchObject != null && touching) {
-			Transform touchTransform = touchObject.GetComponent<Transform>();
 
-			rb.AddForce((touchTransform.position - transform.position) * touchController.flickForce);
-
-			GameObject.Find("DebugText").GetComponent<Text>().text = ""+Vector2.Distance(touchTransform.position, transform.position);
-		}
-	}
-
-	private void SetTouched(GameObject other) {
-		touchObject = other;
+	/*
+	FINISH THIS TOUCH MODE
+	MOVE THE SHIT INTO THE TOUCH OBJECT CONTROLLER
+	IMPORTANT: USE THIS SetTouched() METHOD INTO THE TOUCH OBJECT ONE
+	 */
+	public void SetTouched(GameObject touchObject) {
+		this.touchObject = touchObject;
 		touching = true;
 		gameObject.GetComponent<Renderer>().material.color = Color.gray; // Indicates when touched. Instead would need to change sprite when we actually have art
+		CircleCollider2D cd = GetComponent<CircleCollider2D>();
+		cd.sharedMaterial = lowBounce;
+		GameObject.Find("DebugText").GetComponent<Text>().text = "Bounciness?";
 	}
 
 	public bool IsTouching() {
 		return touching;
 	}
+
+	public bool Touched() {
+		return touched;
+	}
+
+	public void SetTouched(bool touched) {
+		this.touched = touched;
+	}
+
 
 	
 }
