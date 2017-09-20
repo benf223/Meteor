@@ -592,7 +592,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4019202162784332, guid: 764878502185c42c2a0a4404156ef1e1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.03
+      value: 1.99
       objectReference: {fileID: 0}
     - target: {fileID: 4019202162784332, guid: 764878502185c42c2a0a4404156ef1e1, type: 2}
       propertyPath: m_LocalPosition.y
@@ -638,6 +638,21 @@ Prefab:
       propertyPath: m_Name
       value: Water2
       objectReference: {fileID: 0}
+    - target: {fileID: 212943041413226514, guid: 764878502185c42c2a0a4404156ef1e1,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212943041413226514, guid: 764878502185c42c2a0a4404156ef1e1,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212943041413226514, guid: 764878502185c42c2a0a4404156ef1e1,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 764878502185c42c2a0a4404156ef1e1, type: 2}
   m_IsPrefabParent: 0
@@ -650,11 +665,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4511021152923106, guid: 7df2e1f29a52649159336a392a4fdc04, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.24
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 4511021152923106, guid: 7df2e1f29a52649159336a392a4fdc04, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.47
+      value: -4.49
       objectReference: {fileID: 0}
     - target: {fileID: 4511021152923106, guid: 7df2e1f29a52649159336a392a4fdc04, type: 2}
       propertyPath: m_LocalPosition.z
@@ -682,11 +697,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4511021152923106, guid: 7df2e1f29a52649159336a392a4fdc04, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.6592933
+      value: 0.5890939
       objectReference: {fileID: 0}
     - target: {fileID: 4511021152923106, guid: 7df2e1f29a52649159336a392a4fdc04, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.6784116
+      value: 0.6136122
       objectReference: {fileID: 0}
     - target: {fileID: 114898908052112268, guid: 7df2e1f29a52649159336a392a4fdc04,
         type: 2}
