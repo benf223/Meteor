@@ -8,14 +8,14 @@ public class DifficultyManagerController : MonoBehaviour
 	public GameController gameCont;
 
 	// time
-	private int hours;
+	// private int hours;
 
 	private int minutes;
 	private int seconds;
 	private float startTimer;
 	private float countTime;
 	private int interval = 1; // Time to update (seconds)
-	private float elapsedTime;
+	private float elapsedTime = 0;
 	private int secondsToIncreaseDifficulty;
 
 	// used to minus the duration time frames
@@ -23,12 +23,14 @@ public class DifficultyManagerController : MonoBehaviour
 
 	private float spawnDelayMultiplier;
 	private float speedMultiplier;
-	private bool meteorSpawnDelayDifficultyUpdated;
+	private bool difficultyUpdated;
+
+	public float initialDifficultyTime;
+	public float maxDifficultyTime;	
 
 	// Use this for initialization
 	void Start()
 	{
-		hours = 0;
 		minutes = 0;
 		seconds = 0;
 		elapsedTime = 0f;
@@ -36,9 +38,9 @@ public class DifficultyManagerController : MonoBehaviour
 		timeFlowing = false;
 		secondsToIncreaseDifficulty = 0;
 		timeRemoved = 0;
-		spawnDelayMultiplier = 1.0f;
+		spawnDelayMultiplier = 0.75f;
 		speedMultiplier = 1.0f;
-		meteorSpawnDelayDifficultyUpdated = false;
+		difficultyUpdated = false;
 	}
 
 	// Update is called once per frame
@@ -48,7 +50,6 @@ public class DifficultyManagerController : MonoBehaviour
 		{
 			UpdateTime();
 			DifficultyTimeFrame();
-
 			// Updates every second (or based on interval variable)
 			if (Time.time >= elapsedTime)
 			{
@@ -69,9 +70,9 @@ public class DifficultyManagerController : MonoBehaviour
 	{
 		// does 20, 19, 18, 17, 16, 15 all the way to 10 seconds it changes difficulty
 		// Note: Default values (20 - timeRemoved), (timeRemoved <= 10)
-		if (secondsToIncreaseDifficulty == 20 - timeRemoved)
+		if (secondsToIncreaseDifficulty == initialDifficultyTime - timeRemoved)
 		{
-			if (timeRemoved <= 10)
+			if (timeRemoved < maxDifficultyTime)
 			{
 				timeRemoved++;
 			}
@@ -81,31 +82,33 @@ public class DifficultyManagerController : MonoBehaviour
 			// this decreases from 1 to 0.25 using 0.05 for every difficulty time frame.
 			// To further optimize, this section should call a method from the spawner
 			// Alvin will be keen to refactor these sections of code after main game is completed
-			if (spawnDelayMultiplier >= 0.25f)
+			if (spawnDelayMultiplier >= 0.4f)
 			{
-				spawnDelayMultiplier -= 0.15f;
+				spawnDelayMultiplier -= 0.035f;
 			}
 
 			// Modify meteorite speed multiplier
 			// NOTE THIS CAN CHANGE
 			// this increases from 1.0 to 2.0 using 0.05 for every difficulty time frame.
-			if (speedMultiplier <= 2.0f)
+			if (speedMultiplier <= 1.75f)
 			{
-				speedMultiplier += 0.05f;
+				speedMultiplier += 0.035f;				
 			}
 
 			secondsToIncreaseDifficulty = 0; // Reset countdown timer for difficulty change
-			meteorSpawnDelayDifficultyUpdated = true; // Notifies that difficulty has changed
+			difficultyUpdated = true; // Notifies that difficulty has changed
 		}
 	}
 
 	// Used only for the MeteoriteSpawnController.
 	// Checks if difficulty has been updated, then resets status onced used
-	public bool MeteorSpawnDelayDifficultyUpdated()
+	public bool DifficultyUpdated()
 	{
-		if (meteorSpawnDelayDifficultyUpdated)
+		
+		if (difficultyUpdated)
 		{
-			meteorSpawnDelayDifficultyUpdated = false;
+			Debug.Log("Difficulty Updated");
+			difficultyUpdated = false;
 			return true;
 		}
 
@@ -134,7 +137,7 @@ public class DifficultyManagerController : MonoBehaviour
 	{
 		countTime = Time.time - startTimer;
 
-		hours = (int) countTime / 360;
+		// hours = (int) countTime / 360;
 		minutes = (int) countTime / 60;
 		seconds = (int) countTime % 60;
 	}

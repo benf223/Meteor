@@ -4,7 +4,6 @@ public class MeteoriteController : MonoBehaviour {
     
 	private GameObject difficultyManager;
 	private DifficultyManagerController difficultyManagerController;
-	private TouchController touchController;
 	
 	private Rigidbody2D rb;
 
@@ -20,12 +19,14 @@ public class MeteoriteController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		touchController = GameObject.Find("TouchManager").GetComponent<TouchController>();
 		touchObject = null;
 		touched = false;
 		touching = false;
 		difficultyManager = GameObject.Find("DifficultyManager");
-		difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
+		if (difficultyManager != null) {
+			difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
+		}
+		
 		InitializeSpeed();
 	}
 	
@@ -46,8 +47,12 @@ public class MeteoriteController : MonoBehaviour {
 
 	private void InitializeSpeed() {
 		rb = GetComponent<Rigidbody2D>();
-
-		maxGravityScale *= difficultyManagerController.GetMeteoriteSpeedMultiplier();
+		if (difficultyManagerController != null) {
+			// Initial Gravity Scale
+			maxGravityScale = difficultyManagerController.GetMeteoriteSpeedMultiplier();
+			// Debug.Log("Max Meteorite Speed = " + maxGravityScale);
+		}
+		
 		float gravityScale = Random.Range(minGravityScale, maxGravityScale);
 		rb.gravityScale = gravityScale;
 	}

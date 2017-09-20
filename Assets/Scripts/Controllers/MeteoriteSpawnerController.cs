@@ -9,8 +9,11 @@ public class MeteoriteSpawnerController : MonoBehaviour
 	public GameObject diffucltyManager;
 	private DifficultyManagerController difficultyManagerController;
 
-	private float startSpawnTime = 1.0f;
+	private float startSpawnTime = 0.75f;
 	public float timeBetweenSpawn;
+
+	public float minSpawnForce;
+	public float maxSpawnForce;
 
 
 	// Use this for initialization
@@ -25,9 +28,10 @@ public class MeteoriteSpawnerController : MonoBehaviour
 	void Update()
 	{
 		// If difficulty has been updated, then update.
-		if (difficultyManagerController.MeteorSpawnDelayDifficultyUpdated())
+		if (difficultyManagerController.DifficultyUpdated())
 		{
-			timeBetweenSpawn *= difficultyManagerController.GetMeteoriteSpawnDelayMultiplier();
+			// NOTE: Set time for spawn delay
+			timeBetweenSpawn = difficultyManagerController.GetMeteoriteSpawnDelayMultiplier();
 			Debug.Log("Spawn Rate: " + timeBetweenSpawn);
 		}
 
@@ -57,8 +61,16 @@ public class MeteoriteSpawnerController : MonoBehaviour
 		Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
 
 		// Randomize Angle
-		float angle = Random.Range(0, 359);
+		float angle = 0;
+		int randomNum = Random.Range(0, 2);
+		if (randomNum == 0) {
+			angle = 0;
+		} else {
+			angle = 180;
+		}
+
+		float addedForce = Random.Range(minSpawnForce, maxSpawnForce);
 		Vector3 dir = Quaternion.AngleAxis(angle, Vector3.up) * Vector3.right;
-		rb.AddForce(dir * 150);
+		rb.AddForce(dir * addedForce);
 	}
 }
