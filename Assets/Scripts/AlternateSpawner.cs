@@ -1,31 +1,48 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class EndGameSpawner : MonoBehaviour
+public class AlternateSpawner : MonoBehaviour
 {
 	public GameObject meteorite;
-	
+	public bool mainMenu;
+
 	private Collider2D cd;
 	private bool spawn;
-	
+	private System.Random rand;
+
 	void Start()
 	{
 		spawn = false;
 		cd = GetComponent<BoxCollider2D>();
+
+		if (mainMenu)
+			rand = new System.Random();
 	}
 
 	void Update()
 	{
 		if (spawn)
 		{
-			SpawnMeteorites();
+			if (mainMenu)
+			{
+				if (rand.Next(60) == 3)
+				{
+					SpawnMeteorites();
+				}
+			}
+			else
+			{
+				SpawnMeteorites();
+			}
 		}
-
+		
 		spawn = !spawn;
 	}
-	
+
 	void SpawnMeteorites()
 	{
 		Bounds spawnBounds = cd.bounds;

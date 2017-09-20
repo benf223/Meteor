@@ -41,8 +41,7 @@ public class GameEndController : MonoBehaviour
 
 		if (Input.touchCount == 1)
 		{
-			Debug.Log("Wow");
-			
+			PlayerPrefs.SetString("score", "Score: 0");
 			UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
 		}
 	}

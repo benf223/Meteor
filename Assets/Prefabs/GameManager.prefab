@@ -51,4 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b8ef5f990a641499114dfb2650ade3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diffucltyManager: {fileID: 0}
+  difficultyManager: {fileID: 0}
+  scoreText: {fileID: 0}

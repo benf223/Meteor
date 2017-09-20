@@ -5,14 +5,17 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    int score;
-    public GameObject difficultyManager;
+    private int score;
     private DifficultyManagerController difficultyManagerControl;
-
+	
+	public GameObject difficultyManager;
+	public Text scoreText;
+	
     // Use this for initialization
     void Start()
     {
-        difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();
+	    score = 0;
+	    difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();
         difficultyManagerControl.StartTimer();
     }
 
@@ -27,14 +30,13 @@ public class GameController : MonoBehaviour
 
     public void AddScore()
     {
-        score++;
-        //Debug.Log("Score: " + score);
+	    AddScore(10);
     }
 
     public void AddScore(int num)
     {
-        score += num;
-        //Debug.Log("Score: " + score);
+	    score += num;
+	    scoreText.text = "Score: " + score;
     }
 
     private void OnDestroy()
