@@ -10,11 +10,14 @@ public class VillageController : MonoBehaviour {
 	public DifficultyManagerController  diff;
 	private int latestSeconds = 0;
 	private int growthCount = 0;
+	public Sprite[] sprites;
+	private SpriteRenderer spriteRenderer;
 
 	// Use this for initialization
 	void Start () {
-		
-		
+	//this is what makes it so that the sprite can be changed in run time not via animation, can be swapped
+	//to animation later on
+		spriteRenderer = GetComponent<Renderer>() as SpriteRenderer;
 	}
 
 	// Update is called once per frame
@@ -32,10 +35,14 @@ public class VillageController : MonoBehaviour {
 	 * */
 	public void IncreaseSize() {
 		Debug.Log ("Village growth triggered!");
-		if (growthCount < 4) {
-			this.gameObject.transform.localScale += new Vector3 (0.2f, 0.0f, 0.0f);
+		if (growthCount < 2) {
+			spriteRenderer.sprite = sprites [growthCount+1];
+			if (growthCount == 1) {
+				transform.position = new Vector3 (-0.02f, -4.5f, 0.0f);
+			}
+			//this.gameObject.transform.localScale += new Vector3 (0.2f, 0.0f, 0.0f); 
 		} else if(growthCount < 14){
-			this.gameObject.transform.localScale += new Vector3 (0.0f, 0.2f, 0.0f);
+			//this.gameObject.transform.localScale += new Vector3 (0.0f, 0.2f, 0.0f);
 		}
 		growthCount++;
 	}
