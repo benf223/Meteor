@@ -22,7 +22,11 @@ GameObject:
   - component: {fileID: 58815996259091354}
   - component: {fileID: 212065631030414918}
   - component: {fileID: 50035308886740596}
+<<<<<<< HEAD
   - component: {fileID: 114115754002735556}
+=======
+  - component: {fileID: 114428382180297150}
+>>>>>>> Ben-Test
   m_Layer: 0
   m_Name: TouchObject
   m_TagString: Touch
@@ -78,7 +82,11 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+<<<<<<< HEAD
 --- !u!114 &114115754002735556
+=======
+--- !u!114 &114428382180297150
+>>>>>>> Ben-Test
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,7 +94,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1245036499455404}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 303c56f31bbd4ea42ace4888fe857f41, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 144547192fcb90a48a486b31be87a17f, type: 3}
+>>>>>>> Ben-Test
   m_Name: 
   m_EditorClassIdentifier: 
   touchManager: {fileID: 0}

@@ -2,39 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeteoriteSpawnerController : MonoBehaviour {
-
+public class MeteoriteSpawnerController : MonoBehaviour
+{
 	private Collider2D cd;
 	public GameObject meteorite;
 	public GameObject diffucltyManager;
 	private DifficultyManagerController difficultyManagerController;
-	
+
 	private float startSpawnTime = 1.0f;
 	public float timeBetweenSpawn;
 
 
 	// Use this for initialization
-	void Start () {
+	void Start()
+	{
 		Debug.Log("Spawn Rate: " + timeBetweenSpawn);
 		cd = GetComponent<BoxCollider2D>();
 		difficultyManagerController = diffucltyManager.GetComponent<DifficultyManagerController>();
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
+	void Update()
+	{
 		// If difficulty has been updated, then update.
-		if (difficultyManagerController.MeteorSpawnDelayDifficultyUpdated()) {
+		if (difficultyManagerController.MeteorSpawnDelayDifficultyUpdated())
+		{
 			timeBetweenSpawn *= difficultyManagerController.GetMeteoriteSpawnDelayMultiplier();
 			Debug.Log("Spawn Rate: " + timeBetweenSpawn);
 		}
 
-		if (Time.time >= startSpawnTime) {
+		if (Time.time >= startSpawnTime)
+		{
 			SpawnMeteorites();
 			startSpawnTime = Time.time + timeBetweenSpawn;
 		}
 	}
 
-	void SpawnMeteorites() {
+	void SpawnMeteorites()
+	{
 		Bounds spawnBounds = cd.bounds;
 
 		Vector3 min = spawnBounds.min; // Get the minimum values
@@ -56,6 +61,4 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 		Vector3 dir = Quaternion.AngleAxis(angle, Vector3.up) * Vector3.right;
 		rb.AddForce(dir * 150);
 	}
-
-
 }

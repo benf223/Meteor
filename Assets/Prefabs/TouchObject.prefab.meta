@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 283009a417040d647b734452a23d8f46
 timeCreated: 1505714155
 licenseType: Free
 NativeFormatImporter:
   mainObjectFileID: 100100000
+=======
+guid: 8693138120722ae4ca16551dfd1d5cfe
+timeCreated: 1505903224
+licenseType: Free
+NativeFormatImporter:
+  mainObjectFileID: 0
+>>>>>>> Ben-Test
   userData: 
   assetBundleName: 
   assetBundleVariant: 
