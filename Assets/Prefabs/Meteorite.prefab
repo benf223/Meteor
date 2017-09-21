@@ -91,16 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGravityScale: 0.75
   maxGravityScale: 0.8
-<<<<<<< HEAD:Assets/Prefabs/Cosmetic/Meteorite.prefab
-<<<<<<< HEAD:Assets/Prefabs/Meteorite.prefab
-  lowBounce: {fileID: 6200000, guid: 4cab3eaba8092054ab13aa9314178f0a, type: 2}
-=======
-  lowBounce: {fileID: 0}
->>>>>>> Ben-Test:Assets/Prefabs/Cosmetic/Meteorite.prefab
-  minBounciness: 0
-=======
   lowBounce: {fileID: 6200000, guid: 060ac08daa253b14db8b1ea4aebac2b2, type: 2}
->>>>>>> Ben-Test:Assets/Prefabs/Meteorite.prefab
 --- !u!212 &212488209702916204
 SpriteRenderer:
   m_ObjectHideFlags: 1

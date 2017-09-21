@@ -14,96 +14,6 @@ public class DifficultyManagerController : MonoBehaviour
 	private int seconds;
 	private float startTimer;
 	private float countTime;
-<<<<<<< HEAD
-    private int interval = 1; // Time to update (seconds)
-    private float elapsedTime;
-    private int secondsToIncreaseDifficulty;
-
-    // used to minus the duration time frames
-    private int timeRemoved;
-    private float spawnDelayMultiplier;
-    private float speedMultiplier;
-    private bool meteorSpawnDelayDifficultyUpdated;
-
-    // Use this for initialization
-    void Start()
-    {
-        timeFlowing = false;
-        secondsToIncreaseDifficulty = 0;
-        timeRemoved = 0;
-        spawnDelayMultiplier = 1.0f;
-        speedMultiplier = 1.0f;
-        meteorSpawnDelayDifficultyUpdated = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (timeFlowing)
-        {
-            UpdateTime();
-            DifficultyTimeFrame();
-
-            // Updates every second (or based on interval variable)
-            if (Time.time >= elapsedTime) {
-                elapsedTime += interval;
-                UpdateEverySecond();
-            }
-        }
-    }
-
-    // Called Every Second
-    private void UpdateEverySecond() {
-	    gameCont.AddScore(1);
-        secondsToIncreaseDifficulty++; // Used for the difficulty increase interval
-    }
-
-    void DifficultyTimeFrame()
-    {
-        // does 20, 19, 18, 17, 16, 15 all the way to 10 seconds it changes difficulty
-        // Note: Default values (20 - timeRemoved), (timeRemoved <= 10)
-        if (secondsToIncreaseDifficulty == 20 - timeRemoved)
-        {
-            if (timeRemoved <= 10)
-            {
-                timeRemoved++;
-            }
-
-            // Modify spawn delay multiplier
-            // NOTE THIS CAN CHANGE
-            // this decreases from 1 to 0.25 using 0.05 for every difficulty time frame.
-            // To further optimize, this section should call a method from the spawner
-            // Alvin will be keen to refactor these sections of code after main game is completed
-            if (spawnDelayMultiplier >= 0.25f) {
-<<<<<<< HEAD:Assets/Scripts/DifficultyManagerController.cs
-                spawnDelayMultiplier -= 0.05f;
-                Debug.Log("Meteor spawn delay decreased");
-=======
-                spawnDelayMultiplier -= 0.15f;
->>>>>>> Ben-Test:Assets/Scripts/Controllers/Game Controllers/DifficultyManagerController.cs
-            }
-
-            // Modify meteorite speed multiplier
-            // NOTE THIS CAN CHANGE
-            // this increases from 1.0 to 2.0 using 0.05 for every difficulty time frame.
-            if (speedMultiplier <= 2.0f) {
-                speedMultiplier += 0.05f;
-            }
-
-            secondsToIncreaseDifficulty = 0; // Reset countdown timer for difficulty change
-            meteorSpawnDelayDifficultyUpdated = true; // Notifies that difficulty has changed
-        }
-    }
-
-    // Used only for the MeteoriteSpawnController.
-    // Checks if difficulty has been updated, then resets status onced used
-    public bool MeteorSpawnDelayDifficultyUpdated() {
-        if (meteorSpawnDelayDifficultyUpdated) {
-            meteorSpawnDelayDifficultyUpdated = false;
-            return true;
-        }
-	    
-=======
 	private int interval = 1; // Time to update (seconds)
 	private float elapsedTime = 0;
 	private int secondsToIncreaseDifficulty;
@@ -203,7 +113,6 @@ public class DifficultyManagerController : MonoBehaviour
 			return true;
 		}
 
->>>>>>> Ben-Test
 		return false;
 	}
 
