@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Time.timeScale = 1f;
 	    score = 0;
 	    difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();
         difficultyManagerControl.StartTimer();
@@ -42,5 +43,6 @@ public class GameController : MonoBehaviour
     private void OnDestroy()
     {
         PlayerPrefs.SetString("score", "Score: " + score);
+        difficultyManagerControl.PauseTimer(); // maybe 
     }
 }

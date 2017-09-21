@@ -25,7 +25,6 @@ public class TouchController : MonoBehaviour
 		if (Input.touchCount == 1)
 		{
 			Touch touch = Input.GetTouch(0);
-			GameObject anObject = null;
 			if (touch.phase == TouchPhase.Began)
 			{
 				Vector2 touchPosition = touch.position;

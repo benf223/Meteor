@@ -4,7 +4,6 @@ public class MeteoriteController : MonoBehaviour {
     
 	private GameObject difficultyManager;
 	private DifficultyManagerController difficultyManagerController;
-	private TouchController touchController;
 	
 	private Rigidbody2D rb;
 
@@ -16,18 +15,18 @@ public class MeteoriteController : MonoBehaviour {
 	private bool touching; // State in which meteorite is in process of flick
 	private bool touched; // State in which meteorite HAS BEEN touched
 
-	public float minBounciness;
-
 	private GameObject touchObject;
 
 	// Use this for initialization
 	void Start () {
-		touchController = GameObject.Find("TouchManager").GetComponent<TouchController>();
 		touchObject = null;
 		touched = false;
 		touching = false;
 		difficultyManager = GameObject.Find("DifficultyManager");
-		difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
+		if (difficultyManager != null) {
+			difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
+		}
+		
 		InitializeSpeed();
 	}
 	
@@ -48,8 +47,12 @@ public class MeteoriteController : MonoBehaviour {
 
 	private void InitializeSpeed() {
 		rb = GetComponent<Rigidbody2D>();
-
-		maxGravityScale *= difficultyManagerController.GetMeteoriteSpeedMultiplier();
+		if (difficultyManagerController != null) {
+			// Initial Gravity Scale
+			maxGravityScale = difficultyManagerController.GetMeteoriteSpeedMultiplier();
+			// Debug.Log("Max Meteorite Speed = " + maxGravityScale);
+		}
+		
 		float gravityScale = Random.Range(minGravityScale, maxGravityScale);
 		rb.gravityScale = gravityScale;
 	}
@@ -63,7 +66,7 @@ public class MeteoriteController : MonoBehaviour {
 	public void SetTouched(GameObject touchObject) {
 		this.touchObject = touchObject;
 		touching = true;
-		gameObject.GetComponent<Renderer>().material.color = Color.gray; // Indicates when touched. Instead would need to change sprite when we actually have art
+	//	gameObject.GetComponent<Renderer>().material.color = Color.gray; // Indicates when touched. Instead would need to change sprite when we actually have art
 		CircleCollider2D cd = GetComponent<CircleCollider2D>();
 		cd.sharedMaterial = lowBounce;
 	}
