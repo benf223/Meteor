@@ -43,5 +43,6 @@ public class GameController : MonoBehaviour
     private void OnDestroy()
     {
         PlayerPrefs.SetString("score", "Score: " + score);
+        difficultyManagerControl.PauseTimer(); // maybe 
     }
 }
