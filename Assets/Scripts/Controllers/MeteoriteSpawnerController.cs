@@ -9,9 +9,13 @@ public class MeteoriteSpawnerController : MonoBehaviour
 	public GameObject diffucltyManager;
 	private DifficultyManagerController difficultyManagerController;
 
+	// Breath time for when to start the spawning of meteorites
 	private float startSpawnTime = 0.75f;
+
+	// Spawn delay between meteorites
 	public float timeBetweenSpawn;
 
+	// Minimum and maximum spawn force
 	public float minSpawnForce;
 	public float maxSpawnForce;
 
@@ -35,15 +39,27 @@ public class MeteoriteSpawnerController : MonoBehaviour
 			Debug.Log("Spawn Rate: " + timeBetweenSpawn);
 		}
 
-		if (Time.time >= startSpawnTime)
+		
+	}
+
+	void FixedUpdate() {
+		/**
+		 * Start spawning meteorites when breathing time reached
+		 * and then set the delay for spawn times between meteorites
+		 */
+		if (Time.timeSinceLevelLoad >= startSpawnTime)
 		{
 			SpawnMeteorites();
-			startSpawnTime = Time.time + timeBetweenSpawn;
+			startSpawnTime = Time.timeSinceLevelLoad + timeBetweenSpawn;
 		}
 	}
 
+	/**
+	 * Function to controll the spawning of meteorites
+	 */
 	void SpawnMeteorites()
 	{
+		// Gets the bounding box of the box collider
 		Bounds spawnBounds = cd.bounds;
 
 		Vector3 min = spawnBounds.min; // Get the minimum values
@@ -60,8 +76,9 @@ public class MeteoriteSpawnerController : MonoBehaviour
 		GameObject spawned = Instantiate(meteorite, spawnLocation, Quaternion.identity);
 		Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
 
-		// Randomize Angle
-		float angle = 0;
+		// Randomize between spawning to the left, or the right
+		// 0 = right, 180 = left
+		float angle = 180;
 		int randomNum = Random.Range(0, 2);
 		if (randomNum == 0) {
 			angle = 0;
@@ -69,8 +86,14 @@ public class MeteoriteSpawnerController : MonoBehaviour
 			angle = 180;
 		}
 
+		// Calculate the force to add
 		float addedForce = Random.Range(minSpawnForce, maxSpawnForce);
+		
+		// Calculates the direction using the angle
+		// TBH, I have no idea how this actually works.
 		Vector3 dir = Quaternion.AngleAxis(angle, Vector3.up) * Vector3.right;
+		
+		// Finally, add the force to the direction.
 		rb.AddForce(dir * addedForce);
 	}
 }

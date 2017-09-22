@@ -98,10 +98,12 @@ public class DifficultyManagerController : MonoBehaviour
 
 			secondsToIncreaseDifficulty = 0; // Reset countdown timer for difficulty change
 			difficultyUpdated = true; // Notifies that difficulty has changed
+
+			// Calling this in this object, because it sometimes won't call in the other
+			GameObject.Find("Village").GetComponent<VillageController>().IncreaseSize();
 		}
 	}
 
-	// Used only for the MeteoriteSpawnController.
 	// Checks if difficulty has been updated, then resets status onced used
 	public bool DifficultyUpdated()
 	{

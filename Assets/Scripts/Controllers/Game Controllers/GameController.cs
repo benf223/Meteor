@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
-	    score = 0;
+	    score = -1;
 	    difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();
         difficultyManagerControl.StartTimer();
     }
