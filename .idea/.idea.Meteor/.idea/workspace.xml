@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7703dfdb-788d-4a7c-9732-347b7cfb281b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scenes/Game End.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Scenes/Game End.unity.meta" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.Meteor/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Meteor/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameEndController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameEndController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/VillageController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/VillageController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,37 +20,39 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DifficultyManagerController.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/DifficultyManagerController.cs">
+    <leaf>
+      <file leaf-file-name="ScoreCarryOverTest.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Tests/Editor/ScoreCarryOverTest.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+            <state relative-caret-position="357">
+              <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
               <folding>
-                <marker date="1505941204106" expanded="true" signature="669:920" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="972:1205" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="994:1202" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="1134:1198" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="1264:1372" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="1401:2456" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="1407:1551" ph="/* does 20, 19, 18, 17, 16, 15 all the way to 10 seconds it changes difficulty ... */" />
-                <marker date="1505941204106" expanded="true" signature="1606:2453" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="1636:1665" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="1670:1976" ph="/* Modify spawn delay multiplier ... */" />
-                <marker date="1505941204106" expanded="true" signature="2014:2059" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="2064:2208" ph="/* Modify meteorite speed multiplier ... */" />
-                <marker date="1505941204106" expanded="true" signature="2240:2280" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="2459:2578" ph="/* Used only for the MeteoriteSpawnController. ... */" />
-                <marker date="1505941204106" expanded="true" signature="2627:2761" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="2671:2741" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="2812:2849" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="2895:2927" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="2954:3008" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="3035:3181" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="3208:3237" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="3265:3331" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="3358:3404" ph="{...}" />
-                <marker date="1505941204106" expanded="true" signature="3430:3454" ph="{...}" />
+                <marker date="1506209607398" expanded="true" signature="6:161" ph="..." />
+                <marker date="1506209607398" expanded="true" signature="194:991" ph="{...}" />
+                <marker date="1506209607398" expanded="true" signature="271:804" ph="{...}" />
+                <marker date="1506209607398" expanded="true" signature="457:540" ph="{...}" />
+                <marker date="1506209607398" expanded="true" signature="720:801" ph="{...}" />
+                <marker date="1506209607398" expanded="true" signature="889:989" ph="{...}" />
+                <marker date="1506209607398" expanded="true" signature="895:965" ph="/* Use the Assert class to test conditions. ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameEndController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameEndController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <marker date="1506209534100" expanded="false" signature="6:54" ph="..." />
+                <marker date="1506209534100" expanded="true" signature="102:805" ph="{...}" />
+                <marker date="1506209534100" expanded="true" signature="275:387" ph="{...}" />
+                <marker date="1506209534100" expanded="true" signature="440:803" ph="{...}" />
+                <marker date="1506209534100" expanded="true" signature="457:552" ph="{...}" />
+                <marker date="1506209534100" expanded="true" signature="493:548" ph="{...}" />
+                <marker date="1506209534100" expanded="true" signature="607:652" ph="{...}" />
+                <marker date="1506209534100" expanded="true" signature="682:800" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -52,45 +61,20 @@
       <file leaf-file-name="GameController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
               <folding>
-                <marker date="1505941204113" expanded="false" signature="6:100" ph="..." />
-                <marker date="1505941204113" expanded="true" signature="145:1000" ph="{...}" />
-                <marker date="1505941204113" expanded="true" signature="354:524" ph="{...}" />
-                <marker date="1505941204113" expanded="true" signature="582:731" ph="{...}" />
-                <marker date="1505941204113" expanded="true" signature="633:725" ph="{...}" />
-                <marker date="1505941204113" expanded="true" signature="759:790" ph="{...}" />
-                <marker date="1505941204113" expanded="true" signature="825:897" ph="{...}" />
-                <marker date="1505941204113" expanded="true" signature="927:998" ph="{...}" />
+                <marker date="1506209534000" expanded="false" signature="6:135" ph="..." />
+                <marker date="1506209534000" expanded="true" signature="180:1253" ph="{...}" />
+                <marker date="1506209534000" expanded="true" signature="389:588" ph="{...}" />
+                <marker date="1506209534000" expanded="true" signature="646:795" ph="{...}" />
+                <marker date="1506209534000" expanded="true" signature="697:789" ph="{...}" />
+                <marker date="1506209534000" expanded="true" signature="823:854" ph="{...}" />
+                <marker date="1506209534000" expanded="true" signature="889:961" ph="{...}" />
+                <marker date="1506209534000" expanded="true" signature="991:1119" ph="{...}" />
+                <marker date="1506209534000" expanded="true" signature="1143:1165" ph="{...}" />
+                <marker date="1506209534000" expanded="true" signature="1192:1251" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MeteoriteSpawnerController.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-              <folding>
-                <marker date="1505941204131" expanded="false" signature="6:78" ph="..." />
-                <marker date="1505941204131" expanded="true" signature="413:599" ph="{...}" />
-                <marker date="1505941204131" expanded="true" signature="651:1038" ph="{...}" />
-                <marker date="1505941204131" expanded="true" signature="775:919" ph="{...}" />
-                <marker date="1505941204131" expanded="true" signature="955:1035" ph="{...}" />
-                <marker date="1505941204131" expanded="true" signature="1063:1786" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MeteoriteController.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/MeteoriteController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="79" lean-forward="false" selection-start-line="22" selection-start-column="79" selection-end-line="22" selection-end-column="79" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -101,11 +85,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/MeteoriteController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AlternateSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/Editor/ScoreCarryOverTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1ABFBF84-528A-423E-BA2F-4832AE4E28C0/f0/fdd8b0bb/EditorSceneManager.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/249E3C18-6ACB-4F50-900C-04353137B726/27/8f8676a8/Scene.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/DifficultyManagerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameEndController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/VillageController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -124,9 +111,14 @@
         <option value="$PROJECT_DIR$/Assets/GameEndController.cs" />
         <option value="$PROJECT_DIR$/Assets/Rotator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AlternateSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/DifficultyManagerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Cosmetic/MeteoriteController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/VillageController.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1ABFBF84-528A-423E-BA2F-4832AE4E28C0/f0/fdd8b0bb/EditorSceneManager.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/249E3C18-6ACB-4F50-900C-04353137B726/27/8f8676a8/Scene.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameEndController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tests/Editor/ScoreCarryOverTest.cs" />
       </list>
     </option>
   </component>
@@ -137,10 +129,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1051" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -157,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <PATH>
@@ -166,7 +157,7 @@
               <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Meteor (2 projects)" />
+              <option name="myItemId" value="Meteor (3 projects)" />
               <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -174,6 +165,7 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -288,11 +280,13 @@
       <workItem from="1505940433152" duration="51000" />
       <workItem from="1505940510093" duration="168000" />
       <workItem from="1505941988049" duration="10000" />
+      <workItem from="1506207815307" duration="1197000" />
+      <workItem from="1506209073106" duration="536000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13494000" />
+    <option name="totallyTimeSpent" value="15227000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -304,7 +298,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1051" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -314,7 +309,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24791667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -342,36 +337,26 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Tests/Editor/ScoreCarryOverTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506209607398" expanded="true" signature="6:161" ph="..." />
+            <marker date="1506209607398" expanded="true" signature="194:991" ph="{...}" />
+            <marker date="1506209607398" expanded="true" signature="271:804" ph="{...}" />
+            <marker date="1506209607398" expanded="true" signature="457:540" ph="{...}" />
+            <marker date="1506209607398" expanded="true" signature="720:801" ph="{...}" />
+            <marker date="1506209607398" expanded="true" signature="889:989" ph="{...}" />
+            <marker date="1506209607398" expanded="true" signature="895:965" ph="/* Use the Assert class to test conditions. ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/DifficultyManagerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-          <folding>
-            <marker date="1505941204106" expanded="true" signature="669:920" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="972:1205" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="994:1202" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1134:1198" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1264:1372" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1401:2456" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1407:1551" ph="/* does 20, 19, 18, 17, 16, 15 all the way to 10 seconds it changes difficulty ... */" />
-            <marker date="1505941204106" expanded="true" signature="1606:2453" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1636:1665" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1670:1976" ph="/* Modify spawn delay multiplier ... */" />
-            <marker date="1505941204106" expanded="true" signature="2014:2059" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2064:2208" ph="/* Modify meteorite speed multiplier ... */" />
-            <marker date="1505941204106" expanded="true" signature="2240:2280" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2459:2578" ph="/* Used only for the MeteoriteSpawnController. ... */" />
-            <marker date="1505941204106" expanded="true" signature="2627:2761" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2671:2741" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2812:2849" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2895:2927" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2954:3008" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3035:3181" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3208:3237" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3265:3331" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3358:3404" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3430:3454" ph="{...}" />
-          </folding>
+        <state relative-caret-position="578">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -380,14 +365,50 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1505941204113" expanded="false" signature="6:100" ph="..." />
-            <marker date="1505941204113" expanded="true" signature="145:1000" ph="{...}" />
-            <marker date="1505941204113" expanded="true" signature="354:524" ph="{...}" />
-            <marker date="1505941204113" expanded="true" signature="582:731" ph="{...}" />
-            <marker date="1505941204113" expanded="true" signature="633:725" ph="{...}" />
-            <marker date="1505941204113" expanded="true" signature="759:790" ph="{...}" />
-            <marker date="1505941204113" expanded="true" signature="825:897" ph="{...}" />
-            <marker date="1505941204113" expanded="true" signature="927:998" ph="{...}" />
+            <marker date="1506209534000" expanded="false" signature="6:135" ph="..." />
+            <marker date="1506209534000" expanded="true" signature="180:1253" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="389:588" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="646:795" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="697:789" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="823:854" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="889:961" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="991:1119" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="1143:1165" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="1192:1251" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/MeteoriteController.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/DifficultyManagerController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506209534000" expanded="false" signature="6:135" ph="..." />
+            <marker date="1506209534000" expanded="true" signature="180:1253" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="389:588" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="646:795" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="697:789" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="823:854" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="889:961" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="991:1119" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="1143:1165" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="1192:1251" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -396,22 +417,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding>
-            <marker date="1505941204131" expanded="false" signature="6:78" ph="..." />
-            <marker date="1505941204131" expanded="true" signature="413:599" ph="{...}" />
-            <marker date="1505941204131" expanded="true" signature="651:1038" ph="{...}" />
-            <marker date="1505941204131" expanded="true" signature="775:919" ph="{...}" />
-            <marker date="1505941204131" expanded="true" signature="955:1035" ph="{...}" />
-            <marker date="1505941204131" expanded="true" signature="1063:1786" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/MeteoriteController.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/MeteoriteController.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/DifficultyManagerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="79" lean-forward="false" selection-start-line="22" selection-start-column="79" selection-end-line="22" selection-end-column="79" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -419,65 +432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1505941204106" expanded="true" signature="669:920" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="972:1205" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="994:1202" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1134:1198" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1264:1372" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1401:2456" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1407:1551" ph="/* does 20, 19, 18, 17, 16, 15 all the way to 10 seconds it changes difficulty ... */" />
-            <marker date="1505941204106" expanded="true" signature="1606:2453" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1636:1665" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1670:1976" ph="/* Modify spawn delay multiplier ... */" />
-            <marker date="1505941204106" expanded="true" signature="2014:2059" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2064:2208" ph="/* Modify meteorite speed multiplier ... */" />
-            <marker date="1505941204106" expanded="true" signature="2240:2280" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2459:2578" ph="/* Used only for the MeteoriteSpawnController. ... */" />
-            <marker date="1505941204106" expanded="true" signature="2627:2761" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2671:2741" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2812:2849" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2895:2927" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2954:3008" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3035:3181" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3208:3237" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3265:3331" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3358:3404" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3430:3454" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/DifficultyManagerController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1505941204106" expanded="true" signature="669:920" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="972:1205" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="994:1202" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1134:1198" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1264:1372" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1401:2456" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1407:1551" ph="/* does 20, 19, 18, 17, 16, 15 all the way to 10 seconds it changes difficulty ... */" />
-            <marker date="1505941204106" expanded="true" signature="1606:2453" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1636:1665" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1670:1976" ph="/* Modify spawn delay multiplier ... */" />
-            <marker date="1505941204106" expanded="true" signature="2014:2059" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2064:2208" ph="/* Modify meteorite speed multiplier ... */" />
-            <marker date="1505941204106" expanded="true" signature="2240:2280" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2459:2578" ph="/* Used only for the MeteoriteSpawnController. ... */" />
-            <marker date="1505941204106" expanded="true" signature="2627:2761" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2671:2741" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2812:2849" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2895:2927" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2954:3008" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3035:3181" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3208:3237" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3265:3331" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3358:3404" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3430:3454" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -515,65 +469,89 @@
     <entry file="file://$PROJECT_DIR$/Assets/Rotator.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/DifficultyManagerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-          <folding>
-            <marker date="1505941204106" expanded="true" signature="669:920" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="972:1205" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="994:1202" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1134:1198" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1264:1372" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1401:2456" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1407:1551" ph="/* does 20, 19, 18, 17, 16, 15 all the way to 10 seconds it changes difficulty ... */" />
-            <marker date="1505941204106" expanded="true" signature="1606:2453" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1636:1665" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="1670:1976" ph="/* Modify spawn delay multiplier ... */" />
-            <marker date="1505941204106" expanded="true" signature="2014:2059" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2064:2208" ph="/* Modify meteorite speed multiplier ... */" />
-            <marker date="1505941204106" expanded="true" signature="2240:2280" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2459:2578" ph="/* Used only for the MeteoriteSpawnController. ... */" />
-            <marker date="1505941204106" expanded="true" signature="2627:2761" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2671:2741" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2812:2849" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2895:2927" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="2954:3008" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3035:3181" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3208:3237" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3265:3331" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3358:3404" ph="{...}" />
-            <marker date="1505941204106" expanded="true" signature="3430:3454" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1505941204113" expanded="false" signature="6:100" ph="..." />
-            <marker date="1505941204113" expanded="true" signature="145:1000" ph="{...}" />
-            <marker date="1505941204113" expanded="true" signature="354:524" ph="{...}" />
-            <marker date="1505941204113" expanded="true" signature="582:731" ph="{...}" />
-            <marker date="1505941204113" expanded="true" signature="633:725" ph="{...}" />
-            <marker date="1505941204113" expanded="true" signature="759:790" ph="{...}" />
-            <marker date="1505941204113" expanded="true" signature="825:897" ph="{...}" />
-            <marker date="1505941204113" expanded="true" signature="927:998" ph="{...}" />
-          </folding>
+        <state relative-caret-position="442">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        <state relative-caret-position="-108">
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/VillageController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="62" column="52" lean-forward="false" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1ABFBF84-528A-423E-BA2F-4832AE4E28C0/f0/fdd8b0bb/EditorSceneManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="68" column="24" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/249E3C18-6ACB-4F50-900C-04353137B726/27/8f8676a8/Scene.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding>
-            <marker date="1505941204131" expanded="false" signature="6:78" ph="..." />
-            <marker date="1505941204131" expanded="true" signature="413:599" ph="{...}" />
-            <marker date="1505941204131" expanded="true" signature="651:1038" ph="{...}" />
-            <marker date="1505941204131" expanded="true" signature="775:919" ph="{...}" />
-            <marker date="1505941204131" expanded="true" signature="955:1035" ph="{...}" />
-            <marker date="1505941204131" expanded="true" signature="1063:1786" ph="{...}" />
+            <marker date="1506209534000" expanded="false" signature="6:135" ph="..." />
+            <marker date="1506209534000" expanded="true" signature="180:1253" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="389:588" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="646:795" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="697:789" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="823:854" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="889:961" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="991:1119" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="1143:1165" ph="{...}" />
+            <marker date="1506209534000" expanded="true" signature="1192:1251" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameEndController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <marker date="1506209534100" expanded="false" signature="6:54" ph="..." />
+            <marker date="1506209534100" expanded="true" signature="102:805" ph="{...}" />
+            <marker date="1506209534100" expanded="true" signature="275:387" ph="{...}" />
+            <marker date="1506209534100" expanded="true" signature="440:803" ph="{...}" />
+            <marker date="1506209534100" expanded="true" signature="457:552" ph="{...}" />
+            <marker date="1506209534100" expanded="true" signature="493:548" ph="{...}" />
+            <marker date="1506209534100" expanded="true" signature="607:652" ph="{...}" />
+            <marker date="1506209534100" expanded="true" signature="682:800" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Tests/Editor/ScoreCarryOverTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <marker date="1506209607398" expanded="true" signature="6:161" ph="..." />
+            <marker date="1506209607398" expanded="true" signature="194:991" ph="{...}" />
+            <marker date="1506209607398" expanded="true" signature="271:804" ph="{...}" />
+            <marker date="1506209607398" expanded="true" signature="457:540" ph="{...}" />
+            <marker date="1506209607398" expanded="true" signature="720:801" ph="{...}" />
+            <marker date="1506209607398" expanded="true" signature="889:989" ph="{...}" />
+            <marker date="1506209607398" expanded="true" signature="895:965" ph="/* Use the Assert class to test conditions. ... */" />
           </folding>
         </state>
       </provider>

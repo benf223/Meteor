@@ -12,7 +12,7 @@ public class GameEndController : MonoBehaviour
 	private int count;
 	
 	// Use this for initialization
-	void Start()
+	public void Start()
 	{
 		endText.fontSize = 2;
 		update = true;

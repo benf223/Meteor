@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -45,4 +46,14 @@ public class GameController : MonoBehaviour
         PlayerPrefs.SetString("score", "Score: " + score);
         difficultyManagerControl.PauseTimer(); // maybe 
     }
+
+	public int GetScore()
+	{
+		return score;
+	}
+
+	public void StoreScore()
+	{
+		PlayerPrefs.SetString("score", "Score: " + score);
+	}
 }
