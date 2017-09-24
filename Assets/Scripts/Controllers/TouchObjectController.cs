@@ -138,6 +138,7 @@ public class TouchObjectController : MonoBehaviour
 				 * it cannot be interacted with again after the swipe.
 				 */
 				meteorite = other.gameObject;
+				// Destroy(meteorite); // Uncomment to test
 				meteorite.GetComponent<MeteoriteController>().SetTouched(gameObject);
 			}
 		}

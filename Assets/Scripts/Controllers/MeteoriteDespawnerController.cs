@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class MeteoriteDespawnerController : MonoBehaviour {
 	public GameController gameCont;
+
+	public int amountDespawned {get; private set;}
 	// Use this for initialization
 	void Start () {
-		
+		amountDespawned = 0;
 	}
 	
 	// Update is called once per frame
@@ -17,6 +19,7 @@ public class MeteoriteDespawnerController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Meteorite") {
 			Destroy(other.gameObject);
+			amountDespawned++;
 			if (gameCont != null) {
 				gameCont.AddScore(2);
 			}
