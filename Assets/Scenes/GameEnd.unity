@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meteorite: {fileID: 1852739411863102, guid: be049906cd62d4b4faabff5b700cc254, type: 2}
+  mainMenu: 0
 --- !u!1 &43194038
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +568,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -251553023
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &1389232703
