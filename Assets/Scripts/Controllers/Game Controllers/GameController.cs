@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
 	public Text scoreText;
 	
     // Use this for initialization
-    void Start()
+	private void Start()
     {
         Time.timeScale = 1f;
 	    score = -1;
@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+	private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {

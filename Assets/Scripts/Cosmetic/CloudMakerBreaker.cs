@@ -9,7 +9,7 @@ public class CloudMakerBreaker : MonoBehaviour
 	
 	public bool onLeft;
 
-	void Update()
+	private void Update()
 	{
 		if (Random.Range(1, 200) == 17)
 		{
@@ -49,7 +49,7 @@ public class CloudMakerBreaker : MonoBehaviour
 	}
 
 
-	void OnTriggerEnter2D(Collider2D other)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.tag.Equals("Cloud"))
 		{

@@ -22,7 +22,7 @@ public class GameEndController : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void Update()	
+	private void Update()	
 	{
 		if (update)
 		{
@@ -42,6 +42,10 @@ public class GameEndController : MonoBehaviour
 		if (Input.touchCount == 1)
 		{
 			PlayerPrefs.SetString("score", "Score: 0");
+			
+			//This is a way to add a listener for the test
+			GameObject.Find("TestObject").GetComponent<TouchTests>().GameEndListener();
+			
 			UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
 		}
 	}

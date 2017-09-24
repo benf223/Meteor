@@ -991,7 +991,7 @@ Prefab:
     - target: {fileID: 114901353698217930, guid: 0b4f3123e33fd7c4ab97619d5d521df0,
         type: 2}
       propertyPath: godMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b4f3123e33fd7c4ab97619d5d521df0, type: 2}

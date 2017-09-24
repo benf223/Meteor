@@ -21,7 +21,7 @@ public class MeteoriteSpawnerController : MonoBehaviour
 
 
 	// Use this for initialization
-	void Start()
+	private void Start()
 	{
 		Debug.Log("Spawn Rate: " + timeBetweenSpawn);
 		cd = GetComponent<BoxCollider2D>();
@@ -29,7 +29,7 @@ public class MeteoriteSpawnerController : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void Update()
+	private void Update()
 	{
 		// If difficulty has been updated, then update.
 		if (difficultyManagerController.DifficultyUpdated())
@@ -42,7 +42,7 @@ public class MeteoriteSpawnerController : MonoBehaviour
 		
 	}
 
-	void FixedUpdate() {
+	private void FixedUpdate() {
 		/**
 		 * Start spawning meteorites when breathing time reached
 		 * and then set the delay for spawn times between meteorites
@@ -57,7 +57,7 @@ public class MeteoriteSpawnerController : MonoBehaviour
 	/**
 	 * Function to controll the spawning of meteorites
 	 */
-	void SpawnMeteorites()
+	private void SpawnMeteorites()
 	{
 		// Gets the bounding box of the box collider
 		Bounds spawnBounds = cd.bounds;
