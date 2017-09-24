@@ -1292,12 +1292,12 @@ Prefab:
     - target: {fileID: 58991366449962406, guid: be049906cd62d4b4faabff5b700cc254,
         type: 2}
       propertyPath: m_Offset.y
-      value: 0.1411779
+      value: 0.0045051575
       objectReference: {fileID: 0}
     - target: {fileID: 58991366449962406, guid: be049906cd62d4b4faabff5b700cc254,
         type: 2}
       propertyPath: m_Radius
-      value: 0.6411779
+      value: 0.50450516
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114463707615814302, guid: be049906cd62d4b4faabff5b700cc254, type: 2}
