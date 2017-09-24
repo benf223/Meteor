@@ -1,16 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class TouchTests : MonoBehaviour {
-
+public class TouchTests : MonoBehaviour
+{
 	// Use this for initialization
-	void Start () {
+	void Start()
+	{
+		UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
+	}
+
+	private void MainMenuTests()
+	{
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	private void GamePlayTests()
+	{
 		
 	}
+
+	private void GameEndTests()
+	{
+		
+	}
+
 }
