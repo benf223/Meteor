@@ -42,7 +42,7 @@ public class GameEndController : MonoBehaviour
 			reminderText.color = Color.black;
 		}
 
-		if (timeToStop == (int) Time.timeSinceLevelLoad)
+		if (timeToStop <= (int) Time.timeSinceLevelLoad)
 		{
 			if (Input.touchCount == 1)
 			{
