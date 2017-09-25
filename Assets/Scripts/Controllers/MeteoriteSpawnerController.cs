@@ -8,7 +8,7 @@ public class MeteoriteSpawnerController : MonoBehaviour
 
 	private Collider2D cd;
 	public GameObject meteorite;
-	public GameObject diffucltyManager;
+	public GameObject difficultyManager;
 	private DifficultyManagerController difficultyManagerController;
 
 	public bool spawningEnabled = true;
@@ -34,14 +34,16 @@ public class MeteoriteSpawnerController : MonoBehaviour
 		startTime = Time.timeSinceLevelLoad;
 		Debug.Log("Spawn Rate: " + timeBetweenSpawn);
 		cd = GetComponent<BoxCollider2D>();
-		difficultyManagerController = diffucltyManager.GetComponent<DifficultyManagerController>();
+		if (difficultyManager != null) {
+			difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
+		}
 	}
 
 	// Update is called once per frame
 	private void Update()
 	{
 		// If difficulty has been updated, then update.
-		if (difficultyManagerController.DifficultyUpdated())
+		if (difficultyManagerController != null && difficultyManagerController.DifficultyUpdated())
 		{
 			// NOTE: Set time for spawn delay
 			timeBetweenSpawn = difficultyManagerController.GetMeteoriteSpawnDelayMultiplier();
