@@ -14,7 +14,7 @@ public class AlternateSpawner : MonoBehaviour
 	private bool spawn;
 	private System.Random rand;
 
-	void Start()
+	private void Start()
 	{
 		spawn = false;
 		cd = GetComponent<BoxCollider2D>();
@@ -23,7 +23,7 @@ public class AlternateSpawner : MonoBehaviour
 			rand = new System.Random();
 	}
 
-	void Update()
+	private void Update()
 	{
 		if (spawn)
 		{
@@ -43,7 +43,7 @@ public class AlternateSpawner : MonoBehaviour
 		spawn = !spawn;
 	}
 
-	void SpawnMeteorites()
+	private void SpawnMeteorites()
 	{
 		Bounds spawnBounds = cd.bounds;
 
