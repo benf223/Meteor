@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Prefabs/Island.prefab.meta
-guid: 49a5e79d4357a47feb5832c45b380942
-timeCreated: 1505794033
-=======
 guid: ae0a31dfe869a274ca6f42abbd9e0611
 timeCreated: 1506041881
->>>>>>> master:Assets/Prefabs/Cosmetic/Island.prefab.meta
 licenseType: Free
 NativeFormatImporter:
   mainObjectFileID: 100100000

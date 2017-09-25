@@ -51,6 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300ea0cfe05c6c3439c31cdd794823c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameCont: {fileID: 114831057639246678, guid: 282b1e7f8c90d4adbae7a9e24f281e1d, type: 2}
   timeFlowing: 0
   gameCont: {fileID: 0}
