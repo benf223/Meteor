@@ -9,7 +9,7 @@ public class VillageControllerTests {
 	public DifficultyManagerController diffCont;
 
 	public void LoadMyScene() {
-		UnityEngine.SceneManagement.SceneManager.LoadScene ("Test");
+			UnityEngine.SceneManagement.SceneManager.LoadScene ("Test");
 
 	}
 	[UnityTest]
@@ -20,23 +20,22 @@ public class VillageControllerTests {
 		yield return null;
 	}
 		
-//	[UnityTest]
-//	public IEnumerator TestVillageGrowthChangeSprite()
-//	{
-//		LoadMyScene ();
-//
-//		GameObject currObj = GameObject.Find("Village");
-//		villCont = currObj.GetComponent<VillageController>();
-//		Sprite sprite1 = currObj.GetComponent<SpriteRenderer> ().sprite;
-//		villCont.IncreaseSize ();
-//		GameObject nextObj = GameObject.Find("Village");
-//		villCont = nextObj.GetComponent<VillageController>();
-//		Sprite sprite2 = nextObj.GetComponent<SpriteRenderer> ().sprite;
-//		yield return new WaitForFixedUpdate();
-//		Assert.IsFalse(sprite1.Equals(sprite2));
-//		//Assert.AreEqual(1,1);
-//		//yield return null;
-//	}
+	[UnityTest]
+	public IEnumerator TestVillageGrowthChangeSprite()
+	{
+		LoadMyScene ();
+		yield return new WaitForFixedUpdate();
+		GameObject currObj = GameObject.Find("Village");
+		villCont = currObj.GetComponent<VillageController>();
+		Sprite sprite1 = currObj.GetComponent<SpriteRenderer> ().sprite;
+		villCont.IncreaseSize ();
+		GameObject nextObj = GameObject.Find("Village");
+		villCont = nextObj.GetComponent<VillageController>();
+		Sprite sprite2 = nextObj.GetComponent<SpriteRenderer> ().sprite;
+		yield return new WaitForFixedUpdate();
+		Assert.IsFalse(sprite1.Equals(sprite2));
+
+	}
 
 	// A UnityTest behaves like a coroutine in PlayMode
 	// and allows you to yield null to skip a frame in EditMode
