@@ -10,6 +10,8 @@ public class GameEndController : MonoBehaviour
 
 	private bool update;
 	private int count;
+
+	private int timeToStop;
 	
 	// Use this for initialization
 	public void Start()
@@ -17,6 +19,7 @@ public class GameEndController : MonoBehaviour
 		endText.fontSize = 2;
 		update = true;
 		count = 0;
+		timeToStop = (int) Time.timeSinceLevelLoad + 3;
 
 		scoreText.text = PlayerPrefs.GetString("score");
 	}
@@ -39,18 +42,21 @@ public class GameEndController : MonoBehaviour
 			reminderText.color = Color.black;
 		}
 
-		if (Input.touchCount == 1)
+		if (timeToStop == (int) Time.timeSinceLevelLoad)
 		{
-			PlayerPrefs.SetString("score", "Score: 0");
-			
-			//This is a listener for the TouchTests class.
-			if (Debug.isDebugBuild)
+			if (Input.touchCount == 1)
 			{
-				//Calls the listener.
-				GameObject.Find("TestObject").GetComponent<TouchTests>().GameEndListener();
-			}
+				PlayerPrefs.SetString("score", "Score: 0");
 			
-			UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+				//This is a listener for the TouchTests class.
+				if (Debug.isDebugBuild)
+				{
+					//Calls the listener.
+					GameObject.Find("TestObject").GetComponent<TouchTests>().GameEndListener();
+				}
+			
+				UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+			}
 		}
 	}
 }
