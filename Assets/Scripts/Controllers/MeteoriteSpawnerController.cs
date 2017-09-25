@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class MeteoriteSpawnerController : MonoBehaviour
 {
+	public int amountSpawned {get; private set;}
+
 	private Collider2D cd;
 	public GameObject meteorite;
-	public GameObject diffucltyManager;
+	public GameObject difficultyManager;
 	private DifficultyManagerController difficultyManagerController;
+
+	public bool spawningEnabled = true;
 
 	// Breath time for when to start the spawning of meteorites
 	private float startSpawnTime = 0.75f;
@@ -19,20 +23,27 @@ public class MeteoriteSpawnerController : MonoBehaviour
 	public float minSpawnForce;
 	public float maxSpawnForce;
 
+	// Testing tthe time for first spawn
+	private float startTime;
+	private float timeFirstSpawn = -1;
+
 
 	// Use this for initialization
 	private void Start()
 	{
+		startTime = Time.timeSinceLevelLoad;
 		Debug.Log("Spawn Rate: " + timeBetweenSpawn);
 		cd = GetComponent<BoxCollider2D>();
-		difficultyManagerController = diffucltyManager.GetComponent<DifficultyManagerController>();
+		if (difficultyManager != null) {
+			difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
+		}
 	}
 
 	// Update is called once per frame
 	private void Update()
 	{
 		// If difficulty has been updated, then update.
-		if (difficultyManagerController.DifficultyUpdated())
+		if (difficultyManagerController != null && difficultyManagerController.DifficultyUpdated())
 		{
 			// NOTE: Set time for spawn delay
 			timeBetweenSpawn = difficultyManagerController.GetMeteoriteSpawnDelayMultiplier();
@@ -51,6 +62,14 @@ public class MeteoriteSpawnerController : MonoBehaviour
 		{
 			SpawnMeteorites();
 			startSpawnTime = Time.timeSinceLevelLoad + timeBetweenSpawn;
+
+			/**
+			 * For Testing
+			 */
+			if (timeFirstSpawn == -1) {
+				timeFirstSpawn = Time.timeSinceLevelLoad;
+				Debug.Log("Delay for first spawN: " + (timeFirstSpawn - startTime));
+			}
 		}
 	}
 
@@ -75,6 +94,7 @@ public class MeteoriteSpawnerController : MonoBehaviour
 		// Create the object in the random position
 		GameObject spawned = Instantiate(meteorite, spawnLocation, Quaternion.identity);
 		Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
+		// Debug.Log("Meteorite ID: " + spawned.GetInstanceID()+" | Spawn Location (x, y): " + "("+rb.position.x+". "+ rb.position.y+")");
 
 		// Randomize between spawning to the left, or the right
 		// 0 = right, 180 = left

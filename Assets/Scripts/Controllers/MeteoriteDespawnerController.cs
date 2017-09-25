@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MeteoriteDespawnerController : MonoBehaviour {
 	public GameController gameCont;
+	public int amountDespawned {get; private set;}
 	// Use this for initialization
 	private void Start () {
 		
