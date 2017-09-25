@@ -51,7 +51,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b8ef5f990a641499114dfb2650ade3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   difficultyManager: {fileID: 1284525091757060, guid: 14958cc3649084746aa4f8ccc64baecb,
     type: 2}
   scoreText: {fileID: 114613703202062268, guid: ffd3b3daae958495186f0877ec14eccc,
     type: 2}
+=======
+  difficultyManager: {fileID: 0}
+  scoreText: {fileID: 0}
+>>>>>>> master
