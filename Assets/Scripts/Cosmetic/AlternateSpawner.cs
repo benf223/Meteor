@@ -1,30 +1,50 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class MeteoriteSpawnerController : MonoBehaviour {
+public class AlternateSpawner : MonoBehaviour
+{
+	public GameObject meteorite;
+	public bool mainMenu;
 
 	private Collider2D cd;
-	public GameObject meteorite;
-	
-	private float startSpawnTime = 1.0f;
-	public float timeBetweenSpawn = 0.4f;
+	private bool spawn;
+	private System.Random rand;
 
-
-	// Use this for initialization
-	void Start () {
+	private void Start()
+	{
+		spawn = false;
 		cd = GetComponent<BoxCollider2D>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (Time.time >= startSpawnTime) {
-			SpawnMeteorites();
-			startSpawnTime = Time.time + timeBetweenSpawn;
-		}
+
+		if (mainMenu)
+			rand = new System.Random();
 	}
 
-	void SpawnMeteorites() {
+	private void Update()
+	{
+		if (spawn)
+		{
+			if (mainMenu)
+			{
+				if (rand.Next(60) == 3)
+				{
+					SpawnMeteorites();
+				}
+			}
+			else
+			{
+				SpawnMeteorites();
+			}
+		}
+		
+		spawn = !spawn;
+	}
+
+	private void SpawnMeteorites()
+	{
 		Bounds spawnBounds = cd.bounds;
 
 		Vector3 min = spawnBounds.min; // Get the minimum values
