@@ -5,10 +5,7 @@ using System.Collections;
 
 public class SpawnerTest {
 
-	[Test]
-	public void SpawnerTestSimplePasses() {
-		// Use the Assert class to test conditions.
-	}
+	private bool sceneLoaded = false;
 
 	// A UnityTest behaves like a coroutine in PlayMode
 	// and allows you to yield null to skip a frame in EditMode
@@ -42,7 +39,26 @@ public class SpawnerTest {
 	 * Function to load the test scene
 	 */
 	private void SetupScene() {
-		UnityEngine.SceneManagement.SceneManager.LoadScene("Spawn Test");
+		if (!sceneLoaded) {
+			UnityEngine.SceneManagement.SceneManager.LoadScene("Spawn Test");
+			sceneLoaded = true;
+		}
+		
+		
+	}
+
+	/**
+	 * Tests if more than one meteorites can be present at once
+	 */
+	[UnityTest]
+	public IEnumerator SpawnerTestMultipleAtOnce() {
+		SetupScene();
+
+		yield return new WaitForSeconds(5);
+
+		GameObject[] meteorites = GameObject.FindGameObjectsWithTag("Meteorite");
+		Debug.Log("Meteorite Count: " + meteorites.Length);
+		Assert.AreEqual(true, meteorites.Length > 1);
 	}
 }
 
