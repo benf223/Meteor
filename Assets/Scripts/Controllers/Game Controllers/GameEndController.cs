@@ -43,8 +43,12 @@ public class GameEndController : MonoBehaviour
 		{
 			PlayerPrefs.SetString("score", "Score: 0");
 			
-			//This is a way to add a listener for the test
-			GameObject.Find("TestObject").GetComponent<TouchTests>().GameEndListener();
+			//This is a listener for the TouchTests class.
+			if (Debug.isDebugBuild)
+			{
+				//Calls the listener.
+				GameObject.Find("TestObject").GetComponent<TouchTests>().GameEndListener();
+			}
 			
 			UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
 		}
