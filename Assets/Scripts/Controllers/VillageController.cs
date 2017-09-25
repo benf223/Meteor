@@ -50,14 +50,16 @@ public class VillageController : MonoBehaviour {
      * NOTE: This function is called within the difficulty manager controller to make sure it is called 100% of the time
      * WILL NEED TO FIGURE OUT WHY IT WON'T CALL WHEN IN THE UPDATES 100% OF THE TIME
 	 * */
-    public void IncreaseSize() {
+    public bool IncreaseSize() {
         Debug.Log("Growed?");
         if (growthCount < 2) {
             Debug.Log("Village growth triggered!");
             spriteRenderer.sprite = sprites[growthCount + 1];
             UpdateCollider();
+			return true;
         }
         growthCount++;
+		return false;
     }
 
 	private void OnCollisionEnter2D(Collision2D collision) {
