@@ -52,3 +52,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeFlowing: 0
+  gameCont: {fileID: 0}
