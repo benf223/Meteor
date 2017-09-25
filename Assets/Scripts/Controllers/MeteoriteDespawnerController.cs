@@ -5,16 +5,16 @@ using UnityEngine;
 public class MeteoriteDespawnerController : MonoBehaviour {
 	public GameController gameCont;
 	// Use this for initialization
-	void Start () {
+	private void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	private void Update () {
 		
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
+	private void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Meteorite") {
 			Destroy(other.gameObject);
 			if (gameCont != null) {

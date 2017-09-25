@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -12,7 +10,7 @@ public class GameController : MonoBehaviour
 	public Text scoreText;
 	
     // Use this for initialization
-    void Start()
+	private void Start()
     {
         Time.timeScale = 1f;
 	    score = -1;
@@ -21,7 +19,7 @@ public class GameController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+	private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
@@ -45,4 +43,14 @@ public class GameController : MonoBehaviour
         PlayerPrefs.SetString("score", "Score: " + score);
         difficultyManagerControl.PauseTimer(); // maybe 
     }
+
+	public int GetScore()
+	{
+		return score;
+	}
+
+	public void StoreScore()
+	{
+		PlayerPrefs.SetString("score", "Score: " + score);
+	}
 }

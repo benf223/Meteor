@@ -29,7 +29,7 @@ public class DifficultyManagerController : MonoBehaviour
 	public float maxDifficultyTime;	
 
 	// Use this for initialization
-	void Start()
+	private void Start()
 	{
 		minutes = 0;
 		seconds = 0;
@@ -44,7 +44,7 @@ public class DifficultyManagerController : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void Update()
+	private void Update()
 	{
 		if (timeFlowing)
 		{
@@ -67,7 +67,7 @@ public class DifficultyManagerController : MonoBehaviour
 		//Debug.Log(seconds);
 	}
 
-	void DifficultyTimeFrame()
+	private void DifficultyTimeFrame()
 	{
 		// does 20, 19, 18, 17, 16, 15 all the way to 10 seconds it changes difficulty
 		// Note: Default values (20 - timeRemoved), (timeRemoved <= 10)

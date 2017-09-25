@@ -14,12 +14,12 @@ public class TouchController : MonoBehaviour {
     private bool dragging;
 
     // Use this for initialization
-    void Start() {
+	private void Start() {
         dragging = false;
     }
 
     // Update is called once per frame
-    void Update() {
+	private void Update() {
         /**
 		 * Calls when exactly 1 touch has been counted
 		 */

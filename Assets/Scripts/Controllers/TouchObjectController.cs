@@ -28,7 +28,7 @@ public class TouchObjectController : MonoBehaviour
 	private GameObject meteorite;
 
 	// Use this for initialization
-	void Start()
+	private void Start()
 	{
 		//foundMeteorite = false;
 		touchManager = GameObject.Find("TouchManager");
@@ -39,7 +39,7 @@ public class TouchObjectController : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void Update()
+	private void Update()
 	{
 		/**
 		 * Destroys the object when the drag time is reached
@@ -51,7 +51,7 @@ public class TouchObjectController : MonoBehaviour
 		}
 	}
 
-	void FixedUpdate()
+	private void FixedUpdate()
 	{	
 		// Gets the position of the current frame
 		currentPosition = transform.position;
@@ -93,7 +93,7 @@ public class TouchObjectController : MonoBehaviour
 	 * Function that controls the movement of the meteorite
 	 * the touch object is interacting with.
 	 */
-	void MoveMeteorite()
+	private void MoveMeteorite()
 	{	
 		// Referencing the needed controllers and components
 		MeteoriteController meteoriteController = meteorite.GetComponent<MeteoriteController>();
@@ -121,7 +121,7 @@ public class TouchObjectController : MonoBehaviour
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
 		/**
 		 * This first if statement is to stop the touch object from
