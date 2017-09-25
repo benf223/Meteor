@@ -13,6 +13,9 @@ public class TouchTests : MonoBehaviour
 
 	private void Start()
 	{
+	    if (!Debug.isDebugBuild)
+		    return;
+	
 		sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
 		if (sceneName.Equals("Menu"))
@@ -38,6 +41,9 @@ public class TouchTests : MonoBehaviour
 
 	private void Update()
 	{
+		if (!Debug.isDebugBuild)
+			return;
+		
 		switch (sceneName)
 		{
 			case "Menu":
@@ -79,6 +85,9 @@ public class TouchTests : MonoBehaviour
 	
 	private void QuitButtonListener()
 	{
+		if (!Debug.isDebugBuild)
+			return;
+		
 		menuFlag = true;
 		wasQuit = true;
 	}
@@ -116,6 +125,9 @@ public class TouchTests : MonoBehaviour
 
 	private void OnDestroy()
 	{
+		if (!Debug.isDebugBuild)
+			return;
+		
 		if (gameEndFlag)
 		{
 			Debug.Log("Touch Test: Scene changing from Game End.");
