@@ -64,7 +64,7 @@ public class DifficultyManagerController : MonoBehaviour
 	{
 		gameCont.AddScore(1);
 		secondsToIncreaseDifficulty++; // Used for the difficulty increase interval
-		//Debug.Log(seconds);
+		Debug.Log(seconds);
 	}
 
 	private void DifficultyTimeFrame()

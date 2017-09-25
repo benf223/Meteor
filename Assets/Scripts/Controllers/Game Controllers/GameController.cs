@@ -12,10 +12,12 @@ public class GameController : MonoBehaviour
     // Use this for initialization
 	private void Start()
     {
+		
         Time.timeScale = 1f;
 	    score = -1;
 	    difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();
         difficultyManagerControl.StartTimer();
+		Debug.Log ("Start woo");
     }
 
     // Update is called once per frame
