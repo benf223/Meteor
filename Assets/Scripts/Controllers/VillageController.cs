@@ -16,7 +16,7 @@ public class VillageController : MonoBehaviour {
     public bool godMode;
 
     // Use this for initialization
-    void Start() {
+	private void Start() {
         // Initialize the difficulty manager script
         if (difficultyManager != null) {
             difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
@@ -32,14 +32,14 @@ public class VillageController : MonoBehaviour {
         Debug.Log("Village Created Succesfully");
     }
 
-    void FixedUpdate() {
+	private void FixedUpdate() {
         // if (difficultyManagerController != null && difficultyManagerController.DifficultyUpdated()) {
         //     IncreaseSize();
         // }
     }
 
     // Update is called once per frame
-    void Update() {
+	private void Update() {
         
     }
     /**
@@ -60,14 +60,14 @@ public class VillageController : MonoBehaviour {
         growthCount++;
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
+	private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Meteorite")) {
             if (!godMode) {
                 MeteoriteController meteorite = collision.gameObject.GetComponent<MeteoriteController>();
                 meteorite.BlowUp();
                 isDestroyed = true;
                 Destroy(gameObject);
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Game End");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("GameEnd");
             }
 
         }
@@ -78,7 +78,7 @@ public class VillageController : MonoBehaviour {
      * depending on the sprite's bounds set
      * in the sprite editor.
      */
-    void UpdateCollider() {
+	private void UpdateCollider() {
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
 
         // Gets the size and center of the sprite and applies it to the collider
