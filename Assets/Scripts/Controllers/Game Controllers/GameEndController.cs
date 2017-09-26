@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GameEndController : MonoBehaviour
@@ -10,7 +9,6 @@ public class GameEndController : MonoBehaviour
 
 	private bool update;
 	private int count;
-
 	private int timeToStop;
 	
 	// Use this for initialization

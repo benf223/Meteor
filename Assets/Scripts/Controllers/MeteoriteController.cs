@@ -4,18 +4,15 @@ public class MeteoriteController : MonoBehaviour
 {
 	private GameObject difficultyManager;
 	private DifficultyManagerController difficultyManagerController;
-
 	private Rigidbody2D rb;
 
 	public float minGravityScale;
 	public float maxGravityScale;
-
 	public PhysicsMaterial2D lowBounce;
 	
 	[HideInInspector]
 	public bool touching; // State in which meteorite is in process of flick
 	private bool touched; // State in which meteorite HAS BEEN touched
-
 	private GameObject touchObject;
 
 	// Use this for initialization
@@ -25,6 +22,7 @@ public class MeteoriteController : MonoBehaviour
 		touched = false;
 		touching = false;
 		difficultyManager = GameObject.Find("DifficultyManager");
+		
 		if (difficultyManager != null)
 		{
 			difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
@@ -54,30 +52,22 @@ public class MeteoriteController : MonoBehaviour
 	private void InitializeSpeed()
 	{
 		rb = GetComponent<Rigidbody2D>();
+		
 		if (difficultyManagerController != null)
 		{
 			// Initial Gravity Scale
 			maxGravityScale = difficultyManagerController.GetMeteoriteSpeedMultiplier();
-			// Debug.Log("Max Meteorite Speed = " + maxGravityScale);
 		}
 
 		float gravityScale = Random.Range(minGravityScale, maxGravityScale);
 		rb.gravityScale = gravityScale;
 	}
 
-	private void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.CompareTag("Touch") && !touched)
-		{
-			//SetTouched(other.gameObject);
-		}
-	}
-
 	public void SetTouched(GameObject touchObject)
 	{
 		this.touchObject = touchObject;
 		touching = true;
-		//	gameObject.GetComponent<Renderer>().material.color = Color.gray; // Indicates when touched. Instead would need to change sprite when we actually have art
+		
 		CircleCollider2D cd = GetComponent<CircleCollider2D>();
 		cd.sharedMaterial = lowBounce;
 	}

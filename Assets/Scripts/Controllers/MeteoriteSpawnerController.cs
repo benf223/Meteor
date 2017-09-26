@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MeteoriteSpawnerController : MonoBehaviour
 {
-	public int amountSpawned {get; private set;}
-
-	private Collider2D cd;
+	public int amountSpawned { get; private set; }
 	public GameObject meteorite;
 	public GameObject difficultyManager;
+
+	private Collider2D cd;
 	private DifficultyManagerController difficultyManagerController;
 
 	public bool spawningEnabled = true;
@@ -21,20 +19,28 @@ public class MeteoriteSpawnerController : MonoBehaviour
 
 	// Minimum and maximum spawn force
 	public float minSpawnForce;
+
 	public float maxSpawnForce;
 
 	// Testing tthe time for first spawn
 	private float startTime;
-	private float timeFirstSpawn = -1;
 
+	private float timeFirstSpawn = -1;
 
 	// Use this for initialization
 	private void Start()
 	{
 		startTime = Time.timeSinceLevelLoad;
-		Debug.Log("Spawn Rate: " + timeBetweenSpawn);
+		
+		if (Debug.isDebugBuild)
+		{
+			Debug.Log("Spawn Rate: " + timeBetweenSpawn);
+		}
+
 		cd = GetComponent<BoxCollider2D>();
-		if (difficultyManager != null) {
+
+		if (difficultyManager != null)
+		{
 			difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
 		}
 	}
@@ -47,13 +53,16 @@ public class MeteoriteSpawnerController : MonoBehaviour
 		{
 			// NOTE: Set time for spawn delay
 			timeBetweenSpawn = difficultyManagerController.GetMeteoriteSpawnDelayMultiplier();
-			Debug.Log("Spawn Rate: " + timeBetweenSpawn);
-		}
 
-		
+			if (Debug.isDebugBuild)
+			{
+				Debug.Log("Spawn Rate: " + timeBetweenSpawn);
+			}
+		}
 	}
 
-	private void FixedUpdate() {
+	private void FixedUpdate()
+	{
 		/**
 		 * Start spawning meteorites when breathing time reached
 		 * and then set the delay for spawn times between meteorites
@@ -63,12 +72,16 @@ public class MeteoriteSpawnerController : MonoBehaviour
 			SpawnMeteorites();
 			startSpawnTime = Time.timeSinceLevelLoad + timeBetweenSpawn;
 
-			/**
-			 * For Testing
-			 */
-			if (timeFirstSpawn == -1) {
-				timeFirstSpawn = Time.timeSinceLevelLoad;
-				Debug.Log("Delay for first spawN: " + (timeFirstSpawn - startTime));
+			if (Debug.isDebugBuild)
+			{
+				/**
+				 * For Testing
+				 */
+				if (timeFirstSpawn == -1)
+				{
+					timeFirstSpawn = Time.timeSinceLevelLoad;
+					Debug.Log("Delay for first spawn: " + (timeFirstSpawn - startTime));
+				}
 			}
 		}
 	}
@@ -94,25 +107,28 @@ public class MeteoriteSpawnerController : MonoBehaviour
 		// Create the object in the random position
 		GameObject spawned = Instantiate(meteorite, spawnLocation, Quaternion.identity);
 		Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
-		// Debug.Log("Meteorite ID: " + spawned.GetInstanceID()+" | Spawn Location (x, y): " + "("+rb.position.x+". "+ rb.position.y+")");
 
 		// Randomize between spawning to the left, or the right
 		// 0 = right, 180 = left
-		float angle = 180;
+		float angle;
 		int randomNum = Random.Range(0, 2);
-		if (randomNum == 0) {
+		
+		if (randomNum == 0)
+		{
 			angle = 0;
-		} else {
+		}
+		else
+		{
 			angle = 180;
 		}
 
 		// Calculate the force to add
 		float addedForce = Random.Range(minSpawnForce, maxSpawnForce);
-		
+
 		// Calculates the direction using the angle
 		// TBH, I have no idea how this actually works.
 		Vector3 dir = Quaternion.AngleAxis(angle, Vector3.up) * Vector3.right;
-		
+
 		// Finally, add the force to the direction.
 		rb.AddForce(dir * addedForce);
 	}

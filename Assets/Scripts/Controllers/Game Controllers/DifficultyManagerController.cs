@@ -8,8 +8,6 @@ public class DifficultyManagerController : MonoBehaviour
 	public GameController gameCont;
 
 	// time
-	// private int hours;
-
 	private int minutes;
 	private int seconds;
 	private float startTimer;
@@ -50,6 +48,7 @@ public class DifficultyManagerController : MonoBehaviour
 		{
 			UpdateTime();
 			DifficultyTimeFrame();
+			
 			// Updates every second (or based on interval variable)
 			if (Time.timeSinceLevelLoad >= elapsedTime)
 			{
@@ -64,7 +63,6 @@ public class DifficultyManagerController : MonoBehaviour
 	{
 		gameCont.AddScore(1);
 		secondsToIncreaseDifficulty++; // Used for the difficulty increase interval
-		//Debug.Log(seconds);
 	}
 
 	private void DifficultyTimeFrame()
@@ -107,10 +105,13 @@ public class DifficultyManagerController : MonoBehaviour
 	// Checks if difficulty has been updated, then resets status onced used
 	public bool DifficultyUpdated()
 	{
-		
 		if (difficultyUpdated)
 		{
-			Debug.Log("Difficulty Updated");
+			if (Debug.isDebugBuild)
+			{
+				Debug.Log("Difficulty Updated");
+			}
+			
 			difficultyUpdated = false;
 			return true;
 		}
@@ -140,7 +141,6 @@ public class DifficultyManagerController : MonoBehaviour
 	{
 		countTime = Time.timeSinceLevelLoad - startTimer;
 
-		// hours = (int) countTime / 360;
 		minutes = (int) countTime / 60;
 		seconds = (int) countTime % 60;
 	}
