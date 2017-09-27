@@ -40,9 +40,23 @@ public class GameController : MonoBehaviour
 
     private void OnDestroy()
     {
+	    UpdateHighscores();
         PlayerPrefs.SetString("score", "Score: " + score);
         difficultyManagerControl.PauseTimer();
     }
+
+	private void UpdateHighscores()
+	{
+		int[] current = new int[5];
+
+		for (int i = 0; i < current.Length; ++i)
+		{
+			current[i] = PlayerPrefs.GetInt("Highscore" + i, 0);
+		}
+		
+		//find place
+		//shuffle down
+	}
 
 	public int GetScore()
 	{
