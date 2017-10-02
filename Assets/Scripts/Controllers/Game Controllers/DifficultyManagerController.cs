@@ -21,6 +21,7 @@ public class DifficultyManagerController : MonoBehaviour
 
 	private float spawnDelayMultiplier;
 	private float speedMultiplier;
+    private float directionChange;
 	private bool difficultyUpdated;
 
 	public float initialDifficultyTime;
@@ -36,9 +37,12 @@ public class DifficultyManagerController : MonoBehaviour
 		timeFlowing = false;
 		secondsToIncreaseDifficulty = 0;
 		timeRemoved = 0;
-		spawnDelayMultiplier = 0.75f;
-		speedMultiplier = 1.0f;
-		difficultyUpdated = false;
+
+        spawnDelayMultiplier = 0.75f;
+        speedMultiplier = 1.0f;
+        directionChange = 0.4f;
+
+        difficultyUpdated = false;
 	}
 
 	// Update is called once per frame
@@ -76,23 +80,23 @@ public class DifficultyManagerController : MonoBehaviour
 				timeRemoved++;
 			}
 
-			// Modify spawn delay multiplier
-			// NOTE THIS CAN CHANGE
-			// this decreases from 1 to 0.25 using 0.05 for every difficulty time frame.
-			// To further optimize, this section should call a method from the spawner
-			// Alvin will be keen to refactor these sections of code after main game is completed
+			// starts at 0.75, decreases every .035 and maxs at 0.4 (does it 10 times)
 			if (spawnDelayMultiplier >= 0.4f)
 			{
 				spawnDelayMultiplier -= 0.035f;
 			}
 
-			// Modify meteorite speed multiplier
-			// NOTE THIS CAN CHANGE
-			// this increases from 1.0 to 2.0 using 0.05 for every difficulty time frame.
+			// starts at 1.00, increases every .035 and maxs at 1.75 (does it 21-22 times)
 			if (speedMultiplier <= 1.75f)
 			{
 				speedMultiplier += 0.035f;				
 			}
+
+            // starts at 0.40, increases every .025 and maxs at 0.80 (does it 20 times)
+            if (directionChange <= 0.80f)
+            {
+                directionChange += .025f;
+            }
 
 			secondsToIncreaseDifficulty = 0; // Reset countdown timer for difficulty change
 			difficultyUpdated = true; // Notifies that difficulty has changed
@@ -121,7 +125,7 @@ public class DifficultyManagerController : MonoBehaviour
 
 	public float GetMeteoriteSpawnDirectionMultiplier() {
 
-		return 0.0f;
+		return directionChange;
 	}
 
 	public float GetMeteoriteSpawnDelayMultiplier()

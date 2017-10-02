@@ -98,7 +98,9 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 
 		float chance = Random.Range(0.0f, 1.0f);
 
-		float chanceToAimAtVillage = 0.40f; // This will change to call from the difficulty manager
+        // This will change to call from the difficulty manager
+        float chanceToAimAtVillage = difficultyManagerController.GetMeteoriteSpawnDirectionMultiplier();
+
 		Debug.Log(chance);
 
         if (chance > chanceToAimAtVillage) {
