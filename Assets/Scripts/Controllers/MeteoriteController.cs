@@ -9,7 +9,7 @@ public class MeteoriteController : MonoBehaviour
 	public float minGravityScale;
 	public float maxGravityScale;
 	public PhysicsMaterial2D lowBounce;
-	
+
 	[HideInInspector]
 	public bool touching; // State in which meteorite is in process of flick
 	private bool touched; // State in which meteorite HAS BEEN touched
@@ -32,7 +32,7 @@ public class MeteoriteController : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	private void Update()
+	void Update()
 	{
 		if (touching)
 		{
@@ -43,6 +43,7 @@ public class MeteoriteController : MonoBehaviour
 			}
 		}
 	}
+
 
 	public void BlowUp()
 	{

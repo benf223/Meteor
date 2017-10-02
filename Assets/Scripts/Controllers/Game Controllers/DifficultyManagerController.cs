@@ -119,6 +119,10 @@ public class DifficultyManagerController : MonoBehaviour
 		return false;
 	}
 
+	public float GetMeteoriteSpawnDirectionMultiplier() {
+
+		return 0.0f;
+	}
 
 	public float GetMeteoriteSpawnDelayMultiplier()
 	{
