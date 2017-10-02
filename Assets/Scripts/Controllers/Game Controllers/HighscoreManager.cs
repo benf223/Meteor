@@ -15,6 +15,7 @@ public class HighscoreManager : MonoBehaviour
 	private void Start()
 	{
 		highscores = new int[5];
+		
 		LoadScores();
 		WriteScores();
 
@@ -23,11 +24,11 @@ public class HighscoreManager : MonoBehaviour
 
 	private void LoadScores()
 	{
-		highscores[0] = 1000000;
-		highscores[1] = 100000;
-		highscores[2] = 10000;
-		highscores[3] = 1000;
-		highscores[4] = 100;
+		highscores[0] = PlayerPrefs.GetInt("Highscore1", 0);
+		highscores[1] = PlayerPrefs.GetInt("Highscore2", 0);
+		highscores[2] = PlayerPrefs.GetInt("Highscore3", 0);
+		highscores[3] = PlayerPrefs.GetInt("Highscore4", 0);
+		highscores[4] = PlayerPrefs.GetInt("Highscore5", 0);
 	}
 
 	private void WriteScores()
@@ -46,7 +47,7 @@ public class HighscoreManager : MonoBehaviour
 	// Update is called once per frame
 	private void Update()
 	{
-		if (Random.Range(1, 6) == 3)
+		if (Random.Range(1, 20) == 3)
 			SpawnStar();
 		
 		if (Input.GetKeyDown(KeyCode.Escape))

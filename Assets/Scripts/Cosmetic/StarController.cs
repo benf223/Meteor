@@ -18,13 +18,16 @@ public class StarController : MonoBehaviour
 
 	void Update()
 	{
-		if (Random.Range(0, 10) == 5 && !twinkling)
+		if (twinkling)
 		{
-			if (twinkling)
-				UnTwinkle();
-			else
-				Twinkle();
+			UnTwinkle();
 		}
+		else
+		{
+			Twinkle();
+		}
+		
+		twinkling = !twinkling;
 	}
 
 	private void Twinkle()
