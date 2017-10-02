@@ -7,7 +7,7 @@ public class MeteoriteDespawnerController : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.tag.Equals("Meteorite"))
+		if (other.gameObject.tag.Equals("Meteorite") || other.gameObject.tag.Equals("PowerUp"))
 		{
 			Destroy(other.gameObject);
 			

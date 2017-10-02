@@ -5,6 +5,9 @@ public class GameController : MonoBehaviour
 {
     private int score;
     private DifficultyManagerController difficultyManagerControl;
+
+	public GameObject basePowerUp;
+	private GameObject powerUpSpawner;
 	
 	public GameObject difficultyManager;
 	public Text scoreText;
@@ -44,6 +47,12 @@ public class GameController : MonoBehaviour
         PlayerPrefs.SetString("score", "Score: " + score);
         difficultyManagerControl.PauseTimer();
     }
+
+	private void SpawnPowerUp()
+	{
+		//Choose type of powerup;
+		
+	}
 
 	private void UpdateHighscores()
 	{
