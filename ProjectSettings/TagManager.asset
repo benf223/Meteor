@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Meteorite
   - Touch
-  - Cloud
-  - PowerUp
   layers:
   - Default
   - TransparentFX
@@ -18,7 +16,7 @@ TagManager:
   - 
   - 
   - Meteorite
-  - Powerups
+  - 
   - 
   - 
   - 
