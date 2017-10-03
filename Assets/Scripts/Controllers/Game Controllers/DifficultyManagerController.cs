@@ -21,7 +21,7 @@ public class DifficultyManagerController : MonoBehaviour
 
 	private float spawnDelayMultiplier;
 	private float speedMultiplier;
-    private float directionChange;
+    private float directionChangeMultiplier;
 	private bool difficultyUpdated;
 
 	public float initialDifficultyTime;
@@ -38,9 +38,9 @@ public class DifficultyManagerController : MonoBehaviour
 		secondsToIncreaseDifficulty = 0;
 		timeRemoved = 0;
 
-        spawnDelayMultiplier = 0.75f;
+        spawnDelayMultiplier = 0.90f;
         speedMultiplier = 1.0f;
-        directionChange = 0.4f;
+        directionChangeMultiplier = 0.4f;
 
         difficultyUpdated = false;
 	}
@@ -80,10 +80,10 @@ public class DifficultyManagerController : MonoBehaviour
 				timeRemoved++;
 			}
 
-			// starts at 0.75, decreases every .035 and maxs at 0.4 (does it 10 times)
+			// starts at 0.90, decreases every .05 and maxs at 0.4 (does it 10 times)
 			if (spawnDelayMultiplier >= 0.4f)
 			{
-				spawnDelayMultiplier -= 0.035f;
+				spawnDelayMultiplier -= 0.1f;
 			}
 
 			// starts at 1.00, increases every .035 and maxs at 1.75 (does it 21-22 times)
@@ -92,10 +92,10 @@ public class DifficultyManagerController : MonoBehaviour
 				speedMultiplier += 0.035f;				
 			}
 
-            // starts at 0.40, increases every .025 and maxs at 0.80 (does it 20 times)
-            if (directionChange <= 0.80f)
+            // starts at 0.40, increases every .05 and maxs at 0.80 (does it 10? times)
+            if (directionChangeMultiplier <= 0.80f)
             {
-                directionChange += .025f;
+                directionChangeMultiplier += .05f;
             }
 
 			secondsToIncreaseDifficulty = 0; // Reset countdown timer for difficulty change
@@ -125,7 +125,7 @@ public class DifficultyManagerController : MonoBehaviour
 
 	public float GetMeteoriteSpawnDirectionMultiplier() {
 
-		return directionChange;
+		return directionChangeMultiplier;
 	}
 
 	public float GetMeteoriteSpawnDelayMultiplier()

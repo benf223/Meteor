@@ -14,7 +14,8 @@ public class MeteoriteSpawnerController : MonoBehaviour {
     private float startSpawnTime = 0.75f;
 
     // Spawn delay between meteorites
-    public float timeBetweenSpawn;
+    private float timeBetweenSpawn;
+    public float startingTimeBetweenSpawn;
 
     // Minimum and maximum spawn force
     public float minSpawnForce;
@@ -28,6 +29,7 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 
     // Use this for initialization
     private void Start() {
+        timeBetweenSpawn = startingTimeBetweenSpawn;
         startTime = Time.timeSinceLevelLoad;
 
         if (Debug.isDebugBuild) {
@@ -46,7 +48,7 @@ public class MeteoriteSpawnerController : MonoBehaviour {
         // If difficulty has been updated, then update.
         if (difficultyManagerController != null && difficultyManagerController.DifficultyUpdated()) {
             // NOTE: Set time for spawn delay
-            timeBetweenSpawn = difficultyManagerController.GetMeteoriteSpawnDelayMultiplier();
+            timeBetweenSpawn = startingTimeBetweenSpawn * difficultyManagerController.GetMeteoriteSpawnDelayMultiplier();
 
             if (Debug.isDebugBuild) {
                 Debug.Log("Spawn Rate: " + timeBetweenSpawn);
@@ -96,34 +98,38 @@ public class MeteoriteSpawnerController : MonoBehaviour {
         GameObject spawned = Instantiate(meteorite, spawnLocation, Quaternion.identity);
         GameObject village = GameObject.Find("Village");
 
-		float chance = Random.Range(0.0f, 1.0f);
+        float chance = Random.Range(0.0f, 1.0f);
 
         // This will change to call from the difficulty manager
         float chanceToAimAtVillage = difficultyManagerController.GetMeteoriteSpawnDirectionMultiplier();
 
-		Debug.Log(chance);
+            // Debug.Log("Chance to Aim at Village: " + chanceToAimAtVillage);
+            // Debug.Log("Actual Chance" + chance);
 
         if (chance > chanceToAimAtVillage) {
-			AddRandomForce(spawned);
-			
+            AddRandomForce(spawned);
+
         }
         else {
-           AddForceTowardsVillage(spawned, village);
-		}
+            AddForceTowardsVillage(spawned, village);
+        }
 
     }
 
-	private void AddForceTowardsVillage(GameObject spawned, GameObject village) {
-		Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
-		Color meteoriteColor = spawned.GetComponent<SpriteRenderer>().color;
-		meteoriteColor = new Color(0.244f, 0.152f, 0.066f); // NEED TO FIX
-		// meteoriteColor.r = 244;
-		// meteoriteColor.g = 152;
-		// meteoriteColor.b = 66;
-		Vector2 villagePos = village.GetComponent<Transform>().position;
+    private void AddForceTowardsVillage(GameObject spawned, GameObject village) {
+        Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
+        Color myColor = new Color(1f, 0.3f, 0.0f); // NEED TO FIX
 
-		rb.AddForce((villagePos - rb.position) * 50);		
-	}
+        SpriteRenderer meteoriteColor = spawned.GetComponent<SpriteRenderer>();
+        meteoriteColor.color = myColor;
+        // meteoriteColor.r = 244;
+        // meteoriteColor.g = 152;
+        // meteoriteColor.b = 66;
+        Vector2 villagePos = village.GetComponent<Transform>().position;
+
+        rb.AddForce((villagePos - rb.position) * 40);
+        rb.AddTorque(-50.0f); // Make it spin!
+    }
 
     private void AddRandomForce(GameObject spawned) {
         Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
@@ -149,5 +155,7 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 
         // Finally, add the force to the direction.
         rb.AddForce(dir * addedForce);
+
+         rb.AddTorque(-50.0f); // Make it spin!
     }
 }
