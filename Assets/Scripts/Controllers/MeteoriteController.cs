@@ -28,7 +28,7 @@ public class MeteoriteController : MonoBehaviour
 			difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
 		}
 
-		InitializeSpeed();
+		//InitializeSpeed();
 	}
 
 	// Update is called once per frame
@@ -50,6 +50,10 @@ public class MeteoriteController : MonoBehaviour
 		Destroy(gameObject);
 	}
 
+
+	/**
+	 * This function is now obselete as the spawn speed is now calculated by the force added on spawn
+	 */
 	private void InitializeSpeed()
 	{
 		rb = GetComponent<Rigidbody2D>();

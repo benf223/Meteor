@@ -941,6 +941,10 @@ Prefab:
       propertyPath: m_Name
       value: Wall Right
       objectReference: {fileID: 0}
+    - target: {fileID: 1548307808074094, guid: 98281432dc95d8643942b903fb356333, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98281432dc95d8643942b903fb356333, type: 2}
   m_IsPrefabParent: 0
@@ -991,7 +995,7 @@ Prefab:
     - target: {fileID: 114901353698217930, guid: 0b4f3123e33fd7c4ab97619d5d521df0,
         type: 2}
       propertyPath: godMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b4f3123e33fd7c4ab97619d5d521df0, type: 2}
@@ -1046,6 +1050,10 @@ Prefab:
     - target: {fileID: 4041852848878230, guid: 98281432dc95d8643942b903fb356333, type: 2}
       propertyPath: m_LocalScale.y
       value: 1.55678
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548307808074094, guid: 98281432dc95d8643942b903fb356333, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98281432dc95d8643942b903fb356333, type: 2}
@@ -1315,12 +1323,12 @@ Prefab:
     - target: {fileID: 114193161327393866, guid: 87dae5fe6764b5948802eeb16a518f60,
         type: 2}
       propertyPath: minSpawnForce
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 114193161327393866, guid: 87dae5fe6764b5948802eeb16a518f60,
         type: 2}
       propertyPath: maxSpawnForce
-      value: 1000
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 61180742340088534, guid: 87dae5fe6764b5948802eeb16a518f60,
         type: 2}
@@ -1355,7 +1363,12 @@ Prefab:
     - target: {fileID: 114193161327393866, guid: 87dae5fe6764b5948802eeb16a518f60,
         type: 2}
       propertyPath: startingTimeBetweenSpawn
-      value: 10
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114193161327393866, guid: 87dae5fe6764b5948802eeb16a518f60,
+        type: 2}
+      propertyPath: fastSpawnForceMultiplier
+      value: 1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87dae5fe6764b5948802eeb16a518f60, type: 2}
@@ -1615,6 +1628,16 @@ Prefab:
         type: 2}
       propertyPath: dragTime
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114913403887871080, guid: 2b507fa2adf46254faa8ec8d613698e7,
+        type: 2}
+      propertyPath: flickForceMultiplier
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114913403887871080, guid: 2b507fa2adf46254faa8ec8d613698e7,
+        type: 2}
+      propertyPath: maxFlickForce
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b507fa2adf46254faa8ec8d613698e7, type: 2}

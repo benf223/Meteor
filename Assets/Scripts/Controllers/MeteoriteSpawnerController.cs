@@ -22,6 +22,8 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 
     public float maxSpawnForce;
 
+    public float fastSpawnForceMultiplier;
+
     // Testing tthe time for first spawn
     private float startTime;
 
@@ -103,12 +105,12 @@ public class MeteoriteSpawnerController : MonoBehaviour {
         // This will change to call from the difficulty manager
         float chanceToAimAtVillage = difficultyManagerController.GetMeteoriteSpawnDirectionMultiplier();
 
-            // Debug.Log("Chance to Aim at Village: " + chanceToAimAtVillage);
-            // Debug.Log("Actual Chance" + chance);
+        // Debug.Log("Chance to Aim at Village: " + chanceToAimAtVillage);
+        // Debug.Log("Actual Chance" + chance);
 
         if (chance > chanceToAimAtVillage) {
-            AddRandomForce(spawned);
-
+            //            AddRandomForce(spawned);
+            AddForceTowardsWall(spawned);
         }
         else {
             AddForceTowardsVillage(spawned, village);
@@ -118,7 +120,7 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 
     private void AddForceTowardsVillage(GameObject spawned, GameObject village) {
         Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
-        Color myColor = new Color(1f, 0.3f, 0.0f); // NEED TO FIX
+        Color myColor = new Color(1f, 0.3f, 0.0f); 
 
         SpriteRenderer meteoriteColor = spawned.GetComponent<SpriteRenderer>();
         meteoriteColor.color = myColor;
@@ -127,10 +129,38 @@ public class MeteoriteSpawnerController : MonoBehaviour {
         // meteoriteColor.b = 66;
         Vector2 villagePos = village.GetComponent<Transform>().position;
 
-        rb.AddForce((villagePos - rb.position) * 40);
+        rb.AddForce((villagePos - rb.position).normalized * (GetRandomForce()*fastSpawnForceMultiplier));
         rb.AddTorque(-50.0f); // Make it spin!
     }
 
+    private void AddForceTowardsWall(GameObject spawned) {
+        Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
+        GameObject[] walls = GameObject.FindGameObjectsWithTag("Wall");
+
+        int targetIndex = Random.Range(0, walls.Length);
+        Vector2 targetLocation = GenerateRandomLocation(walls[targetIndex]);
+
+        //.normalized keeps direction, but length of 1.
+        rb.AddForce((targetLocation - rb.position).normalized * GetRandomForce());
+        rb.AddTorque(-50.0f); // Make it spin!
+    }
+
+    public Vector3 GenerateRandomLocation(GameObject target) {
+        Bounds bounds = target.GetComponent<Collider2D>().bounds;
+        Vector3 min = bounds.min;
+        Vector3 max = bounds.max;
+
+        float x = Random.Range(min.x, max.x);
+   
+        float   y = Random.Range(min.y, cd.bounds.max.y);
+
+        return new Vector3(x, y, 0);
+    }
+
+    /**
+     * This function is now obselete as the meteorites will instead target a random spot
+     * in the walls.
+     */
     private void AddRandomForce(GameObject spawned) {
         Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
 
@@ -156,6 +186,10 @@ public class MeteoriteSpawnerController : MonoBehaviour {
         // Finally, add the force to the direction.
         rb.AddForce(dir * addedForce);
 
-         rb.AddTorque(-50.0f); // Make it spin!
+        rb.AddTorque(-50.0f); // Make it spin!
+    }
+
+    private float GetRandomForce() {
+        return Random.Range(minSpawnForce, maxSpawnForce) * difficultyManagerController.GetMeteoriteSpeedMultiplier();
     }
 }
