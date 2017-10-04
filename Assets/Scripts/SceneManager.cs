@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Threading;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
@@ -10,7 +8,17 @@ public class SceneManager : MonoBehaviour
 		LoadScene("Game");
 	}
 
-	public void Quit()
+	public void HighscoreButtonPressed()
+	{
+		LoadScene("Highscores");
+	}
+
+	public void SettingsButtonPressed()
+	{
+		LoadScene("Settings");
+	}
+	
+	public void QuitButtonPressed()
 	{
 		Application.Quit();
 	}
