@@ -17,7 +17,7 @@ public class GameEndController : MonoBehaviour
 		endText.fontSize = 2;
 		update = true;
 		count = 0;
-		timeToStop = (int) Time.timeSinceLevelLoad + 3;
+		timeToStop = (int) Time.timeSinceLevelLoad + 2;
 
 		scoreText.text = PlayerPrefs.GetString("score");
 	}

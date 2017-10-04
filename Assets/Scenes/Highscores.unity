@@ -243,6 +243,16 @@ Prefab:
       propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212488209702916204, guid: be049906cd62d4b4faabff5b700cc254,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -329757845
+      objectReference: {fileID: 0}
+    - target: {fileID: 212488209702916204, guid: be049906cd62d4b4faabff5b700cc254,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114463707615814302, guid: be049906cd62d4b4faabff5b700cc254, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: be049906cd62d4b4faabff5b700cc254, type: 2}
@@ -307,6 +317,16 @@ Prefab:
         type: 2}
       propertyPath: m_AngularDrag
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212488209702916204, guid: be049906cd62d4b4faabff5b700cc254,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -329757845
+      objectReference: {fileID: 0}
+    - target: {fileID: 212488209702916204, guid: be049906cd62d4b4faabff5b700cc254,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114463707615814302, guid: be049906cd62d4b4faabff5b700cc254, type: 2}
@@ -475,7 +495,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -251553023
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &665682852
@@ -894,6 +914,16 @@ Prefab:
       propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212488209702916204, guid: be049906cd62d4b4faabff5b700cc254,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -329757845
+      objectReference: {fileID: 0}
+    - target: {fileID: 212488209702916204, guid: be049906cd62d4b4faabff5b700cc254,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114463707615814302, guid: be049906cd62d4b4faabff5b700cc254, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: be049906cd62d4b4faabff5b700cc254, type: 2}
@@ -1047,6 +1077,16 @@ Prefab:
         type: 2}
       propertyPath: m_AngularDrag
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212488209702916204, guid: be049906cd62d4b4faabff5b700cc254,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -329757845
+      objectReference: {fileID: 0}
+    - target: {fileID: 212488209702916204, guid: be049906cd62d4b4faabff5b700cc254,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114463707615814302, guid: be049906cd62d4b4faabff5b700cc254, type: 2}
@@ -1220,6 +1260,16 @@ Prefab:
         type: 2}
       propertyPath: m_AngularDrag
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212488209702916204, guid: be049906cd62d4b4faabff5b700cc254,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -329757845
+      objectReference: {fileID: 0}
+    - target: {fileID: 212488209702916204, guid: be049906cd62d4b4faabff5b700cc254,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114463707615814302, guid: be049906cd62d4b4faabff5b700cc254, type: 2}

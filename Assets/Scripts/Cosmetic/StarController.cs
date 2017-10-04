@@ -2,7 +2,7 @@
 
 public class StarController : MonoBehaviour
 {
-	private bool twinkling;
+	private int twinkleToggle;
 	private int twinkleTimes;
 	private int twinkledTimes;
 
@@ -10,7 +10,7 @@ public class StarController : MonoBehaviour
 	
 	void Start()
 	{
-		twinkling = false;
+		twinkleToggle = 0;
 		twinkleTimes = Random.Range(2, 5);
 		twinkledTimes = 0;
 		transform.localScale = new Vector3(0, 0, 0);
@@ -18,24 +18,27 @@ public class StarController : MonoBehaviour
 
 	void Update()
 	{
-		if (twinkling)
+		if (twinkleToggle == 1)
 		{
 			UnTwinkle();
 		}
-		else
+		else if (twinkleToggle == 0)
 		{
 			Twinkle();
 		}
-		
-		twinkling = !twinkling;
+		else if (twinkleToggle == 5)
+		{
+			twinkleToggle = 0;
+			return;
+		}
+
+		++twinkleToggle;
 	}
 
 	private void Twinkle()
 	{
 		if (twinkledTimes < twinkleTimes)
 		{
-			twinkling = true;
-
 			transform.localScale = new Vector3(1 * scale, 1 * scale, 0);
 
 			++twinkledTimes;
