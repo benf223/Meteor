@@ -66,7 +66,7 @@ public class HighscoreManager : MonoBehaviour
 
 		float x = Random.Range(min.x, max.x);
 		float y = Random.Range(min.y, max.y);
-		float scale = Random.RandomRange(1f, 1.3f);
+		float scale = Random.Range(1f, 1.3f);
 
 		Vector2 spawnLocation = new Vector3(x, y, 0);
 
