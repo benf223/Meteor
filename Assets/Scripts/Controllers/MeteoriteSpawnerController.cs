@@ -142,7 +142,7 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 
         //.normalized keeps direction, but length of 1.
         rb.AddForce((targetLocation - rb.position).normalized * GetRandomForce());
-        rb.AddTorque(-50.0f); // Make it spin!
+        rb.AddTorque(-25.0f); // Make it spin!
     }
 
     public Vector3 GenerateRandomLocation(GameObject target) {
@@ -186,7 +186,7 @@ public class MeteoriteSpawnerController : MonoBehaviour {
         // Finally, add the force to the direction.
         rb.AddForce(dir * addedForce);
 
-        rb.AddTorque(-50.0f); // Make it spin!
+        rb.AddTorque(-25.0f); // Make it spin!
     }
 
     private float GetRandomForce() {

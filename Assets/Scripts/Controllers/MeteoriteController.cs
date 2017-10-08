@@ -10,10 +10,24 @@ public class MeteoriteController : MonoBehaviour
 	public float maxGravityScale;
 	public PhysicsMaterial2D lowBounce;
 
+
+	// FOR SPRITES
+	public SpriteRenderer spriteRenderer;
+	public Variations[] spriteArray;
+	private int spriteIndex;
+	[System.Serializable]
+	public class Variations {
+		public Sprite[] sprites = new Sprite[2];
+	}
+	
+
+
 	[HideInInspector]
 	public bool touching; // State in which meteorite is in process of flick
 	private bool touched; // State in which meteorite HAS BEEN touched
 	private GameObject touchObject;
+
+	
 
 	// Use this for initialization
 	private void Start()
@@ -21,6 +35,7 @@ public class MeteoriteController : MonoBehaviour
 		touchObject = null;
 		touched = false;
 		touching = false;
+		SelectRandomSprite();
 		difficultyManager = GameObject.Find("DifficultyManager");
 		
 		if (difficultyManager != null)
@@ -75,6 +90,8 @@ public class MeteoriteController : MonoBehaviour
 		
 		CircleCollider2D cd = GetComponent<CircleCollider2D>();
 		cd.sharedMaterial = lowBounce;
+
+		spriteRenderer.sprite = spriteArray[spriteIndex].sprites[1];
 	}
 
 	public bool IsTouching()
@@ -91,4 +108,13 @@ public class MeteoriteController : MonoBehaviour
 	{
 		this.touched = touched;
 	}
+
+	private void SelectRandomSprite() {
+		int size = spriteArray.Length;
+		spriteIndex = Random.Range(0, size);
+		spriteRenderer.sprite = spriteArray[spriteIndex].sprites[0];
+	}
+
+	
 }
+
