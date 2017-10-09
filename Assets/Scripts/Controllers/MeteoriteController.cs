@@ -62,7 +62,6 @@ public class MeteoriteController : MonoBehaviour
 
 	public void BlowUp()
 	{
-        Debug.Log("Meteorite object is destroyed");
 		Destroy(gameObject);
 	}
 
