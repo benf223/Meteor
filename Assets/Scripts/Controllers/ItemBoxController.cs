@@ -76,6 +76,7 @@ public class ItemBoxController : MonoBehaviour {
         }
     }
 
+    //touch screen
     public void SetTouched(GameObject touchObject)
     {
         this.touchObject = touchObject;
