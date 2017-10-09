@@ -12,7 +12,7 @@ public class VillageController : MonoBehaviour {
     private int latestSeconds;
     private int growthCount;
     private SpriteRenderer spriteRenderer;
-	public AudioClip audio;
+	public new AudioClip audio;
 	public AudioSource source;
 
 
