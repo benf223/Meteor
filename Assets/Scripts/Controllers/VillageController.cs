@@ -51,7 +51,6 @@ public class VillageController : MonoBehaviour {
      * WILL NEED TO FIGURE OUT WHY IT WON'T CALL WHEN IN THE UPDATES 100% OF THE TIME
 	 * */
     public void IncreaseSize() {
-        Debug.Log("Growed?");
         if (growthCount < 2) {
             Debug.Log("Village growth triggered!");
             spriteRenderer.sprite = sprites[growthCount + 1];
@@ -66,7 +65,10 @@ public class VillageController : MonoBehaviour {
                 MeteoriteController meteorite = collision.gameObject.GetComponent<MeteoriteController>();
                 meteorite.BlowUp();
                 isDestroyed = true;
+
                 Destroy(gameObject);
+                Debug.Log("Village Destroyed: "+isDestroyed);
+
                 UnityEngine.SceneManagement.SceneManager.LoadScene("GameEnd");
             }
 
