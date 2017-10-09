@@ -1490,7 +1490,7 @@ Prefab:
     - target: {fileID: 114193161327393866, guid: 87dae5fe6764b5948802eeb16a518f60,
         type: 2}
       propertyPath: maxSpawnForce
-      value: 400
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 61180742340088534, guid: 87dae5fe6764b5948802eeb16a518f60,
         type: 2}
