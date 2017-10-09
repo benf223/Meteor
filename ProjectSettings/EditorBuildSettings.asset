@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Highscores.unity
     guid: ea82ed7e031c3f144b959de534a6c706
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 532c18639d134ce41b3cd77f33e086c6
   - enabled: 0
     path: Assets/Scenes/Tests/Spawn Test.unity
     guid: bad1abd735702f046b0143ce0b547f5f
