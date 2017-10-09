@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent (typeof (AudioSource))] 
 public class VillageController : MonoBehaviour {
 
     public bool isDestroyed;
@@ -12,11 +12,16 @@ public class VillageController : MonoBehaviour {
     private int latestSeconds;
     private int growthCount;
     private SpriteRenderer spriteRenderer;
+	public AudioClip audio;
+	public AudioSource source;
+
 
     public bool godMode;
 
     // Use this for initialization
+
 	private void Start() {
+		source = GetComponent<AudioSource>();
         // Initialize the difficulty manager script
         if (difficultyManager != null) {
             difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
@@ -40,7 +45,8 @@ public class VillageController : MonoBehaviour {
 
     // Update is called once per frame
 	private void Update() {
-        
+		//AudioSource source = GetComponent<AudioSource> ();
+		//source.PlayOneShot (audio, 1);
     }
     /**
 	 * This method increases the size of the village sprite by .2 lengthwise for the first 20 seconds, and then
@@ -64,16 +70,27 @@ public class VillageController : MonoBehaviour {
 
 	private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Meteorite")) {
-            if (!godMode) {
+			PlayExplosion ();
+			if (!godMode) {
                 MeteoriteController meteorite = collision.gameObject.GetComponent<MeteoriteController>();
                 meteorite.BlowUp();
+				PlayExplosion ();
                 isDestroyed = true;
                 Destroy(gameObject);
-                UnityEngine.SceneManagement.SceneManager.LoadScene("GameEnd");
+				Invoke ("ChangeScene", 3);
+				//UnityEngine.SceneManagement.SceneManager.LoadScene("GameEnd");
             }
 
         }
     }
+	void ChangeScene() {
+		Debug.Log ("Change scene called");
+		UnityEngine.SceneManagement.SceneManager.LoadScene("GameEnd");
+	}
+
+	private void PlayExplosion() {
+		AudioSource.PlayClipAtPoint(audio, transform.position); 
+	}
 
     /**
      * Updates the BoxCollider2D offset and size
