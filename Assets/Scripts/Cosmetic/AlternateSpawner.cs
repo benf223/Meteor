@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class AlternateSpawner : MonoBehaviour
@@ -39,7 +35,7 @@ public class AlternateSpawner : MonoBehaviour
 				SpawnMeteorites();
 			}
 		}
-		
+
 		spawn = !spawn;
 	}
 

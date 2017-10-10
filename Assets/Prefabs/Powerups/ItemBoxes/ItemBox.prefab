@@ -99,10 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 542bc302e8f019d44a12293bec20bf9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minGravityScale: 0
-  maxGravityScale: 0
+  customTag: 
   lowBounce: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  spriteArray: []
   touching: 0
+  powerups:
+  - {fileID: 1489061683571032, guid: 27380abefbd60f1499fc99208d208076, type: 2}
 --- !u!212 &212319074647693864
 SpriteRenderer:
   m_ObjectHideFlags: 1

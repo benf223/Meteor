@@ -6,8 +6,11 @@ TagManager:
   tags:
   - Touch
   - Cloud
+  - Wall
   - Meteorite
   - ItemBox
+  - Village
+  - Powerup
   layers:
   - Default
   - TransparentFX
