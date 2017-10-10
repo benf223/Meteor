@@ -9,6 +9,8 @@ TagManager:
   - Wall
   - Meteorite
   - ItemBox
+  - Village
+  - Powerup
   layers:
   - Default
   - TransparentFX

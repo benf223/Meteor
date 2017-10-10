@@ -4,6 +4,7 @@ public class MeteoriteDespawnerController : MonoBehaviour
 {
 	public GameController gameCont;
 	public int amountDespawned { get; private set; }
+	public bool despawnItemBoxes = true;
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
@@ -15,6 +16,10 @@ public class MeteoriteDespawnerController : MonoBehaviour
 			{
 				gameCont.AddScore(2);
 			}
+		}
+
+		if (despawnItemBoxes && other.gameObject.CompareTag("ItemBox")) {
+			Destroy(other.gameObject);
 		}
 	}
 }

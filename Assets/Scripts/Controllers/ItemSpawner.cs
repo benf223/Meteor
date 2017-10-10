@@ -7,7 +7,7 @@ public class ItemSpawner : MonoBehaviour {
     private Collider2D collider;
     public GameObject itemBox;
     public GameObject difficultyManager;
-    private DifficultyManagerController difficultyManagerController;
+    //private DifficultyManagerController difficultyManagerController;
 
     //Spawn delay between item drops
     private float elapseTime = 0f;
@@ -17,33 +17,35 @@ public class ItemSpawner : MonoBehaviour {
     public float minSpawnForce;
     public float maxSpawnForce;
 
-	// Use this for initialization
-	void Start () {
+    public float spawnDelay = 5;
+
+    // Use this for initialization
+    void Start() {
         collider = GetComponent<BoxCollider2D>();
-        difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Time.timeSinceLevelLoad >= elapseTime)
-        {
+        // difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
+    }
+
+    // Update is called once per frame
+    void Update() {
+        if (Time.timeSinceLevelLoad >= elapseTime) {
             elapseTime++;
             secondsToIncrease++;
         }
         spawnTime();
-	}
+    }
 
-    public void spawnTime()
-    {
-        if(secondsToIncrease == 5)
-        {
-            SpawnItemBox();
+    public void spawnTime() {
+        if (secondsToIncrease == spawnDelay) {
+            // Spawn item box with powerup is NOT already active
+            if (GameObject.FindWithTag("Powerup") == null) {
+                SpawnItemBox();
+            }
+
             secondsToIncrease = 0;
         }
     }
 
-    public void SpawnItemBox()
-    {
+    public void SpawnItemBox() {
         //get the bounding box of the box collider
         Bounds spawnBounds = collider.bounds;
 
@@ -65,12 +67,10 @@ public class ItemSpawner : MonoBehaviour {
         // 0 = right, 180 = left
         float angle = 180;
         int randomNum = Random.Range(0, 2);
-        if (randomNum == 0)
-        {
+        if (randomNum == 0) {
             angle = 0;
         }
-        else
-        {
+        else {
             angle = 180;
         }
 
