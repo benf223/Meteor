@@ -1559,6 +1559,14 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 4.1200843
       objectReference: {fileID: 0}
+    - target: {fileID: 1516270406610830, guid: f29ee2202352ef94192a559027d3c9ee, type: 2}
+      propertyPath: m_TagString
+      value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516270406610830, guid: f29ee2202352ef94192a559027d3c9ee, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f29ee2202352ef94192a559027d3c9ee, type: 2}
   m_IsPrefabParent: 0
