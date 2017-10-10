@@ -96,7 +96,7 @@ public class TouchObjectController : MonoBehaviour
 	private void MoveMeteorite()
 	{
 		// Referencing the needed controllers and components
-		MeteoriteController meteoriteController = meteorite.GetComponent<MeteoriteController>();
+		TouchableObjectController meteoriteController = meteorite.GetComponent<TouchableObjectController>();
 		Transform meteoriteTransform = meteorite.GetComponent<Transform>();
 		Rigidbody2D meteoriteRb = meteorite.GetComponent<Rigidbody2D>();
 
@@ -118,6 +118,8 @@ public class TouchObjectController : MonoBehaviour
 
 			// Finally, applies the force to the meteorite towards the position of the touch object
 			meteoriteRb.AddForce((transform.position - meteoriteTransform.position) * flickForce);
+			meteoriteRb.AddTorque((transform.position.x - meteoriteTransform.position.x) * 10);
+			
 		}
 	}
 
@@ -139,6 +141,18 @@ public class TouchObjectController : MonoBehaviour
 				 */
 				meteorite = other.gameObject;
 				meteorite.GetComponent<MeteoriteController>().SetTouched(gameObject);
+			}
+
+			if (other.CompareTag("ItemBox"))
+			{
+				/**
+				 * Assigns the touch object with a meteorite
+				 * to interact with.
+				 * Also sets the meteorite in a touched state so that
+				 * it cannot be interacted with again after the swipe.
+				 */
+				meteorite = other.gameObject;
+				meteorite.GetComponent<ItemBoxController>().SetTouched(gameObject);
 			}
 		}
 	}

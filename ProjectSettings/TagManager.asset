@@ -4,10 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Meteorite
   - Touch
   - Cloud
   - Wall
+  - Meteorite
+  - ItemBox
+  - Village
+  - Powerup
   layers:
   - Default
   - TransparentFX
@@ -17,7 +20,7 @@ TagManager:
   - UI
   - 
   - 
-  - Meteorite
+  - 
   - 
   - 
   - 
@@ -46,14 +49,11 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background
-    uniqueID: 2543274023
-    locked: 0
-  - name: Meteorites
-    uniqueID: 2967363213
+    uniqueID: 735275075
     locked: 0
   - name: Foreground
-    uniqueID: 3965209451
+    uniqueID: 694376371
     locked: 0
   - name: UI
-    uniqueID: 4043414273
+    uniqueID: 2738002363
     locked: 0
