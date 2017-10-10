@@ -38,7 +38,7 @@ public class ShieldController : MonoBehaviour
     {
         // destory shield after 10 seconds
         timeSinceStart = Time.timeSinceLevelLoad - startTimer;
-        if (timeSinceStart > 10 || shieldHealth == 0)
+        if (timeSinceStart > 10 || shieldHealth == 1)
         {
             Destroy(shield);
         }
@@ -48,7 +48,15 @@ public class ShieldController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Meteorite"))
         {
-            shieldHealth -= 50;
+            shieldHealth -= 33;
+            if (shieldHealth == 67)
+            {
+                shield.GetComponent<Renderer>().material.color = yellow;
+            }
+            else if (shieldHealth == 34)
+            {
+                shield.GetComponent<Renderer>().material.color = red;
+            }
         }
     }
 
@@ -71,12 +79,12 @@ public class ShieldController : MonoBehaviour
     {
         if (counter == 0)
         {
-            if (timeSinceStart > 8)
+            if (timeSinceStart > 8 && shieldHealth == 34)
             {
                 Debug.Log("Red " + timeSinceStart);
                 shield.GetComponent<Renderer>().material.color = red;
             }
-            else
+            else if (shieldHealth == 67)
             {
                 Debug.Log("Yellow " + timeSinceStart);
                 shield.GetComponent<Renderer>().material.color = yellow;
@@ -85,8 +93,16 @@ public class ShieldController : MonoBehaviour
         }
         else if (counter == 1)
         {
-            Debug.Log("Blue " + timeSinceStart);
-            shield.GetComponent<Renderer>().material.color = blue;
+            if (shieldHealth == 100)
+            {
+                Debug.Log("Blue " + timeSinceStart);
+                shield.GetComponent<Renderer>().material.color = blue;
+            }
+            else if (shieldHealth == 67)
+            {
+                Debug.Log("Red " + timeSinceStart);
+                shield.GetComponent<Renderer>().material.color = red;
+            }
             counter--;
         }
     }
