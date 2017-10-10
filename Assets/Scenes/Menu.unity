@@ -1324,7 +1324,7 @@ MonoBehaviour:
   smol: {fileID: 1030961272557678, guid: af79fb56501d0914daf5390ddde98eec, type: 2}
   med: {fileID: 1567065469174716, guid: fb4d55d9dd18fc84dabbe4571c4498a2, type: 2}
   large: {fileID: 1044929607250210, guid: 731f97ee18b018043a9d13c11f63eca9, type: 2}
-  collider: {fileID: 1488399669}
+  cd: {fileID: 1488399669}
   onLeft: 1
 --- !u!61 &1488399669
 BoxCollider2D:
@@ -1525,7 +1525,7 @@ MonoBehaviour:
   smol: {fileID: 1030961272557678, guid: af79fb56501d0914daf5390ddde98eec, type: 2}
   med: {fileID: 1567065469174716, guid: fb4d55d9dd18fc84dabbe4571c4498a2, type: 2}
   large: {fileID: 1044929607250210, guid: 731f97ee18b018043a9d13c11f63eca9, type: 2}
-  collider: {fileID: 1683386699}
+  cd: {fileID: 1683386699}
   onLeft: 0
 --- !u!61 &1683386699
 BoxCollider2D:

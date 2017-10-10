@@ -640,6 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430a9c539ab651b41bb3064612c71fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseButton: {fileID: 1751386989}
 --- !u!1 &601075713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,7 +1734,7 @@ MonoBehaviour:
   smol: {fileID: 1030961272557678, guid: af79fb56501d0914daf5390ddde98eec, type: 2}
   med: {fileID: 1567065469174716, guid: fb4d55d9dd18fc84dabbe4571c4498a2, type: 2}
   large: {fileID: 1044929607250210, guid: 731f97ee18b018043a9d13c11f63eca9, type: 2}
-  collider: {fileID: 1427518732}
+  cd: {fileID: 1427518732}
   onLeft: 0
 --- !u!4 &1427518734
 Transform:
@@ -2011,7 +2012,7 @@ MonoBehaviour:
   smol: {fileID: 1030961272557678, guid: af79fb56501d0914daf5390ddde98eec, type: 2}
   med: {fileID: 1567065469174716, guid: fb4d55d9dd18fc84dabbe4571c4498a2, type: 2}
   large: {fileID: 1044929607250210, guid: 731f97ee18b018043a9d13c11f63eca9, type: 2}
-  collider: {fileID: 1692378450}
+  cd: {fileID: 1692378450}
   onLeft: 1
 --- !u!4 &1692378452
 Transform:

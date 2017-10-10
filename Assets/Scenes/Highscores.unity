@@ -637,7 +637,7 @@ MonoBehaviour:
   - {fileID: 113187377}
   - {fileID: 1676990639}
   - {fileID: 643044710}
-  collider: {fileID: 716973422}
+  cd: {fileID: 716973422}
   maxStars: 10
 --- !u!4 &716973421
 Transform:
