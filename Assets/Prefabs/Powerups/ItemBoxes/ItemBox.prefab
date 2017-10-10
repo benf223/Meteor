@@ -105,7 +105,8 @@ MonoBehaviour:
   spriteArray: []
   touching: 0
   powerups:
-  - {fileID: 1489061683571032, guid: 27380abefbd60f1499fc99208d208076, type: 2}
+  - {fileID: 1516270406610830, guid: f29ee2202352ef94192a559027d3c9ee, type: 2}
+  - {fileID: 1516270406610830, guid: f29ee2202352ef94192a559027d3c9ee, type: 2}
 --- !u!212 &212319074647693864
 SpriteRenderer:
   m_ObjectHideFlags: 1

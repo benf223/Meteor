@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212416259089453378}
   - component: {fileID: 50488603705722864}
   - component: {fileID: 58778035167162370}
-  m_Layer: 0
+  - component: {fileID: 114576691755623048}
+  m_Layer: 9
   m_Name: Shield
-  m_TagString: Untagged
+  m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1516270406610830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -4.92, z: 0}
+  m_LocalPosition: {x: -0.06623028, y: -4.9378576, z: 0}
   m_LocalScale: {x: 2.4541202, y: 3.8900642, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,9 +75,22 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0050200974, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.3656415
+--- !u!114 &114576691755623048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1516270406610830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a89399b12c4524e945f57d6364ab5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 10
+  powerupName: Shield
 --- !u!212 &212416259089453378
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -106,8 +120,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 694376371
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a2f15d9a1e41fb94bbc171f4fae5b825, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
