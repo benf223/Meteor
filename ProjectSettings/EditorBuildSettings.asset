@@ -21,11 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Settings.unity
     guid: ea09c30ae656f484abe7276298ed7bd0
   - enabled: 0
-    path: Assets/Scenes/Settings(Broke).unity
+    path: 
     guid: 532c18639d134ce41b3cd77f33e086c6
   - enabled: 0
     path: Assets/Scenes/Tests/Spawn Test.unity
     guid: bad1abd735702f046b0143ce0b547f5f
-    path: Assets/Scenes/CloudTest.unity
-    guid: 6b68e28ed41c8ee4fa22840fe623282e
-

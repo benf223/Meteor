@@ -39,6 +39,7 @@ public class PauseMenuController : MonoBehaviour
 	public void OnQuitPressed()
 	{
         gc.restarting = true;
+		Time.timeScale = 1;
         UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
 	}
 }
