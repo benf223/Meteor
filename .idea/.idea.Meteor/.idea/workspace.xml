@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7703dfdb-788d-4a7c-9732-347b7cfb281b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scenes/Highscores.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Highscores.unity" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.Meteor/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Meteor/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Prefabs/Powerups/ItemBoxes/ItemBox.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Powerups/ItemBoxes/ItemBox.prefab" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,23 +17,41 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HighscoreManager.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/HighscoreManager.cs">
+      <file leaf-file-name="MeteoriteSpawnerController.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+            <state relative-caret-position="520">
+              <caret line="139" column="58" lean-forward="false" selection-start-line="139" selection-start-column="58" selection-end-line="139" selection-end-column="58" />
               <folding>
-                <marker date="1507686683847" expanded="false" signature="6:40" ph="..." />
-                <marker date="1507686683847" expanded="true" signature="87:1820" ph="{...}" />
-                <marker date="1507686683847" expanded="true" signature="307:397" ph="{...}" />
-                <marker date="1507686683847" expanded="true" signature="425:706" ph="{...}" />
-                <marker date="1507686683847" expanded="true" signature="735:852" ph="{...}" />
-                <marker date="1507686683847" expanded="true" signature="784:849" ph="{...}" />
-                <marker date="1507686683847" expanded="true" signature="894:932" ph="{...}" />
-                <marker date="1507686683847" expanded="true" signature="992:1152" ph="{...}" />
-                <marker date="1507686683847" expanded="true" signature="1179:1662" ph="{...}" />
-                <marker date="1507686683847" expanded="true" signature="1692:1716" ph="{...}" />
-                <marker date="1507686683847" expanded="true" signature="1750:1818" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="76:6501" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="887:1297" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="1020:1089" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="1175:1291" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="1364:1822" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="1522:1816" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="1729:1806" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="1855:2486" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="1865:1996" ph="/* Start spawning meteorites when breathing time reached ... */" />
+                <marker date="1507758867336" expanded="true" signature="2052:2480" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="2195:2470" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="2213:2243" ph="/* For Testing ... */" />
+                <marker date="1507758867336" expanded="true" signature="2286:2456" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="2492:2552" ph="/* Function to controll the spawning of meteorites ... */" />
+                <marker date="1507758867336" expanded="true" signature="2588:3840" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="3491:3605" ph="/* Debug.Log(&quot;Chance to Aim at Village: &quot; + chanceToAimAtVillage); ... */" />
+                <marker date="1507758867336" expanded="true" signature="3650:3754" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="3754:3833" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="3922:4495" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="4167:4262" ph="/* meteoriteColor.r = 244; ... */" />
+                <marker date="1507758867336" expanded="true" signature="4554:5021" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="5084:5372" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="5378:5499" ph="/* This function is now obselete as the meteorites will instead target a random spot ... */" />
+                <marker date="1507758867336" expanded="true" signature="5552:6336" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="5625:5713" ph="/* Randomize between spawning to the left, or the right ... */" />
+                <marker date="1507758867336" expanded="true" signature="5808:5842" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="5842:5892" ph="{...}" />
+                <marker date="1507758867336" expanded="true" signature="6012:6111" ph="/* Calculates the direction using the angle ... */" />
+                <marker date="1507758867336" expanded="true" signature="6373:6499" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -41,6 +62,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Debug.Log</find>
+      <find>Activate</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -48,24 +70,29 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteDespawnerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/VillageController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TouchController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/249E3C18-6ACB-4F50-900C-04353137B726/3a/1ff0259e/Button.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/PauseMenuController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/SettingsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Powerups/MultipleTouchesPowerupController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tests/TouchTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/FadeIn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Powerups/Powerup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/249E3C18-6ACB-4F50-900C-04353137B726/7a/cf4b7648/Time.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/AlternateSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/StarController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/Rotator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Powerups/ShieldController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9FACBD76-75F5-45B1-86B6-BE0E55785D7F/09/77099e48/Int32.cs" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/ItemBoxController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/DifficultyManagerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/HighscoreManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Powerups/WallBreaker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/SettingsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/StarController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/DifficultyManagerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameEndController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/CloudMakerBreaker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/TouchObjectController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -98,7 +125,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/249E3C18-6ACB-4F50-900C-04353137B726/7a/cf4b7648/Time.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteDespawnerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TouchController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TouchObjectController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Cosmetic/AlternateSpawner.cs" />
@@ -120,6 +146,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/SettingsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/PauseMenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/HighscoreManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Powerups/Powerup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Powerups/WallBreaker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs" />
       </list>
     </option>
   </component>
@@ -150,6 +179,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <PATH>
@@ -166,12 +196,12 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Documents/GitHub/Meteor/Assets/Scripts/Powerups/Powerup.cs" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -300,12 +330,13 @@
       <workItem from="1507172151386" duration="213000" />
       <workItem from="1507523333532" duration="2917000" />
       <workItem from="1507601855579" duration="1142000" />
-      <workItem from="1507757287674" duration="54000" />
+      <workItem from="1507757287674" duration="1531000" />
+      <workItem from="1507758851174" duration="23000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38456000" />
+    <option name="totallyTimeSpent" value="39956000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -317,22 +348,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1051" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1051" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18854167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37760416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -356,11 +387,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/FadeIn.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/EndGameSpawner.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/SceneManager.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/GameEndController.cs" />
-    <entry file="file://$USER_HOME$/Desktop/master/Meteor/Assets/Scripts/MeteoriteSpawnerController.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MeteoriteSpawnerController.cs" />
     <entry file="file://$USER_HOME$/Desktop/master/Meteor/Assets/Scripts/GameController.cs" />
     <entry file="file://$USER_HOME$/Desktop/master/Meteor/Assets/Scripts/DifficultyManagerController.cs" />
@@ -430,13 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/Rotator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/StarController.cs" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9FACBD76-75F5-45B1-86B6-BE0E55785D7F/09/77099e48/Int32.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -454,8 +473,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="857">
-          <caret line="108" column="39" lean-forward="false" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
+        <state relative-caret-position="520">
+          <caret line="139" column="58" lean-forward="false" selection-start-line="139" selection-start-column="58" selection-end-line="139" selection-end-column="58" />
+          <folding>
+            <marker date="1507758867336" expanded="true" signature="76:6501" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="887:1297" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="1020:1089" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="1175:1291" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="1364:1822" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="1522:1816" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="1729:1806" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="1855:2486" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="1865:1996" ph="/* Start spawning meteorites when breathing time reached ... */" />
+            <marker date="1507758867336" expanded="true" signature="2052:2480" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="2195:2470" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="2213:2243" ph="/* For Testing ... */" />
+            <marker date="1507758867336" expanded="true" signature="2286:2456" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="2492:2552" ph="/* Function to controll the spawning of meteorites ... */" />
+            <marker date="1507758867336" expanded="true" signature="2588:3840" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="3491:3605" ph="/* Debug.Log(&quot;Chance to Aim at Village: &quot; + chanceToAimAtVillage); ... */" />
+            <marker date="1507758867336" expanded="true" signature="3650:3754" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="3754:3833" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="3922:4495" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="4167:4262" ph="/* meteoriteColor.r = 244; ... */" />
+            <marker date="1507758867336" expanded="true" signature="4554:5021" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="5084:5372" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="5378:5499" ph="/* This function is now obselete as the meteorites will instead target a random spot ... */" />
+            <marker date="1507758867336" expanded="true" signature="5552:6336" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="5625:5713" ph="/* Randomize between spawning to the left, or the right ... */" />
+            <marker date="1507758867336" expanded="true" signature="5808:5842" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="5842:5892" ph="{...}" />
+            <marker date="1507758867336" expanded="true" signature="6012:6111" ph="/* Calculates the direction using the angle ... */" />
+            <marker date="1507758867336" expanded="true" signature="6373:6499" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -513,20 +563,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/HighscoreManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
-          <folding>
-            <marker date="1507686683847" expanded="false" signature="6:40" ph="..." />
-            <marker date="1507686683847" expanded="true" signature="87:1820" ph="{...}" />
-            <marker date="1507686683847" expanded="true" signature="307:397" ph="{...}" />
-            <marker date="1507686683847" expanded="true" signature="425:706" ph="{...}" />
-            <marker date="1507686683847" expanded="true" signature="735:852" ph="{...}" />
-            <marker date="1507686683847" expanded="true" signature="784:849" ph="{...}" />
-            <marker date="1507686683847" expanded="true" signature="894:932" ph="{...}" />
-            <marker date="1507686683847" expanded="true" signature="992:1152" ph="{...}" />
-            <marker date="1507686683847" expanded="true" signature="1179:1662" ph="{...}" />
-            <marker date="1507686683847" expanded="true" signature="1692:1716" ph="{...}" />
-            <marker date="1507686683847" expanded="true" signature="1750:1818" ph="{...}" />
-          </folding>
+          <caret line="61" column="39" lean-forward="false" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -555,6 +592,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/Rotator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Powerups/Powerup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Powerups/WallBreaker.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/ItemBoxController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Powerups/MultipleTouchesPowerupController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Powerups/ShieldController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="967">
+          <caret line="107" column="38" lean-forward="false" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="38" />
         </state>
       </provider>
     </entry>

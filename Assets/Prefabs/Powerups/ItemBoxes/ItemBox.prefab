@@ -106,7 +106,7 @@ MonoBehaviour:
   touching: 0
   powerups:
   - {fileID: 1516270406610830, guid: f29ee2202352ef94192a559027d3c9ee, type: 2}
-  - {fileID: 1516270406610830, guid: f29ee2202352ef94192a559027d3c9ee, type: 2}
+  - {fileID: 1427852870836018, guid: 8538aa1343cb78f4b845fab78ee924be, type: 2}
 --- !u!212 &212319074647693864
 SpriteRenderer:
   m_ObjectHideFlags: 1
