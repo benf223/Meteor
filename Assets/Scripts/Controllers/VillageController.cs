@@ -4,7 +4,7 @@ public class VillageController : MonoBehaviour
 {
 	public bool isDestroyed;
 	public GameObject difficultyManager;
-	private DifficultyManagerController difficultyManagerController;
+//	private DifficultyManagerController difficultyManagerController;
 	public Sprite[] sprites;
 
 	private int latestSeconds;
@@ -17,10 +17,10 @@ public class VillageController : MonoBehaviour
 	private void Start()
 	{
 		// Initialize the difficulty manager script
-		if (difficultyManager != null)
-		{
-			difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
-		}
+//		if (difficultyManager != null)
+//		{
+//			difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
+//		}
 
 		//this is what makes it so that the sprite can be changed in run time not via animation, can be swapped
 		//to animation later on

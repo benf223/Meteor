@@ -3,6 +3,14 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
+	private float time;
+
+	private void Start()
+	{
+		//do sound
+		Debug.Log("");
+	}
+
 	public void PlayButtonPressed()
 	{
 		LoadScene("Game");

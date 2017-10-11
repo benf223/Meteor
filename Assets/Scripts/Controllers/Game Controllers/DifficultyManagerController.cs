@@ -9,7 +9,7 @@ public class DifficultyManagerController : MonoBehaviour
 	public GameController gameCont;
 
 	// time
-	private int minutes;
+//	private int minutes;
 	private int seconds;
 	private float startTimer;
 	private float countTime;
@@ -31,7 +31,7 @@ public class DifficultyManagerController : MonoBehaviour
 	// Use this for initialization
 	private void Start()
 	{
-		minutes = 0;
+//		minutes = 0;
 		seconds = 0;
 		elapsedTime = 0f;
 		
@@ -167,7 +167,7 @@ public class DifficultyManagerController : MonoBehaviour
 	{
 		countTime = Time.timeSinceLevelLoad - startTimer;
 
-		minutes = (int) countTime / 60;
+//		minutes = (int) countTime / 60;
 		seconds = (int) countTime % 60;
 	}
 
