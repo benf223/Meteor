@@ -11,6 +11,8 @@ public class MeteoriteController : MonoBehaviour
 	public float maxGravityScale;
 
 	public PhysicsMaterial2D lowBounce;
+	public AudioClip audio;
+	public AudioClip water;
 	
 	[HideInInspector]
 	public bool touching; // State in which meteorite is in process of flick
@@ -43,6 +45,15 @@ public class MeteoriteController : MonoBehaviour
 				touched = true;
 				touching = false;
 			}
+		}
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision) {
+		if (collision.gameObject.CompareTag ("Wall") && transform.position.y < 5) {
+			AudioSource.PlayClipAtPoint (audio, transform.position); 
+		}
+		if (collision.gameObject.CompareTag ("Despawner")) {
+			AudioSource.PlayClipAtPoint (water, transform.position);
 		}
 	}
 

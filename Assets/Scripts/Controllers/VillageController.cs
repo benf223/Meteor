@@ -12,8 +12,9 @@ public class VillageController : MonoBehaviour {
     private int latestSeconds;
     private int growthCount;
     private SpriteRenderer spriteRenderer;
-	public new AudioClip audio;
-	public AudioSource source;
+	public AudioClip audio;
+	//public AudioSource source;
+	float timer = 0.0f;
 
 
     public bool godMode;
@@ -21,7 +22,7 @@ public class VillageController : MonoBehaviour {
     // Use this for initialization
 
 	private void Start() {
-		source = GetComponent<AudioSource>();
+		//source = GetComponent<AudioSource>();
         // Initialize the difficulty manager script
         if (difficultyManager != null) {
             difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
@@ -44,10 +45,11 @@ public class VillageController : MonoBehaviour {
     }
 
     // Update is called once per frame
-	private void Update() {
-		//AudioSource source = GetComponent<AudioSource> ();
-		//source.PlayOneShot (audio, 1);
-    }
+	void Update()
+	{
+		timer += Time.deltaTime;
+		float seconds = timer % 60;
+	}
     /**
 	 * This method increases the size of the village sprite by .2 lengthwise for the first 20 seconds, and then
 	 * .2 in height for the next 50, after this the village will not grow anymore. This can be altered later on 
@@ -70,23 +72,22 @@ public class VillageController : MonoBehaviour {
 
 	private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Meteorite")) {
-			PlayExplosion ();
 			if (!godMode) {
                 MeteoriteController meteorite = collision.gameObject.GetComponent<MeteoriteController>();
                 meteorite.BlowUp();
 				PlayExplosion ();
                 isDestroyed = true;
                 Destroy(gameObject);
-				Invoke ("ChangeScene", 3);
-				//UnityEngine.SceneManagement.SceneManager.LoadScene("GameEnd");
+//				float a = timer;
+//				float b = 0;
+//				while (b < 2) {
+//					b = timer - a;
+//				}
+				UnityEngine.SceneManagement.SceneManager.LoadScene("GameEnd");
             }
 
         }
     }
-	void ChangeScene() {
-		Debug.Log ("Change scene called");
-		UnityEngine.SceneManagement.SceneManager.LoadScene("GameEnd");
-	}
 
 	private void PlayExplosion() {
 		AudioSource.PlayClipAtPoint(audio, transform.position); 

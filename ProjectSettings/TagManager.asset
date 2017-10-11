@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Meteorite
   - Touch
+  - Cloud
+  - Wall
+  - Water
+  - Despawner
   layers:
   - Default
   - TransparentFX
