@@ -392,7 +392,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 59d697cfdb6d841c2b37b8f88bf40b17, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -706,7 +706,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4765199335276448, guid: 6c362790855d3054292a499fbd14798e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4765199335276448, guid: 6c362790855d3054292a499fbd14798e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -741,6 +741,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114096267534733502, guid: 6c362790855d3054292a499fbd14798e,
+        type: 2}
+      propertyPath: water
+      value: 
+      objectReference: {fileID: 8300000, guid: f9dadc8f341194d1393b09757d93d8a7, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c362790855d3054292a499fbd14798e, type: 2}
   m_IsPrefabParent: 0
@@ -1165,7 +1170,7 @@ Prefab:
     - target: {fileID: 114901353698217930, guid: 0b4f3123e33fd7c4ab97619d5d521df0,
         type: 2}
       propertyPath: godMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114901353698217930, guid: 0b4f3123e33fd7c4ab97619d5d521df0,
         type: 2}

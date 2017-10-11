@@ -77,13 +77,13 @@ public class VillageController : MonoBehaviour {
                 meteorite.BlowUp();
 				PlayExplosion ();
                 isDestroyed = true;
-                Destroy(gameObject);
 //				float a = timer;
 //				float b = 0;
 //				while (b < 2) {
 //					b = timer - a;
 //				}
-				UnityEngine.SceneManagement.SceneManager.LoadScene("GameEnd");
+				Invoke("ChangeScene", 0.55f);
+
             }
 
         }
@@ -91,6 +91,13 @@ public class VillageController : MonoBehaviour {
 
 	private void PlayExplosion() {
 		AudioSource.PlayClipAtPoint(audio, transform.position); 
+	}
+
+	private void ChangeScene() {
+		Debug.Log ("invoked woo");
+		//Destroy(gameObject);
+		gameObject.SetActive(false);
+		UnityEngine.SceneManagement.SceneManager.LoadScene("GameEnd");
 	}
 
     /**

@@ -52,9 +52,7 @@ public class MeteoriteController : MonoBehaviour
 		if (collision.gameObject.CompareTag ("Wall") && transform.position.y < 5) {
 			AudioSource.PlayClipAtPoint (audio, transform.position); 
 		}
-		if (collision.gameObject.CompareTag ("Despawner")) {
-			AudioSource.PlayClipAtPoint (water, transform.position);
-		}
+
 	}
 
 	public void BlowUp()
