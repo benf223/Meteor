@@ -60,12 +60,12 @@ public class ShieldController : Powerup
     {
         if (counter == 0)
         {
-            if (timeSinceStart > 8 && shieldHealth == 1 || timeSinceStart > 8 && shieldHealth == 3)
+            if (timeSinceStart > 8 && shieldHealth == 1)
             {
                 Debug.Log("Red " + timeSinceStart);
                 GetComponent<Renderer>().material.color = red;
             }
-            else if (shieldHealth == 2 || shieldHealth == 3)
+            else if (shieldHealth == 2)
             {
                 Debug.Log("Yellow " + timeSinceStart);
                 GetComponent<Renderer>().material.color = yellow;
@@ -95,7 +95,7 @@ public class ShieldController : Powerup
         startTime = Time.timeSinceLevelLoad;
         timeSinceStart = 0;
         counter = 0;
-        shieldHealth = 100;
+        shieldHealth = 3;
 
         blue = new Color(0.0f, 0.95f, 1.0f);
         yellow = new Color(1.0f, 1.0f, 0);
