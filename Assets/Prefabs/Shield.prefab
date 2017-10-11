@@ -9,111 +9,94 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1439374596301586}
+  m_RootGameObject: {fileID: 1516270406610830}
   m_IsPrefabParent: 1
---- !u!1 &1439374596301586
+--- !u!1 &1516270406610830
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4715190381563006}
-  - component: {fileID: 212319074647693864}
-  - component: {fileID: 50664612946939114}
-  - component: {fileID: 61438827337376616}
-  - component: {fileID: 114980785205122016}
-  m_Layer: 10
-  m_Name: ItemBox
-  m_TagString: ItemBox
+  - component: {fileID: 4738598125847934}
+  - component: {fileID: 212416259089453378}
+  - component: {fileID: 50488603705722864}
+  - component: {fileID: 58778035167162370}
+  - component: {fileID: 114576691755623048}
+  m_Layer: 9
+  m_Name: Shield
+  m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4715190381563006
+--- !u!4 &4738598125847934
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1439374596301586}
+  m_GameObject: {fileID: 1516270406610830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17, y: -2.47, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: -0.06623028, y: -4.9378576, z: 0}
+  m_LocalScale: {x: 2.4541202, y: 3.8900642, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50664612946939114
+--- !u!50 &50488603705722864
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1439374596301586}
-  m_BodyType: 0
+  m_GameObject: {fileID: 1516270406610830}
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.3
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61438827337376616
-BoxCollider2D:
+--- !u!58 &58778035167162370
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1439374596301586}
+  m_GameObject: {fileID: 1516270406610830}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 060ac08daa253b14db8b1ea4aebac2b2, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0037170649, y: -0.005147934}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.24, y: 2.24}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.0050200974, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.251468, y: 2.2486053}
-  m_EdgeRadius: 0
---- !u!114 &114980785205122016
+  m_Radius: 0.3656415
+--- !u!114 &114576691755623048
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1439374596301586}
+  m_GameObject: {fileID: 1516270406610830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 542bc302e8f019d44a12293bec20bf9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 61a89399b12c4524e945f57d6364ab5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchCount: 0
-  customTag: 
-  lowBounce: {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  spriteArray: []
-  touching: 0
-  powerups:
-  - {fileID: 1489061683571032, guid: 27380abefbd60f1499fc99208d208076, type: 2}
-  - {fileID: 1489061683571032, guid: 27380abefbd60f1499fc99208d208076, type: 2}
---- !u!212 &212319074647693864
+  duration: 10
+  powerupName: Shield
+--- !u!212 &212416259089453378
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1439374596301586}
+  m_GameObject: {fileID: 1516270406610830}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -121,7 +104,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 048a85fb6d961a244a9161b1dbbc3309, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -140,12 +123,12 @@ SpriteRenderer:
   m_SortingLayerID: 694376371
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 99360cdb4130ddf4ca7b1ba822e6b95a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2f15d9a1e41fb94bbc171f4fae5b825, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2, y: 1.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

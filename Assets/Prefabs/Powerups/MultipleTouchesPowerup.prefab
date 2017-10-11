@@ -53,3 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 10
   powerupName: Multiple Touches
+  touchCount: 10

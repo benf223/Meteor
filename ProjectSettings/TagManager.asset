@@ -6,11 +6,13 @@ TagManager:
   tags:
   - Touch
   - Cloud
+  - Shield
   - Wall
   - Meteorite
   - ItemBox
   - Village
   - Powerup
+  - MeteoriteSpawner
   layers:
   - Default
   - TransparentFX
@@ -20,9 +22,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Meteorite
+  - Shield
+  - ItemBox
   - 
   - 
   - 
@@ -47,4 +49,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 735275075
+    locked: 0
+  - name: Foreground
+    uniqueID: 694376371
+    locked: 0
+  - name: UI
+    uniqueID: 2738002363
     locked: 0

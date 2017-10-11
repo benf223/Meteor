@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Assertions;
 
 public class DifficultyManagerController : MonoBehaviour
 {
@@ -67,6 +68,7 @@ public class DifficultyManagerController : MonoBehaviour
 	{
 		gameCont.AddScore(1);
 		secondsToIncreaseDifficulty++; // Used for the difficulty increase interval
+		Debug.Log("Seconds: "+seconds);
 	}
 
 	private void DifficultyTimeFrame()
@@ -75,21 +77,37 @@ public class DifficultyManagerController : MonoBehaviour
 		// Note: Default values (20 - timeRemoved), (timeRemoved <= 10)
 		if (secondsToIncreaseDifficulty == initialDifficultyTime - timeRemoved)
 		{
+            Debug.Log("Difficulty Increase activated");
 			if (timeRemoved < maxDifficultyTime)
 			{
 				timeRemoved++;
 			}
 
-			// starts at 0.90, decreases every .05 and maxs at 0.4 (does it 10 times)
-			if (spawnDelayMultiplier >= 0.4f)
+            /*  
+             *  The Spawn multipler determines how much time is seperated for each meteorite to spawn.
+             *  The multipler starts at 0.75f and decreases 0.035f everytime this method is called.
+             *  The values will keep changing until it reaches 0.40f.
+             */
+
+            // starts at 0.90, decreases every .05 and maxs at 0.4 (does it 10 times)
+            if (spawnDelayMultiplier >= 0.4f)
 			{
 				spawnDelayMultiplier -= 0.1f;
 			}
 
-			// starts at 1.00, increases every .035 and maxs at 1.75 (does it 21-22 times)
-			if (speedMultiplier <= 1.75f)
+            /*
+            *  The Speed of meteorites will be determined by this condition.
+            *  The initial speed of the meteorites will start from x1 speed.
+            *  Each Time this method is called the meteorites speed will increase by 0.035f.
+            *  The maximum speed the meteorites will go is x1.75. 
+            */
+
+            // starts at 1.00, increases every .035 and maxs at 1.75 (does it 21-22 times)
+            if (speedMultiplier <= 1.75f)
 			{
-				speedMultiplier += 0.035f;				
+                Assert.AreEqual(true, speedMultiplier <= 1.75f);
+                Debug.Log("Speed Multipler for each meteorite: " + speedMultiplier);
+                speedMultiplier += 0.035f;				
 			}
 
             // starts at 0.40, increases every .05 and maxs at 0.80 (does it 10? times)
