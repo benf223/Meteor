@@ -9,31 +9,31 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1417127798258870}
+  m_RootGameObject: {fileID: 1435238714249832}
   m_IsPrefabParent: 1
---- !u!1 &1417127798258870
+--- !u!1 &1435238714249832
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4574874492273064}
-  - component: {fileID: 61180742340088534}
-  - component: {fileID: 114193161327393866}
+  - component: {fileID: 4756397721355060}
+  - component: {fileID: 114984320451727524}
+  - component: {fileID: 61722161145949178}
   m_Layer: 0
-  m_Name: MeteoriteSpawner
+  m_Name: ItemSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4574874492273064
+--- !u!4 &4756397721355060
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1417127798258870}
+  m_GameObject: {fileID: 1435238714249832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61180742340088534
+--- !u!61 &61722161145949178
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1417127798258870}
+  m_GameObject: {fileID: 1435238714249832}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -66,21 +66,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114193161327393866
+--- !u!114 &114984320451727524
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1417127798258870}
+  m_GameObject: {fileID: 1435238714249832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75847e11410e609408ef63da49119da5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0421bbd00377ad84392941735c96b8a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meteorite: {fileID: 1852739411863102, guid: be049906cd62d4b4faabff5b700cc254, type: 2}
+  itemBox: {fileID: 1439374596301586, guid: 67680c89c341d1e4a8dedd34659860ce, type: 2}
   difficultyManager: {fileID: 0}
-  spawningEnabled: 1
-  startingTimeBetweenSpawn: 1.5
-  minSpawnForce: 300
-  maxSpawnForce: 400
-  fastSpawnForceMultiplier: 1.2
+  minSpawnForce: 0
+  maxSpawnForce: 0
