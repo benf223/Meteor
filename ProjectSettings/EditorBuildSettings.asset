@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Tests/Spawn Test.unity
     guid: bad1abd735702f046b0143ce0b547f5f
+    path: Assets/Scenes/CloudTest.unity
+    guid: 6b68e28ed41c8ee4fa22840fe623282e
+
