@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ba0c420e0b07a40840d56f24a91ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultTouches: 1
   customTag: 
   lowBounce: {fileID: 6200000, guid: 060ac08daa253b14db8b1ea4aebac2b2, type: 2}
   spriteRenderer: {fileID: 212488209702916204}

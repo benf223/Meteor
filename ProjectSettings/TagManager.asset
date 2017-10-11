@@ -12,6 +12,7 @@ TagManager:
   - ItemBox
   - Village
   - Powerup
+  - MeteoriteSpawner
   layers:
   - Default
   - TransparentFX
