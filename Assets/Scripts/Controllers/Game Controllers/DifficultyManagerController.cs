@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Assertions;
 
 public class DifficultyManagerController : MonoBehaviour
 {
@@ -8,9 +9,7 @@ public class DifficultyManagerController : MonoBehaviour
 	public GameController gameCont;
 
 	// time
-	// private int hours;
-
-	private int minutes;
+//	private int minutes;
 	private int seconds;
 	private float startTimer;
 	private float countTime;
@@ -23,6 +22,7 @@ public class DifficultyManagerController : MonoBehaviour
 
 	private float spawnDelayMultiplier;
 	private float speedMultiplier;
+    private float directionChangeMultiplier;
 	private bool difficultyUpdated;
 
 	public float initialDifficultyTime;
@@ -31,16 +31,19 @@ public class DifficultyManagerController : MonoBehaviour
 	// Use this for initialization
 	private void Start()
 	{
-		minutes = 0;
+//		minutes = 0;
 		seconds = 0;
 		elapsedTime = 0f;
 		
 		timeFlowing = false;
 		secondsToIncreaseDifficulty = 0;
 		timeRemoved = 0;
-		spawnDelayMultiplier = 0.75f;
-		speedMultiplier = 1.0f;
-		difficultyUpdated = false;
+
+        spawnDelayMultiplier = 0.90f;
+        speedMultiplier = 1.0f;
+        directionChangeMultiplier = 0.4f;
+
+        difficultyUpdated = false;
 	}
 
 	// Update is called once per frame
@@ -50,6 +53,7 @@ public class DifficultyManagerController : MonoBehaviour
 		{
 			UpdateTime();
 			DifficultyTimeFrame();
+			
 			// Updates every second (or based on interval variable)
 			if (Time.timeSinceLevelLoad >= elapsedTime)
 			{
@@ -64,7 +68,9 @@ public class DifficultyManagerController : MonoBehaviour
 	{
 		gameCont.AddScore(1);
 		secondsToIncreaseDifficulty++; // Used for the difficulty increase interval
-		Debug.Log(seconds);
+
+		Debug.Log("Seconds: "+seconds);
+
 	}
 
 	private void DifficultyTimeFrame()
@@ -73,28 +79,44 @@ public class DifficultyManagerController : MonoBehaviour
 		// Note: Default values (20 - timeRemoved), (timeRemoved <= 10)
 		if (secondsToIncreaseDifficulty == initialDifficultyTime - timeRemoved)
 		{
+            Debug.Log("Difficulty Increase activated");
 			if (timeRemoved < maxDifficultyTime)
 			{
 				timeRemoved++;
 			}
 
-			// Modify spawn delay multiplier
-			// NOTE THIS CAN CHANGE
-			// this decreases from 1 to 0.25 using 0.05 for every difficulty time frame.
-			// To further optimize, this section should call a method from the spawner
-			// Alvin will be keen to refactor these sections of code after main game is completed
-			if (spawnDelayMultiplier >= 0.4f)
+            /*  
+             *  The Spawn multipler determines how much time is seperated for each meteorite to spawn.
+             *  The multipler starts at 0.75f and decreases 0.035f everytime this method is called.
+             *  The values will keep changing until it reaches 0.40f.
+             */
+
+            // starts at 0.90, decreases every .05 and maxs at 0.4 (does it 10 times)
+            if (spawnDelayMultiplier >= 0.4f)
 			{
-				spawnDelayMultiplier -= 0.035f;
+				spawnDelayMultiplier -= 0.1f;
 			}
 
-			// Modify meteorite speed multiplier
-			// NOTE THIS CAN CHANGE
-			// this increases from 1.0 to 2.0 using 0.05 for every difficulty time frame.
-			if (speedMultiplier <= 1.75f)
+            /*
+            *  The Speed of meteorites will be determined by this condition.
+            *  The initial speed of the meteorites will start from x1 speed.
+            *  Each Time this method is called the meteorites speed will increase by 0.035f.
+            *  The maximum speed the meteorites will go is x1.75. 
+            */
+
+            // starts at 1.00, increases every .035 and maxs at 1.75 (does it 21-22 times)
+            if (speedMultiplier <= 1.75f)
 			{
-				speedMultiplier += 0.035f;				
+                Assert.AreEqual(true, speedMultiplier <= 1.75f);
+                Debug.Log("Speed Multipler for each meteorite: " + speedMultiplier);
+                speedMultiplier += 0.035f;				
 			}
+
+            // starts at 0.40, increases every .05 and maxs at 0.80 (does it 10? times)
+            if (directionChangeMultiplier <= 0.80f)
+            {
+                directionChangeMultiplier += .05f;
+            }
 
 			secondsToIncreaseDifficulty = 0; // Reset countdown timer for difficulty change
 			difficultyUpdated = true; // Notifies that difficulty has changed
@@ -107,10 +129,13 @@ public class DifficultyManagerController : MonoBehaviour
 	// Checks if difficulty has been updated, then resets status onced used
 	public bool DifficultyUpdated()
 	{
-		
 		if (difficultyUpdated)
 		{
-			Debug.Log("Difficulty Updated");
+			if (Debug.isDebugBuild)
+			{
+				Debug.Log("Difficulty Updated");
+			}
+			
 			difficultyUpdated = false;
 			return true;
 		}
@@ -118,6 +143,10 @@ public class DifficultyManagerController : MonoBehaviour
 		return false;
 	}
 
+	public float GetMeteoriteSpawnDirectionMultiplier() {
+
+		return directionChangeMultiplier;
+	}
 
 	public float GetMeteoriteSpawnDelayMultiplier()
 	{
@@ -140,8 +169,7 @@ public class DifficultyManagerController : MonoBehaviour
 	{
 		countTime = Time.timeSinceLevelLoad - startTimer;
 
-		// hours = (int) countTime / 360;
-		minutes = (int) countTime / 60;
+//		minutes = (int) countTime / 60;
 		seconds = (int) countTime % 60;
 	}
 

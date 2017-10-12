@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114901353698217930}
   m_Layer: 0
   m_Name: Village
-  m_TagString: Untagged
+  m_TagString: Village
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0fb48b57a6941e44b9b8d94e10a2ca06, type: 3}
   - {fileID: 21300000, guid: 15cf0880d9298fb428aa4d2530e96e40, type: 3}
   - {fileID: 21300000, guid: 0a336237680e7404382854b40c32de20, type: 3}
-  godMode: 0
+  godMode: 1
 --- !u!212 &212892738109553396
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -119,7 +119,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 048a85fb6d961a244a9161b1dbbc3309, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -135,8 +135,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -329757845
-  m_SortingLayer: 3
+  m_SortingLayerID: 694376371
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0fb48b57a6941e44b9b8d94e10a2ca06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

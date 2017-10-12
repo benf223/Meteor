@@ -1,16 +1,32 @@
 ﻿using System;
-using System.Threading;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
+	private float time;
+
+	private void Start()
+	{
+		//do sound
+		Debug.Log("");
+	}
+
 	public void PlayButtonPressed()
 	{
 		LoadScene("Game");
 	}
 
-	public void Quit()
+	public void HighscoreButtonPressed()
+	{
+		LoadScene("Highscores");
+	}
+
+	public void SettingsButtonPressed()
+	{
+		LoadScene("Settings");
+	}
+	
+	public void QuitButtonPressed()
 	{
 		Application.Quit();
 	}

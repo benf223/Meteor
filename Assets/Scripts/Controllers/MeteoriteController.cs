@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class MeteoriteController : MonoBehaviour
+public class MeteoriteController : TouchableObjectController
 {
 	private GameObject difficultyManager;
 	private DifficultyManagerController difficultyManagerController;
@@ -100,9 +100,7 @@ public class MeteoriteController : MonoBehaviour
 	{
 		return touched;
 	}
-
-	public void SetTouched(bool touched)
-	{
-		this.touched = touched;
-	}
+	
 }
+
+

@@ -9,7 +9,7 @@ public class TouchObjectController : MonoBehaviour
 	private Rigidbody2D rb;
 
 	// The Y position since creation
-	private float initialY; 
+	private float initialY;
 
 	// Extensions for the maxY and maxX
 	public float yPositionExtensionUp;
@@ -30,7 +30,6 @@ public class TouchObjectController : MonoBehaviour
 	// Use this for initialization
 	private void Start()
 	{
-		//foundMeteorite = false;
 		touchManager = GameObject.Find("TouchManager");
 		touchController = touchManager.GetComponent<TouchController>();
 		startTime = Time.timeSinceLevelLoad;
@@ -52,14 +51,14 @@ public class TouchObjectController : MonoBehaviour
 	}
 
 	private void FixedUpdate()
-	{	
+	{
 		// Gets the position of the current frame
 		currentPosition = transform.position;
 
 		if (touchController.IsDragging())
 		{
 			// Get the position of the touch
-			Vector2 touchPosition = (Vector2) Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+			Vector2 touchPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
 
 			// Sets the position of this touch object to the position of the actual touch
 			rb.position = touchPosition;
@@ -69,6 +68,7 @@ public class TouchObjectController : MonoBehaviour
 			{
 				Destroy(gameObject);
 			}
+			
 			// Doesn't allow swiping down
 			if (touchPosition.y < initialY - yPositionExtensionDown)
 			{
@@ -94,9 +94,9 @@ public class TouchObjectController : MonoBehaviour
 	 * the touch object is interacting with.
 	 */
 	private void MoveMeteorite()
-	{	
+	{
 		// Referencing the needed controllers and components
-		MeteoriteController meteoriteController = meteorite.GetComponent<MeteoriteController>();
+		TouchableObjectController meteoriteController = meteorite.GetComponent<TouchableObjectController>();
 		Transform meteoriteTransform = meteorite.GetComponent<Transform>();
 		Rigidbody2D meteoriteRb = meteorite.GetComponent<Rigidbody2D>();
 
@@ -118,6 +118,8 @@ public class TouchObjectController : MonoBehaviour
 
 			// Finally, applies the force to the meteorite towards the position of the touch object
 			meteoriteRb.AddForce((transform.position - meteoriteTransform.position) * flickForce);
+			meteoriteRb.AddTorque((transform.position.x - meteoriteTransform.position.x) * 10);
+			
 		}
 	}
 
@@ -140,9 +142,21 @@ public class TouchObjectController : MonoBehaviour
 				meteorite = other.gameObject;
 				meteorite.GetComponent<MeteoriteController>().SetTouched(gameObject);
 			}
+
+			if (other.CompareTag("ItemBox"))
+			{
+				/**
+				 * Assigns the touch object with a meteorite
+				 * to interact with.
+				 * Also sets the meteorite in a touched state so that
+				 * it cannot be interacted with again after the swipe.
+				 */
+				meteorite = other.gameObject;
+				meteorite.GetComponent<ItemBoxController>().SetTouched(gameObject);
+			}
 		}
 	}
-	
+
 	/**
 	 * Returns the speed of the touch object.
 	 */
