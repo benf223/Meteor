@@ -27,6 +27,10 @@ public class ItemBoxController : TouchableObjectController {
             // Just incase multiple boxes in screen at once
             if (GameObject.FindWithTag("Powerup") == null) {
                 Instantiate(getRandomPowerup(), new Vector3(0, 0, 0), Quaternion.identity);
+                GameObject[] existingItemBoxes = GameObject.FindGameObjectsWithTag("ItemBox");
+                foreach (GameObject itemBoxes in existingItemBoxes) {
+                    Destroy(itemBoxes);
+                }
             }
             Destroy(gameObject);
         }

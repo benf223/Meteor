@@ -6,17 +6,24 @@ public class GameController : MonoBehaviour
     private int score;
     private DifficultyManagerController difficultyManagerControl;
 	
+	[HideInInspector]
+	public bool restarting;
+	
 	public GameObject difficultyManager;
 	public Text scoreText;
+	public GameObject pauseMenu;
 	
     // Use this for initialization
 	private void Start()
     {
+		
         Time.timeScale = 1f;
 	    score = -1;
 	    difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();
         difficultyManagerControl.StartTimer();
-    }
+		Debug.Log ("Start woo");
+	    restarting = false;
+	}
 
     // Update is called once per frame
 	private void Update()
@@ -40,9 +47,12 @@ public class GameController : MonoBehaviour
 
     private void OnDestroy()
     {
-	    UpdateHighscores();
-        PlayerPrefs.SetString("score", "Score: " + score);
-        difficultyManagerControl.PauseTimer();
+	    if (!restarting)
+	    {
+		    UpdateHighscores();
+		    PlayerPrefs.SetString("score", "Score: " + score);
+		    difficultyManagerControl.PauseTimer();
+	    }
     }
 
 	private void UpdateHighscores()
@@ -91,5 +101,12 @@ public class GameController : MonoBehaviour
 	public void StoreScore()
 	{
 		PlayerPrefs.SetString("score", "Score: " + score);
+	}
+
+	public void Pause()
+	{
+		Time.timeScale = 0f;
+		Debug.Log("Frozen?");
+		pauseMenu.SetActive(true);
 	}
 }

@@ -8,7 +8,6 @@ public class GameEndController : MonoBehaviour
 	public Text reminderText;
 
 	private bool update;
-	private int count;
 	private int timeToStop;
 	
 	// Use this for initialization
@@ -16,8 +15,7 @@ public class GameEndController : MonoBehaviour
 	{
 		endText.fontSize = 2;
 		update = true;
-		count = 0;
-		timeToStop = (int) Time.timeSinceLevelLoad + 3;
+		timeToStop = (int) Time.timeSinceLevelLoad + 2;
 
 		scoreText.text = PlayerPrefs.GetString("score");
 	}

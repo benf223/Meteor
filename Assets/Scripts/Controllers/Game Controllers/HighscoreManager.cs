@@ -5,7 +5,7 @@ public class HighscoreManager : MonoBehaviour
 {
 	public GameObject starPrefab;
 	public Text[] highscoreTexts;
-	public Collider2D collider;
+	public Collider2D cd;
 	private int[] highscores;
 
 	public int maxStars;
@@ -59,14 +59,14 @@ public class HighscoreManager : MonoBehaviour
 		if (currentStars >= maxStars)
 			return;
 		
-		Bounds spawnBounds = collider.bounds;
+		Bounds spawnBounds = cd.bounds;
 
 		Vector3 min = spawnBounds.min;
 		Vector3 max = spawnBounds.max;
 
 		float x = Random.Range(min.x, max.x);
 		float y = Random.Range(min.y, max.y);
-		float scale = Random.RandomRange(1f, 1.3f);
+		float scale = Random.Range(1f, 1.3f);
 
 		Vector2 spawnLocation = new Vector3(x, y, 0);
 
@@ -79,5 +79,10 @@ public class HighscoreManager : MonoBehaviour
 	public void StarDespawned()
 	{
 		--currentStars;
+	}
+
+	public void BackButtonPressed()
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
 	}
 }

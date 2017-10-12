@@ -6,8 +6,10 @@ TagManager:
   tags:
   - Touch
   - Cloud
-  - Shield
   - Wall
+  - Water
+  - Despawner
+  - Shield
   - Meteorite
   - ItemBox
   - Village
@@ -23,6 +25,7 @@ TagManager:
   - 
   - 
   - Meteorite
+  - Low
   - Shield
   - ItemBox
   - 
@@ -47,6 +50,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: middle
+    uniqueID: 2434115129
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

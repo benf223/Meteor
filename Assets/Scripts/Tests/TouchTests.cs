@@ -81,6 +81,11 @@ public class TouchTests : MonoBehaviour
 				gameEndFlag = false;
 				break;
 			}
+			case "Settings":
+			case "Highscores":
+			{
+				break;
+			}
 			default:
 			{
 				//If the scene has not been registered for the tests.

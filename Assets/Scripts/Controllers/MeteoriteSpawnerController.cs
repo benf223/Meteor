@@ -144,7 +144,7 @@ public class MeteoriteSpawnerController : MonoBehaviour {
         Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
         GameObject[] walls = GameObject.FindGameObjectsWithTag("Wall");
 
-        int targetIndex = Random.Range(0, walls.Length);
+        int targetIndex = Random.Range(0, walls.Length - 1);
         Vector2 targetLocation = GenerateRandomLocation(walls[targetIndex]);
 
         //.normalized keeps direction, but length of 1.

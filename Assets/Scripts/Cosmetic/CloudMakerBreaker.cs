@@ -5,7 +5,7 @@ public class CloudMakerBreaker : MonoBehaviour
 	public GameObject smol;
 	public GameObject med;
 	public GameObject large;
-	public Collider2D collider;
+	public Collider2D cd;
 	
 	public bool onLeft;
 
@@ -13,7 +13,7 @@ public class CloudMakerBreaker : MonoBehaviour
 	{
 		if (Random.Range(1, 200) == 17)
 		{
-			Bounds spawnBounds = collider.bounds;
+			Bounds spawnBounds = cd.bounds;
 
 			Vector3 min = spawnBounds.min;
 			Vector3 max = spawnBounds.max;
