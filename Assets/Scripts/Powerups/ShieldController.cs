@@ -18,6 +18,7 @@ public class ShieldController : Powerup
     // Update is called once per frame
     new void Update()
     {
+        UpdateSlider();
         timeSinceStart = Time.timeSinceLevelLoad - startTime;
         if (timeSinceStart > duration || shieldHealth == 0)
         {
@@ -107,6 +108,7 @@ public class ShieldController : Powerup
 
     protected override void DeactivatePowerup()
     {
+        DeactivateSlider();
         Destroy(gameObject);
     }
 }

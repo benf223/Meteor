@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour {
 
-    private Collider2D collider;
+    private Collider2D cd;
     public GameObject itemBox;
     public GameObject difficultyManager;
     //private DifficultyManagerController difficultyManagerController;
@@ -21,7 +21,7 @@ public class ItemSpawner : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        collider = GetComponent<BoxCollider2D>();
+        cd = GetComponent<BoxCollider2D>();
         // difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
     }
 
@@ -47,7 +47,7 @@ public class ItemSpawner : MonoBehaviour {
 
     public void SpawnItemBox() {
         //get the bounding box of the box collider
-        Bounds spawnBounds = collider.bounds;
+        Bounds spawnBounds = cd.bounds;
 
         Vector3 min = spawnBounds.min;//get min values
         Vector3 max = spawnBounds.max;//get max values
