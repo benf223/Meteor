@@ -338,7 +338,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.7205882, g: 0.7340771, b: 1, a: 1}
+  m_Color: {r: 0.7352941, g: 0.74807304, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1994,7 +1994,7 @@ Prefab:
     - target: {fileID: 114901353698217930, guid: 0b4f3123e33fd7c4ab97619d5d521df0,
         type: 2}
       propertyPath: godMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114901353698217930, guid: 0b4f3123e33fd7c4ab97619d5d521df0,
         type: 2}
@@ -3227,6 +3227,11 @@ Prefab:
       propertyPath: difficultyManager
       value: 
       objectReference: {fileID: 256551094}
+    - target: {fileID: 114984320451727524, guid: 3a458d337cdea9c44a1e09694ec8eb63,
+        type: 2}
+      propertyPath: spawnDelay
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a458d337cdea9c44a1e09694ec8eb63, type: 2}
   m_IsPrefabParent: 0
