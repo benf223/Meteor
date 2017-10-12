@@ -5,6 +5,8 @@ using UnityEngine;
 public class ItemBoxController : TouchableObjectController {
 
     public GameObject[] powerups;
+    public Transform myTransform;
+
 
     /**
      * Randomizes powerup selection
@@ -28,5 +30,15 @@ public class ItemBoxController : TouchableObjectController {
             }
             Destroy(gameObject);
         }
+    }
+
+    void FixedUpdate() {
+        float rotZ = myTransform.rotation.z;
+
+
+        rb.AddTorque(-rotZ * 10);
+
+
+
     }
 }

@@ -22,6 +22,8 @@ public abstract class Powerup : MonoBehaviour {
 		}
 	}
 
+
+
 	/**
 	 * Values to change when power up is activated
 	 */

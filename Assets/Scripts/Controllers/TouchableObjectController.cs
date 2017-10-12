@@ -8,7 +8,6 @@ public class TouchableObjectController : MonoBehaviour {
     protected DifficultyManagerController difficultyManagerController;
     protected Rigidbody2D rb;
 
-    [HideInInspector]
     public int touchCount = 1;
 
     public string customTag;
@@ -35,6 +34,7 @@ public class TouchableObjectController : MonoBehaviour {
     // Use this for initialization
     protected void Start() {
         //touchCount = 1;
+        rb = GetComponent<Rigidbody2D>();
         touchObject = null;
         touched = false;
         touching = false;
@@ -48,8 +48,8 @@ public class TouchableObjectController : MonoBehaviour {
         //InitializeSpeed();
     }
 
-    // Update is called once per frame
-    void Update() {
+   // Update is called once per frame
+    protected void Update() {
 
         if (touching) {
             if (touchObject == null) {

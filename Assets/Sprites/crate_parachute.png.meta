@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 1c262f6e31c67284e9f9643f23dddb36
+timeCreated: 1507759455
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.50862664, y: 0.12042792}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+    outline:
+    - - {x: -60, y: 71}
+      - {x: -61, y: 70}
+      - {x: -61, y: -19}
+      - {x: -44, y: -79}
+      - {x: 45, y: -79}
+      - {x: 61, y: -20}
+      - {x: 61, y: 69}
+      - {x: 53, y: 71}
+    - - {x: -53, y: 66}
+      - {x: -55, y: 65}
+      - {x: -55, y: 61}
+      - {x: -54, y: 60}
+      - {x: -50, y: 60}
+      - {x: -49, y: 62}
+      - {x: -49, y: 64}
+      - {x: -50, y: 66}
+    physicsShape:
+    - - {x: 61, y: 0}
+      - {x: 61, y: 26}
+      - {x: 53, y: 44}
+      - {x: 32, y: 64}
+      - {x: 18, y: 70}
+      - {x: 8, y: 71}
+      - {x: -13, y: 71}
+      - {x: -24, y: 68}
+      - {x: -38, y: 59}
+      - {x: -52, y: 44}
+      - {x: -60, y: 29}
+      - {x: -61, y: 19}
+      - {x: -61, y: -1}
+      - {x: -17, y: -37}
+      - {x: -18, y: -78}
+      - {x: -15, y: -79}
+      - {x: 17, y: -79}
+      - {x: 19, y: -77}
+      - {x: 21, y: -44}
+      - {x: 15, y: -39}
+    - - {x: -8, y: -35}
+      - {x: -13, y: -31}
+      - {x: -45, y: -5}
+      - {x: -7, y: -37}
+      - {x: -6, y: -36}
+    - - {x: 12, y: -34}
+      - {x: 16, y: -25}
+      - {x: 18, y: -23}
+      - {x: 24, y: -12}
+      - {x: 17, y: -28}
+      - {x: 12, y: -33}
+      - {x: 11, y: -33}
+      - {x: 8, y: -37}
+      - {x: 10, y: -36}
+    - - {x: -23, y: 9}
+      - {x: -2, y: -35}
+      - {x: -1, y: -35}
+    - - {x: 5, y: -19}
+      - {x: 6, y: -18}
+      - {x: 7, y: 0}
+      - {x: 9, y: -22}
+      - {x: 4, y: -34}
+      - {x: 5, y: -34}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
