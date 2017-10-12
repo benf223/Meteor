@@ -91,6 +91,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customTag: 
   lowBounce: {fileID: 6200000, guid: 060ac08daa253b14db8b1ea4aebac2b2, type: 2}
+  audio: {fileID: 8300000, guid: 881c82c27f0d145788f7163312881515, type: 3}
+  water: {fileID: 8300000, guid: 1501b355a56dd443699646286cbe20eb, type: 3}
   spriteRenderer: {fileID: 212488209702916204}
   spriteArray:
   - sprites:
