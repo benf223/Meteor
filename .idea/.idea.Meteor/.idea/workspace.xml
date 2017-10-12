@@ -2,14 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7703dfdb-788d-4a7c-9732-347b7cfb281b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.Meteor/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Meteor/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Prefabs/Powerups/WallBreaker.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Powerups/WallBreaker.prefab" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419464636817880.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419464636817880.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419469615901200.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419469615901200.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419469649054060.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419469649054060.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419469661537910.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419469661537910.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419478904312290.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419478904312290.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419482583274220.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419482583274220.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419483287460300.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419483287460300.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419483526765950.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419483526765950.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419483862428890.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419483862428890.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419483931750490.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419483931750490.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419484011283250.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419484011283250.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419568044684280.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419568044684280.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419596862336660.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419596862336660.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419601955705680.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419601955705680.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419616039341270.unity" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/InitTestScene636419616039341270.unity.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/UIDirectionControl.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/UIDirectionControl.cs.meta" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/ItemBoxController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/ItemBoxController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/ItemSpawner.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/ItemSpawner.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Powerups/Powerup.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Powerups/Powerup.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Powerups/ShieldController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Powerups/ShieldController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteDespawnerController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteDespawnerController.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,41 +117,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MeteoriteSpawnerController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MeteoriteSpawnerController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="147" column="62" lean-forward="true" selection-start-line="147" selection-start-column="62" selection-end-line="147" selection-end-column="62" />
+            <state relative-caret-position="2940">
+              <caret line="147" column="62" lean-forward="false" selection-start-line="147" selection-start-column="62" selection-end-line="147" selection-end-column="62" />
               <folding>
-                <marker date="1507776083983" expanded="true" signature="76:6497" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="887:1297" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="1020:1089" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="1175:1291" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="1364:1822" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="1522:1816" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="1729:1806" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="1855:2486" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="1865:1996" ph="/* Start spawning meteorites when breathing time reached ... */" />
-                <marker date="1507776083983" expanded="true" signature="2052:2480" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="2195:2470" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="2213:2243" ph="/* For Testing ... */" />
-                <marker date="1507776083983" expanded="true" signature="2286:2456" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="2492:2552" ph="/* Function to controll the spawning of meteorites ... */" />
-                <marker date="1507776083983" expanded="true" signature="2588:3840" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="3491:3605" ph="/* Debug.Log(&quot;Chance to Aim at Village: &quot; + chanceToAimAtVillage); ... */" />
-                <marker date="1507776083983" expanded="true" signature="3650:3754" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="3754:3833" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="3922:4495" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="4167:4262" ph="/* meteoriteColor.r = 244; ... */" />
-                <marker date="1507776083983" expanded="true" signature="4554:5017" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="5080:5368" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="5374:5495" ph="/* This function is now obselete as the meteorites will instead target a random spot ... */" />
-                <marker date="1507776083983" expanded="true" signature="5548:6332" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="5621:5709" ph="/* Randomize between spawning to the left, or the right ... */" />
-                <marker date="1507776083983" expanded="true" signature="5804:5838" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="5838:5888" ph="{...}" />
-                <marker date="1507776083983" expanded="true" signature="6008:6107" ph="/* Calculates the direction using the angle ... */" />
-                <marker date="1507776083983" expanded="true" signature="6369:6495" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="76:6497" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="887:1297" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="1020:1089" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="1175:1291" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="1364:1822" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="1522:1816" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="1729:1806" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="1855:2486" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="1865:1996" ph="/* Start spawning meteorites when breathing time reached ... */" />
+                <marker date="1507777351271" expanded="true" signature="2052:2480" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="2195:2470" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="2213:2243" ph="/* For Testing ... */" />
+                <marker date="1507777351271" expanded="true" signature="2286:2456" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="2492:2552" ph="/* Function to controll the spawning of meteorites ... */" />
+                <marker date="1507777351271" expanded="true" signature="2588:3840" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="3491:3605" ph="/* Debug.Log(&quot;Chance to Aim at Village: &quot; + chanceToAimAtVillage); ... */" />
+                <marker date="1507777351271" expanded="true" signature="3650:3754" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="3754:3833" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="3922:4495" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="4167:4262" ph="/* meteoriteColor.r = 244; ... */" />
+                <marker date="1507777351271" expanded="true" signature="4554:5017" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="5080:5368" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="5374:5495" ph="/* This function is now obselete as the meteorites will instead target a random spot ... */" />
+                <marker date="1507777351271" expanded="true" signature="5548:6332" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="5621:5709" ph="/* Randomize between spawning to the left, or the right ... */" />
+                <marker date="1507777351271" expanded="true" signature="5804:5838" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="5838:5888" ph="{...}" />
+                <marker date="1507777351271" expanded="true" signature="6008:6107" ph="/* Calculates the direction using the angle ... */" />
+                <marker date="1507777351271" expanded="true" signature="6369:6495" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MeteoriteDespawnerController.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteDespawnerController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <marker date="1507778182988" expanded="true" signature="77:594" ph="{...}" />
+                <marker date="1507778182988" expanded="true" signature="275:592" ph="{...}" />
+                <marker date="1507778182988" expanded="true" signature="384:484" ph="{...}" />
+                <marker date="1507778182988" expanded="true" signature="444:480" ph="{...}" />
+                <marker date="1507778182988" expanded="true" signature="551:589" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -183,7 +225,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Powerups/WallBreaker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/SettingsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UIDirectionControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/249E3C18-6ACB-4F50-900C-04353137B726/c6/0e737755/MonoBehaviour.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/StarController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/GameController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -214,7 +255,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/249E3C18-6ACB-4F50-900C-04353137B726/e9/3d4878cf/WaitForSeconds.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A87F162D-47B8-4BE7-B6EA-E656C9C5AA2B/35/345fcbda/Button.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/249E3C18-6ACB-4F50-900C-04353137B726/7a/cf4b7648/Time.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteDespawnerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TouchController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TouchObjectController.cs" />
@@ -247,6 +287,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Powerups/Powerup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Powerups/ShieldController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteDespawnerController.cs" />
       </list>
     </option>
   </component>
@@ -435,11 +476,12 @@
       <workItem from="1507772499263" duration="1706000" />
       <workItem from="1507774238747" duration="966000" />
       <workItem from="1507776048017" duration="44000" />
+      <workItem from="1507778156381" duration="47000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43587000" />
+    <option name="totallyTimeSpent" value="43634000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -451,22 +493,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1051" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1051" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3765625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24114583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -515,8 +557,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteDespawnerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="360">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <marker date="1507778182988" expanded="true" signature="77:594" ph="{...}" />
+            <marker date="1507778182988" expanded="true" signature="275:592" ph="{...}" />
+            <marker date="1507778182988" expanded="true" signature="384:484" ph="{...}" />
+            <marker date="1507778182988" expanded="true" signature="444:480" ph="{...}" />
+            <marker date="1507778182988" expanded="true" signature="551:589" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -572,38 +621,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/MeteoriteSpawnerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="147" column="62" lean-forward="true" selection-start-line="147" selection-start-column="62" selection-end-line="147" selection-end-column="62" />
+        <state relative-caret-position="2940">
+          <caret line="147" column="62" lean-forward="false" selection-start-line="147" selection-start-column="62" selection-end-line="147" selection-end-column="62" />
           <folding>
-            <marker date="1507776083983" expanded="true" signature="76:6497" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="887:1297" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="1020:1089" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="1175:1291" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="1364:1822" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="1522:1816" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="1729:1806" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="1855:2486" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="1865:1996" ph="/* Start spawning meteorites when breathing time reached ... */" />
-            <marker date="1507776083983" expanded="true" signature="2052:2480" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="2195:2470" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="2213:2243" ph="/* For Testing ... */" />
-            <marker date="1507776083983" expanded="true" signature="2286:2456" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="2492:2552" ph="/* Function to controll the spawning of meteorites ... */" />
-            <marker date="1507776083983" expanded="true" signature="2588:3840" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="3491:3605" ph="/* Debug.Log(&quot;Chance to Aim at Village: &quot; + chanceToAimAtVillage); ... */" />
-            <marker date="1507776083983" expanded="true" signature="3650:3754" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="3754:3833" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="3922:4495" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="4167:4262" ph="/* meteoriteColor.r = 244; ... */" />
-            <marker date="1507776083983" expanded="true" signature="4554:5017" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="5080:5368" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="5374:5495" ph="/* This function is now obselete as the meteorites will instead target a random spot ... */" />
-            <marker date="1507776083983" expanded="true" signature="5548:6332" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="5621:5709" ph="/* Randomize between spawning to the left, or the right ... */" />
-            <marker date="1507776083983" expanded="true" signature="5804:5838" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="5838:5888" ph="{...}" />
-            <marker date="1507776083983" expanded="true" signature="6008:6107" ph="/* Calculates the direction using the angle ... */" />
-            <marker date="1507776083983" expanded="true" signature="6369:6495" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="76:6497" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="887:1297" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="1020:1089" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="1175:1291" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="1364:1822" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="1522:1816" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="1729:1806" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="1855:2486" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="1865:1996" ph="/* Start spawning meteorites when breathing time reached ... */" />
+            <marker date="1507777351271" expanded="true" signature="2052:2480" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="2195:2470" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="2213:2243" ph="/* For Testing ... */" />
+            <marker date="1507777351271" expanded="true" signature="2286:2456" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="2492:2552" ph="/* Function to controll the spawning of meteorites ... */" />
+            <marker date="1507777351271" expanded="true" signature="2588:3840" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="3491:3605" ph="/* Debug.Log(&quot;Chance to Aim at Village: &quot; + chanceToAimAtVillage); ... */" />
+            <marker date="1507777351271" expanded="true" signature="3650:3754" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="3754:3833" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="3922:4495" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="4167:4262" ph="/* meteoriteColor.r = 244; ... */" />
+            <marker date="1507777351271" expanded="true" signature="4554:5017" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="5080:5368" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="5374:5495" ph="/* This function is now obselete as the meteorites will instead target a random spot ... */" />
+            <marker date="1507777351271" expanded="true" signature="5548:6332" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="5621:5709" ph="/* Randomize between spawning to the left, or the right ... */" />
+            <marker date="1507777351271" expanded="true" signature="5804:5838" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="5838:5888" ph="{...}" />
+            <marker date="1507777351271" expanded="true" signature="6008:6107" ph="/* Calculates the direction using the angle ... */" />
+            <marker date="1507777351271" expanded="true" signature="6369:6495" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -724,13 +773,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/UIDirectionControl.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/UIDirectionControl.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/ItemSpawner.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-200">
