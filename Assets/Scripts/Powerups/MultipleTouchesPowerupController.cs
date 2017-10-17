@@ -16,6 +16,8 @@ public class MultipleTouchesPowerupController : Powerup {
     protected override void ActivatePowerup() {
         Debug.Log(powerupName + " is now Activated");
         spawnerController.touchCount = touchCount;
+
+     
     }
 
     protected override void DeactivatePowerup() {

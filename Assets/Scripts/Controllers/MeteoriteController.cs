@@ -2,6 +2,7 @@
 
 public class MeteoriteController : TouchableObjectController
 {
+
 	// private GameObject difficultyManager;
 	// private DifficultyManagerController difficultyManagerController;
 
@@ -100,7 +101,10 @@ public class MeteoriteController : TouchableObjectController
 	// {
 	// 	return touched;
 	// }
-	
+	public void SetGravityScale(float gs)
+    {
+        rb.gravityScale = gs;
+    }
 }
 
 
