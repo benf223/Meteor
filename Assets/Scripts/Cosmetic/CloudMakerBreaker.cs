@@ -6,7 +6,6 @@ public class CloudMakerBreaker : MonoBehaviour
 	public GameObject med;
 	public GameObject large;
 	public Collider2D cd;
-	
 	public bool onLeft;
 
 	private void Update()
@@ -56,16 +55,10 @@ public class CloudMakerBreaker : MonoBehaviour
 			CloudController a = other.GetComponent<CloudController>();
 
 			if (a != null)
-			{
 				if (a.direction == 1 && !onLeft)
-				{
 					Destroy(other.gameObject);
-				}
 				else if (a.direction == -1 && onLeft)
-				{
 					Destroy(other.gameObject);
-				}
-			}
 		}
 	}
 }

@@ -4,17 +4,16 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    private int score;
-    private DifficultyManagerController difficultyManagerControl;
-	
 	[HideInInspector]
 	public bool restarting;
 
 	public AudioMixer mixer;
-	
-	public GameObject difficultyManager;
 	public Text scoreText;
+	public GameObject difficultyManager;
 	public GameObject pauseMenu;
+	
+	private int score;
+	private DifficultyManagerController difficultyManagerControl;
 	
     // Use this for initialization
 	private void Start()
@@ -27,7 +26,10 @@ public class GameController : MonoBehaviour
 	    score = -1;
 	    difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();
         difficultyManagerControl.StartTimer();
-		Debug.Log ("Start woo");
+	    
+	    if (Debug.isDebugBuild)
+			Debug.Log ("Start woo");
+	    
 	    restarting = false;
 	}
 
@@ -35,9 +37,7 @@ public class GameController : MonoBehaviour
 	private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
-        {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
-        }
     }
 
     public void AddScore()
@@ -66,9 +66,7 @@ public class GameController : MonoBehaviour
 		int[] current = new int[6];
 		
 		for (int i = 0; i < 5; ++i)
-		{
 			current[i] = PlayerPrefs.GetInt("Highscore" + i, 0);
-		}
 
 		current[5] = score;
 
@@ -82,9 +80,7 @@ public class GameController : MonoBehaviour
 			for (int j = i + 1; j < current.Length; j++)
 			{
 				if (current[j].CompareTo(current[indexMin]) < 0)
-				{
 					indexMin = j;
-				}
 			}
 			
 			temp = current[indexMin];
@@ -112,7 +108,10 @@ public class GameController : MonoBehaviour
 	public void Pause()
 	{
 		Time.timeScale = 0f;
-		Debug.Log("Frozen?");
+		
+		if (Debug.isDebugBuild)
+			Debug.Log("Frozen?");
+		
 		pauseMenu.SetActive(true);
 	}
 }

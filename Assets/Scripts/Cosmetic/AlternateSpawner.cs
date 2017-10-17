@@ -7,8 +7,8 @@ public class AlternateSpawner : MonoBehaviour
 	public bool mainMenu;
 
 	private Collider2D cd;
-	private bool spawn;
 	private System.Random rand;
+	private bool spawn;
 
 	private void Start()
 	{
@@ -22,19 +22,11 @@ public class AlternateSpawner : MonoBehaviour
 	private void Update()
 	{
 		if (spawn)
-		{
 			if (mainMenu)
-			{
 				if (rand.Next(60) == 3)
-				{
 					SpawnMeteorites();
-				}
-			}
 			else
-			{
 				SpawnMeteorites();
-			}
-		}
 
 		spawn = !spawn;
 	}
@@ -43,8 +35,8 @@ public class AlternateSpawner : MonoBehaviour
 	{
 		Bounds spawnBounds = cd.bounds;
 
-		Vector3 min = spawnBounds.min; // Get the minimum values
-		Vector3 max = spawnBounds.max; // Get the maximum values
+		Vector3 min = spawnBounds.min; 		// Get the minimum values
+		Vector3 max = spawnBounds.max; 		// Get the maximum values
 
 		// Randomize a position within the spawn area
 		float x = Random.Range(min.x, max.x);

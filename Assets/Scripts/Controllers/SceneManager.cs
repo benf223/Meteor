@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 public class SceneManager : MonoBehaviour
 {
 	public AudioMixer mixer;
-	
+
 	private float time;
 
 	private void Start()
@@ -13,7 +13,6 @@ public class SceneManager : MonoBehaviour
 		mixer.SetFloat("sfxVolume", PlayerPrefs.GetInt("SFXVolume"));
 		mixer.SetFloat("musicVolume", PlayerPrefs.GetInt("MusicVolume"));
 		mixer.SetFloat("masterVolume", PlayerPrefs.GetInt("MasterVolume"));
-		
 	}
 
 	public void PlayButtonPressed()
@@ -30,7 +29,7 @@ public class SceneManager : MonoBehaviour
 	{
 		LoadScene("Settings");
 	}
-	
+
 	public void QuitButtonPressed()
 	{
 		Application.Quit();

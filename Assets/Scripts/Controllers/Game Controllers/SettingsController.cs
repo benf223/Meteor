@@ -7,13 +7,11 @@ public class SettingsController : MonoBehaviour
 	public Slider music;
 	public Slider sfx;
 	public Slider master;
-
 	public AudioMixer mixer;
-	
+
 	private int musicVolume;
 	private int sfxVolume;
 	private int masterVolume;
-
 	private bool muted;
 	private bool resettingHighscore;
 
@@ -69,7 +67,7 @@ public class SettingsController : MonoBehaviour
 			PlayerPrefs.SetInt("Highscore4", 0);
 			PlayerPrefs.SetInt("Highscore5", 0);
 		}
-		
+
 		UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
 	}
 

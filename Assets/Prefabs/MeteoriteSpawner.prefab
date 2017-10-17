@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114193161327393866}
   m_Layer: 0
   m_Name: MeteoriteSpawner
-  m_TagString: Untagged
+  m_TagString: MeteoriteSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,8 +79,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meteorite: {fileID: 1852739411863102, guid: be049906cd62d4b4faabff5b700cc254, type: 2}
   difficultyManager: {fileID: 0}
+  defaultTouchCount: 1
+  touchCount: 1
   spawningEnabled: 1
   startingTimeBetweenSpawn: 1.5
-  minSpawnForce: 300
-  maxSpawnForce: 400
+  minSpawnForce: 200
+  maxSpawnForce: 300
   fastSpawnForceMultiplier: 1.2

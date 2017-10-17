@@ -3,9 +3,10 @@ using UnityEngine.UI;
 
 public abstract class Powerup : MonoBehaviour
 {
-	public float duration; // Duration of power up
-	protected float startTime; // Just the start time. Not to be modifed
-	public string powerupName; // Name of powerup 
+	public float duration; 			// Duration of power up
+	public string powerupName; 		// Name of powerup 
+	
+	protected float startTime; 		// Just the start time. Not to be modifed
 
 	private GameObject sliderObject;
 	private Slider slider;
@@ -17,7 +18,7 @@ public abstract class Powerup : MonoBehaviour
 		slider.value = 0f;
 		slider.maxValue = duration;
 		sliderObject.transform.position = new Vector3(0, 0, 0);
-		
+
 		// Sets the start time for the duration of the power up
 		startTime = Time.timeSinceLevelLoad;
 		ActivatePowerup();
@@ -26,14 +27,12 @@ public abstract class Powerup : MonoBehaviour
 	protected void Update()
 	{
 		UpdateSlider();
-		
+
 		// Once duration of powerup has been reached, reset all stats and deactivate (destroy) the powerup
 		if (Time.timeSinceLevelLoad - startTime >= duration)
 		{
 			DeactivatePowerup();
-			
 			DeactivateSlider();
-			
 			Destroy(gameObject);
 		}
 	}

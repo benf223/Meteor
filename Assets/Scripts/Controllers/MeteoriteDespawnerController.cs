@@ -9,20 +9,18 @@ public class MeteoriteDespawnerController : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		gameObject.GetComponent<AudioSource>().Play();
+		if (water != null)
+			gameObject.GetComponent<AudioSource>().Play();
+		
 		if (other.gameObject.tag.Equals("Meteorite"))
 		{
 			Destroy(other.gameObject);
 
 			if (gameCont != null)
-			{
 				gameCont.AddScore(2);
-			}
 		}
 
 		if (despawnItemBoxes && other.gameObject.CompareTag("ItemBox"))
-		{
 			Destroy(other.gameObject);
-		}
 	}
 }
