@@ -6,9 +6,12 @@ public class MeteoriteSpawnerController : MonoBehaviour {
     public GameObject difficultyManager;
 
     public int defaultTouchCount;
+    public float defaultGravityScale;
     
     [HideInInspector]
     public int touchCount;
+    public float gravityScale;
+ //   public float slowedGravityScale;
 
     private Collider2D cd;
     private DifficultyManagerController difficultyManagerController;
@@ -38,6 +41,7 @@ public class MeteoriteSpawnerController : MonoBehaviour {
     private void Start() {
         timeBetweenSpawn = startingTimeBetweenSpawn;
         touchCount = defaultTouchCount;
+        gravityScale = defaultGravityScale;
         startTime = Time.timeSinceLevelLoad;
 
         if (Debug.isDebugBuild) {
@@ -105,6 +109,8 @@ public class MeteoriteSpawnerController : MonoBehaviour {
         // Create the object in the random position
         GameObject spawned = Instantiate(meteorite, spawnLocation, Quaternion.identity);
         SetTouchCount(spawned);
+        SetGravityControl(spawned);
+
         GameObject village = GameObject.Find("Village");
 
         float chance = Random.Range(0.0f, 1.0f);
@@ -203,4 +209,11 @@ public class MeteoriteSpawnerController : MonoBehaviour {
     public void SetTouchCount(GameObject meteorite) {
         meteorite.GetComponent<MeteoriteController>().touchCount = this.touchCount;
     }
+
+    public void SetGravityControl(GameObject meteorite)
+    {
+        meteorite.GetComponent<MeteoriteController>().SetGravityScale(this.gravityScale);
+    }
+
+    
 }

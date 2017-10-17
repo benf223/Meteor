@@ -6,7 +6,7 @@ public class TouchableObjectController : MonoBehaviour {
 
     protected GameObject difficultyManager;
     protected DifficultyManagerController difficultyManagerController;
-    protected Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     [HideInInspector]
     public int touchCount = 1;
@@ -35,6 +35,7 @@ public class TouchableObjectController : MonoBehaviour {
     // Use this for initialization
     protected void Start() {
         //touchCount = 1;
+        //rb = GetComponent<Rigidbody2D>();
         touchObject = null;
         touched = false;
         touching = false;

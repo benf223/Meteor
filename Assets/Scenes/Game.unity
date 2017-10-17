@@ -1548,6 +1548,20 @@ Prefab:
       propertyPath: difficultyManager
       value: 
       objectReference: {fileID: 256551094}
+    - target: {fileID: 1417127798258870, guid: 87dae5fe6764b5948802eeb16a518f60, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114193161327393866, guid: 87dae5fe6764b5948802eeb16a518f60,
+        type: 2}
+      propertyPath: defaultGravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114193161327393866, guid: 87dae5fe6764b5948802eeb16a518f60,
+        type: 2}
+      propertyPath: gravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87dae5fe6764b5948802eeb16a518f60, type: 2}
   m_IsPrefabParent: 0

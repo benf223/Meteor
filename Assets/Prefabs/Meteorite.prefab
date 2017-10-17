@@ -57,7 +57,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.6
+  m_GravityScale: 0.8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -89,7 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ba0c420e0b07a40840d56f24a91ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultTouches: 1
+  rb: {fileID: 50471809505160918}
+  touchCount: 1
   customTag: 
   lowBounce: {fileID: 6200000, guid: 060ac08daa253b14db8b1ea4aebac2b2, type: 2}
   spriteRenderer: {fileID: 212488209702916204}
