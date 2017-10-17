@@ -10,6 +10,7 @@ public abstract class Powerup : MonoBehaviour
 
 	private GameObject sliderObject;
 	private Slider slider;
+	private Text notifyText;
 
 	protected void Start()
 	{
@@ -18,6 +19,10 @@ public abstract class Powerup : MonoBehaviour
 		slider.value = 0f;
 		slider.maxValue = duration;
 		sliderObject.transform.position = new Vector3(0, 0, 0);
+		
+		notifyText = GameObject.Find("Powerup Notification").GetComponent<Text>();
+		notifyText.text = powerupName + " Activated.";
+		notifyText.fontSize = 100;
 
 		// Sets the start time for the duration of the power up
 		startTime = Time.timeSinceLevelLoad;
@@ -26,7 +31,7 @@ public abstract class Powerup : MonoBehaviour
 
 	protected void Update()
 	{
-		UpdateSlider();
+		UpdateVisibles();
 
 		// Once duration of powerup has been reached, reset all stats and deactivate (destroy) the powerup
 		if (Time.timeSinceLevelLoad - startTime >= duration)
@@ -37,8 +42,14 @@ public abstract class Powerup : MonoBehaviour
 		}
 	}
 
-	protected void UpdateSlider()
+	protected void UpdateVisibles()
 	{
+		if (Time.timeSinceLevelLoad - startTime >= 2)
+		{
+			notifyText.fontSize = 1;
+			notifyText.text = "";
+		}
+		
 		slider.value = startTime + duration - Time.timeSinceLevelLoad;
 	}
 
