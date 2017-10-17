@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * This script handles the touch objects spawned in the game
+ * when the screen is touched.
+ */
 public class TouchObjectController : MonoBehaviour {
+    
+    // DECLARATION
     public GameObject touchManager;
     private TouchController touchController;
     private float startTime;
@@ -10,7 +16,7 @@ public class TouchObjectController : MonoBehaviour {
     // The Y position since creation
     private float initialY;
 
-    // Extensions for the maxY and maxX
+    // Extensions for the maxY and maxX to limit the swiping of up and down
     public float yPositionExtensionUp;
     public float yPositionExtensionDown;
 
@@ -22,16 +28,26 @@ public class TouchObjectController : MonoBehaviour {
     // Distance between current frame and last frame
     private float speed;
 
-    // Variable to store the meteorite the object is interacting with
+    // Variable to store the touchable object this touch object is interacting with
     // Prevents the controlling of multiple meteorites in a single touch
-    private GameObject meteorite;
+    private GameObject touchableObject;
+
+    // The force to apply spin to the object when swiped
+    public float spinForce;
 
     // Use this for initialization
     private void Start() {
+        // Finds reference to the touch manager to get the script (object)
         touchManager = GameObject.Find("TouchManager");
         touchController = touchManager.GetComponent<TouchController>();
+
+        // To keep track of the when the touch object was spawned
         startTime = Time.timeSinceLevelLoad;
+
+        // Get reference to the object's rigidbody2d
         rb = GetComponent<Rigidbody2D>();
+
+        // References to the initial Y position of the object
         initialY = rb.position.y;
     }
 
@@ -72,8 +88,8 @@ public class TouchObjectController : MonoBehaviour {
         speed = Vector2.Distance(previousPosition, currentPosition);
 
         // If a meteorite exists in the touch, then move it
-        if (meteorite != null) {
-            MoveMeteorite();
+        if (touchableObject != null) {
+            MoveObject();
         }
 
         // Technically saves the positition of the previous frame
@@ -81,20 +97,20 @@ public class TouchObjectController : MonoBehaviour {
     }
 
     /**
-	 * Function that controls the movement of the meteorite
+	 * Function that controls the movement of the objects
 	 * the touch object is interacting with.
 	 */
-    private void MoveMeteorite() {
+    private void MoveObject() {
         // Referencing the needed controllers and components
-        TouchableObjectController meteoriteController = meteorite.GetComponent<TouchableObjectController>();
-        Transform meteoriteTransform = meteorite.GetComponent<Transform>();
-        Rigidbody2D meteoriteRb = meteorite.GetComponent<Rigidbody2D>();
+        TouchableObjectController touchableObjectController = touchableObject.GetComponent<TouchableObjectController>();
+        Transform touchableObjectTransform = touchableObject.GetComponent<Transform>();
+        Rigidbody2D touchableObjectRb = touchableObject.GetComponent<Rigidbody2D>();
 
         /**
 		 * First checks if the meteorite is currenty being interacted with,
 		 * and if the meteorite HAS NOT already been touched.
 		 */
-        if (meteoriteController.IsTouching() && meteoriteController.touchCount >= 0) {
+        if (touchableObjectController.IsTouching() && touchableObjectController.touchCount >= 0) {
             // Calculating the force of the flick using the modifiable multiplier and speed of touch object
             float flickForce = touchController.flickForceMultiplier * speed;
 
@@ -105,8 +121,8 @@ public class TouchObjectController : MonoBehaviour {
             }
 
             // Finally, applies the force to the meteorite towards the position of the touch object
-            meteoriteRb.AddForce((transform.position - meteoriteTransform.position) * flickForce);
-            meteoriteRb.AddTorque((transform.position.x - meteoriteTransform.position.x) * 10);
+            touchableObjectRb.AddForce((transform.position - touchableObjectTransform.position) * flickForce);
+            touchableObjectRb.AddTorque((transform.position.x - touchableObjectTransform.position.x) * spinForce);
 
         }
     }
@@ -116,7 +132,10 @@ public class TouchObjectController : MonoBehaviour {
 		 * This first if statement is to stop the touch object from
 		 * interacting with multiple touch objects in a single swipe
 		 */
-        if (meteorite == null) {
+        if (touchableObject == null) {
+
+            // Sets which objects can be interacted with/swiped
+
             if (other.CompareTag("Meteorite")) {
 
                 SetTouched(other);
@@ -136,8 +155,12 @@ public class TouchObjectController : MonoBehaviour {
 	* it cannot be interacted with again after the swipe.
 	*/
     private void SetTouched(Collider2D other) {
-        meteorite = other.gameObject;
-        TouchableObjectController touchableObjectController = meteorite.GetComponent<TouchableObjectController>();
+
+        // Gets reference to the collided object to obtain the script
+        touchableObject = other.gameObject;
+        TouchableObjectController touchableObjectController = touchableObject.GetComponent<TouchableObjectController>();
+
+        // Apply the SetTouched function to the object that has been touched
         if (!touchableObjectController.IsTouching()) {
             touchableObjectController.SetTouched(gameObject);
         }
