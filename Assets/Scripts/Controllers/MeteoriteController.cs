@@ -50,7 +50,9 @@ public class MeteoriteController : TouchableObjectController
 
 	private void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.gameObject.CompareTag ("Wall") && transform.position.y < 5) {
-			AudioSource.PlayClipAtPoint (audio, transform.position); 
+//			AudioSource.PlayClipAtPoint (audio, transform.position); 
+			gameObject.GetComponent<AudioSource>().clip = audio;
+			gameObject.GetComponent<AudioSource>().Play();
 		}
 
 	}

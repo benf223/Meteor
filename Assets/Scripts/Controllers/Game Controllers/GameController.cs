@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -8,6 +9,8 @@ public class GameController : MonoBehaviour
 	
 	[HideInInspector]
 	public bool restarting;
+
+	public AudioMixer mixer;
 	
 	public GameObject difficultyManager;
 	public Text scoreText;
@@ -16,7 +19,10 @@ public class GameController : MonoBehaviour
     // Use this for initialization
 	private void Start()
     {
-		
+	    mixer.SetFloat("sfxVolume", PlayerPrefs.GetInt("SFXVolume"));
+	    mixer.SetFloat("musicVolume", PlayerPrefs.GetInt("MusicVolume"));
+	    mixer.SetFloat("masterVolume", PlayerPrefs.GetInt("MasterVolume"));
+	    
         Time.timeScale = 1f;
 	    score = -1;
 	    difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();

@@ -9,7 +9,7 @@ public class MeteoriteDespawnerController : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		AudioSource.PlayClipAtPoint(water, transform.position);
+		gameObject.GetComponent<AudioSource>().Play();
 		if (other.gameObject.tag.Equals("Meteorite"))
 		{
 			Destroy(other.gameObject);

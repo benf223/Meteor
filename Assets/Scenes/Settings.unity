@@ -458,6 +458,7 @@ MonoBehaviour:
   music: {fileID: 745541820}
   sfx: {fileID: 1825468756}
   master: {fileID: 2037618845}
+  mixer: {fileID: 24100000, guid: bfc09299b32f82f41a8bd36fc592e886, type: 2}
 --- !u!4 &251035689
 Transform:
   m_ObjectHideFlags: 0
@@ -1304,10 +1305,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 881442394}
   m_HandleRect: {fileID: 1196285494}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 80
+  m_MinValue: -100
+  m_MaxValue: 0
   m_WholeNumbers: 1
-  m_Value: 80
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2407,10 +2408,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1459596021}
   m_HandleRect: {fileID: 229431959}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 80
+  m_MinValue: -100
+  m_MaxValue: 0
   m_WholeNumbers: 1
-  m_Value: 80
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2752,10 +2753,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 509435606}
   m_HandleRect: {fileID: 27092543}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 80
+  m_MinValue: -100
+  m_MaxValue: 0
   m_WholeNumbers: 1
-  m_Value: 80
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

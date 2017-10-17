@@ -1,14 +1,19 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SceneManager : MonoBehaviour
 {
+	public AudioMixer mixer;
+	
 	private float time;
 
 	private void Start()
 	{
-		//do sound
-		Debug.Log("");
+		mixer.SetFloat("sfxVolume", PlayerPrefs.GetInt("SFXVolume"));
+		mixer.SetFloat("musicVolume", PlayerPrefs.GetInt("MusicVolume"));
+		mixer.SetFloat("masterVolume", PlayerPrefs.GetInt("MasterVolume"));
+		
 	}
 
 	public void PlayButtonPressed()

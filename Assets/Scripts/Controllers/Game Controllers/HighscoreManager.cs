@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class HighscoreManager : MonoBehaviour
@@ -6,6 +7,8 @@ public class HighscoreManager : MonoBehaviour
 	public GameObject starPrefab;
 	public Text[] highscoreTexts;
 	public Collider2D cd;
+	public AudioMixer mixer;
+	
 	private int[] highscores;
 
 	public int maxStars;
@@ -14,6 +17,10 @@ public class HighscoreManager : MonoBehaviour
 	// Use this for initialization
 	private void Start()
 	{
+		mixer.SetFloat("sfxVolume", PlayerPrefs.GetInt("SFXVolume"));
+		mixer.SetFloat("musicVolume", PlayerPrefs.GetInt("MusicVolume"));
+		mixer.SetFloat("masterVolume", PlayerPrefs.GetInt("MasterVolume"));
+		
 		highscores = new int[5];
 		
 		LoadScores();

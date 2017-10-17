@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class GameEndController : MonoBehaviour
@@ -6,13 +7,18 @@ public class GameEndController : MonoBehaviour
 	public Text scoreText;
 	public Text endText;
 	public Text reminderText;
-
+	public AudioMixer mixer;
+	
 	private bool update;
 	private int timeToStop;
 	
 	// Use this for initialization
 	public void Start()
 	{
+		mixer.SetFloat("sfxVolume", PlayerPrefs.GetInt("SFXVolume"));
+		mixer.SetFloat("musicVolume", PlayerPrefs.GetInt("MusicVolume"));
+		mixer.SetFloat("masterVolume", PlayerPrefs.GetInt("MasterVolume"));
+		
 		endText.fontSize = 2;
 		update = true;
 		timeToStop = (int) Time.timeSinceLevelLoad + 2;

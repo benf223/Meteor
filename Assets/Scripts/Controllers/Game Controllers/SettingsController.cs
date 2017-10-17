@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingsController : MonoBehaviour
@@ -6,6 +7,8 @@ public class SettingsController : MonoBehaviour
 	public Slider music;
 	public Slider sfx;
 	public Slider master;
+
+	public AudioMixer mixer;
 	
 	private int musicVolume;
 	private int sfxVolume;
@@ -17,9 +20,13 @@ public class SettingsController : MonoBehaviour
 
 	private void Start()
 	{
-		musicVolume = PlayerPrefs.GetInt("MusicVol", 80);
-		sfxVolume = PlayerPrefs.GetInt("SFXVolume", 80);
-		masterVolume = PlayerPrefs.GetInt("MasterVolume", 80);
+		musicVolume = PlayerPrefs.GetInt("MusicVol", 0);
+		sfxVolume = PlayerPrefs.GetInt("SFXVolume", 0);
+		masterVolume = PlayerPrefs.GetInt("MasterVolume", 0);
+
+		mixer.SetFloat("sfxVolume", sfxVolume);
+		mixer.SetFloat("musicVolume", musicVolume);
+		mixer.SetFloat("masterVolume", masterVolume);
 
 		muted = PlayerPrefs.GetInt("Muted", 0) == 1;
 	}

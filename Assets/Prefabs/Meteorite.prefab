@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212488209702916204}
   - component: {fileID: 50471809505160918}
   - component: {fileID: 58991366449962406}
+  - component: {fileID: 82128444916859550}
   - component: {fileID: 114463707615814302}
   m_Layer: 8
   m_Name: Meteorite
@@ -78,6 +79,87 @@ CircleCollider2D:
   m_Offset: {x: -0.013909836, y: 0}
   serializedVersion: 2
   m_Radius: 0.959033
+--- !u!82 &82128444916859550
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852739411863102}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243612551852383672, guid: bfc09299b32f82f41a8bd36fc592e886,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114463707615814302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,13 +173,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customTag: 
   lowBounce: {fileID: 6200000, guid: 060ac08daa253b14db8b1ea4aebac2b2, type: 2}
-  audio: {fileID: 8300000, guid: 881c82c27f0d145788f7163312881515, type: 3}
-  water: {fileID: 8300000, guid: 1501b355a56dd443699646286cbe20eb, type: 3}
   spriteRenderer: {fileID: 212488209702916204}
   spriteArray:
   - sprites:
     - {fileID: 21300000, guid: aed8d1309f63d66409901d79bbffda22, type: 3}
     - {fileID: 21300000, guid: 8f14e11133076c244a4d705ee56a734a, type: 3}
+  touching: 0
+  minGravityScale: 0
+  maxGravityScale: 0
+  lowBounce: {fileID: 6200000, guid: 060ac08daa253b14db8b1ea4aebac2b2, type: 2}
+  audio: {fileID: 8300000, guid: 881c82c27f0d145788f7163312881515, type: 3}
+  water: {fileID: 8300000, guid: 1501b355a56dd443699646286cbe20eb, type: 3}
   touching: 0
 --- !u!212 &212488209702916204
 SpriteRenderer:
