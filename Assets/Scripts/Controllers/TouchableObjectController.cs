@@ -6,7 +6,9 @@ public class TouchableObjectController : MonoBehaviour {
 
     protected GameObject difficultyManager;
     protected DifficultyManagerController difficultyManagerController;
-    protected Rigidbody2D rb;
+    public Rigidbody2D rb;
+
+    public int touchCount = 1;
 
     public string customTag;
 
@@ -31,6 +33,7 @@ public class TouchableObjectController : MonoBehaviour {
 
     // Use this for initialization
     protected void Start() {
+        //touchCount = 1;
         touchObject = null;
         touched = false;
         touching = false;
@@ -44,8 +47,8 @@ public class TouchableObjectController : MonoBehaviour {
         //InitializeSpeed();
     }
 
-    // Update is called once per frame
-    void Update() {
+   // Update is called once per frame
+    protected void Update() {
 
         if (touching) {
             if (touchObject == null) {
@@ -62,12 +65,14 @@ public class TouchableObjectController : MonoBehaviour {
 
 
     public void SetTouched(GameObject touchObject) {
-        this.touchObject = touchObject;
         touching = true;
+        this.touchObject = touchObject;
+        Debug.Log(touchCount);
+        touchCount--;
 
         Collider2D cd = GetComponent<Collider2D>();
         cd.sharedMaterial = lowBounce;
-        if (spriteArray.Length > 0) {
+        if (spriteArray.Length > 0 && touchCount <= 0) {
             spriteRenderer.sprite = spriteArray[spriteIndex].sprites[1];
         }
     }

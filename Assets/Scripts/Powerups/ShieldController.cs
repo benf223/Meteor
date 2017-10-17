@@ -29,7 +29,7 @@ public class ShieldController : Powerup
     {
         if (collision.gameObject.CompareTag("Meteorite"))
         {
-            shieldHealth -= 1;
+            shieldHealth--;
             if (shieldHealth == 2)
             {
                 GetComponent<Renderer>().material.color = yellow;
@@ -60,12 +60,12 @@ public class ShieldController : Powerup
     {
         if (counter == 0)
         {
-            if (timeSinceStart > 8 && shieldHealth == 1)
+            if (timeSinceStart > 8 && shieldHealth == 1 || timeSinceStart > 8 && shieldHealth == 3)
             {
                 Debug.Log("Red " + timeSinceStart);
                 GetComponent<Renderer>().material.color = red;
             }
-            else if (shieldHealth == 2)
+            else if (shieldHealth > 2)
             {
                 Debug.Log("Yellow " + timeSinceStart);
                 GetComponent<Renderer>().material.color = yellow;

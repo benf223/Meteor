@@ -92,6 +92,7 @@ MonoBehaviour:
   touchManager: {fileID: 0}
   yPositionExtensionUp: 0.75
   yPositionExtensionDown: 1.25
+  spinForce: 10
 --- !u!212 &212065631030414918
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -16,7 +16,10 @@ public class MeteoriteDespawnerController : MonoBehaviour {
     public bool despawnItemBoxes = true;
 
     private void OnTriggerEnter2D(Collider2D other) {
-        AudioSource.PlayClipAtPoint(water, transform.position);
+        if (water != null) {
+            AudioSource.PlayClipAtPoint(water, transform.position);
+
+        }
         if (other.gameObject.tag.Equals("Meteorite")) {
             Destroy(other.gameObject);
 
