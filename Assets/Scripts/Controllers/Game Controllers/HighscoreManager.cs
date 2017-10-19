@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class HighscoreManager : MonoBehaviour
@@ -6,16 +7,21 @@ public class HighscoreManager : MonoBehaviour
 	public GameObject starPrefab;
 	public Text[] highscoreTexts;
 	public Collider2D cd;
-	private int[] highscores;
-
+	public AudioMixer mixer;
 	public int maxStars;
+	
 	private int currentStars;
+	private int[] highscores;
 	
 	// Use this for initialization
 	private void Start()
 	{
+		mixer.SetFloat("sfxVolume", PlayerPrefs.GetInt("SFXVolume"));
+		mixer.SetFloat("musicVolume", PlayerPrefs.GetInt("MusicVolume"));
+		mixer.SetFloat("masterVolume", PlayerPrefs.GetInt("MasterVolume"));
+
 		highscores = new int[5];
-		
+
 		LoadScores();
 		WriteScores();
 
@@ -49,7 +55,7 @@ public class HighscoreManager : MonoBehaviour
 	{
 		if (Random.Range(1, 20) == 3)
 			SpawnStar();
-		
+
 		if (Input.GetKeyDown(KeyCode.Escape))
 			UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
 	}
@@ -58,7 +64,7 @@ public class HighscoreManager : MonoBehaviour
 	{
 		if (currentStars >= maxStars)
 			return;
-		
+
 		Bounds spawnBounds = cd.bounds;
 
 		Vector3 min = spawnBounds.min;

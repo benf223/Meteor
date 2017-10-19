@@ -3,10 +3,9 @@
 public class TouchController : MonoBehaviour
 {
 	public GameObject touchObject;
-
-	public float flickForceMultiplier; // force of the flick
-	public float dragTime; // in seconds, max duration of each flick
-	public float maxFlickForce; // Max flick force that can be applied to the touch object
+	public float flickForceMultiplier; 		// force of the flick
+	public float dragTime; 					// in seconds, max duration of each flick
+	public float maxFlickForce; 			// Max flick force that can be applied to the touch object
 
 	// To check if user still dragging or not to destroy the touch object
 	private bool dragging;

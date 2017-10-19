@@ -2,13 +2,13 @@
 
 public class StarController : MonoBehaviour
 {
+	[HideInInspector] public float scale;
+	
 	private int twinkleToggle;
 	private int twinkleTimes;
 	private int twinkledTimes;
 
-	[HideInInspector] public float scale;
-	
-	void Start()
+	private void Start()
 	{
 		twinkleToggle = 0;
 		twinkleTimes = Random.Range(2, 5);
@@ -16,16 +16,12 @@ public class StarController : MonoBehaviour
 		transform.localScale = new Vector3(0, 0, 0);
 	}
 
-	void Update()
+	private void Update()
 	{
 		if (twinkleToggle == 1)
-		{
 			UnTwinkle();
-		}
 		else if (twinkleToggle == 0)
-		{
 			Twinkle();
-		}
 		else if (twinkleToggle == 5)
 		{
 			twinkleToggle = 0;
