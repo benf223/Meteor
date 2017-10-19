@@ -69,7 +69,6 @@ public class VillageController : MonoBehaviour {
                 BlowUp();
                 PlayExplosion();
                 isDestroyed = true;
-
                 
             }
         }
@@ -81,7 +80,6 @@ public class VillageController : MonoBehaviour {
         // pos.y += 0.48f;
         Instantiate(destroyedVersions[growthCount], pos, Quaternion.identity);
         //pos.y -= 1f;
-        Instantiate(explosion, pos, Quaternion.identity);
         Destroy(gameObject);
     }
 

@@ -110,8 +110,9 @@ public class DifficultyManagerController : MonoBehaviour
 			difficultyUpdated = true;				// Notifies that difficulty has changed
 
 			// Calling this in this object, because it sometimes won't call in the other
-			VillageController villageController = GameObject.Find("Village").GetComponent<VillageController>();
-			if (villageController != null) {
+			GameObject village = GameObject.Find("Village");		
+			if (village != null) {
+				VillageController villageController = village.GetComponent<VillageController>();
 				villageController.IncreaseSize();
 			}
 			
