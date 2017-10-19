@@ -7,11 +7,11 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 
     public int defaultTouchCount;
     public float defaultGravityScale;
-    
+
     [HideInInspector]
     public int touchCount;
     public float gravityScale;
- //   public float slowedGravityScale;
+    //   public float slowedGravityScale;
 
     private Collider2D cd;
     private DifficultyManagerController difficultyManagerController;
@@ -133,17 +133,20 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 
     private void AddForceTowardsVillage(GameObject spawned, GameObject village) {
         Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
-        Color myColor = new Color(1f, 0.3f, 0.0f); 
+        Color myColor = new Color(1f, 0.3f, 0.0f);
 
         SpriteRenderer meteoriteColor = spawned.GetComponent<SpriteRenderer>();
         meteoriteColor.color = myColor;
         // meteoriteColor.r = 244;
         // meteoriteColor.g = 152;
         // meteoriteColor.b = 66;
-        Vector2 villagePos = village.GetComponent<Transform>().position;
 
-        rb.AddForce((villagePos - rb.position).normalized * (GetRandomForce()*fastSpawnForceMultiplier));
-        rb.AddTorque(-50.0f); // Make it spin!
+        if (village != null) {
+            Vector2 villagePos = village.GetComponent<Transform>().position;
+
+            rb.AddForce((villagePos - rb.position).normalized * (GetRandomForce() * fastSpawnForceMultiplier));
+            rb.AddTorque(-50.0f); // Make it spin!
+        }
     }
 
     private void AddForceTowardsWall(GameObject spawned) {
@@ -164,8 +167,8 @@ public class MeteoriteSpawnerController : MonoBehaviour {
         Vector3 max = bounds.max;
 
         float x = Random.Range(min.x, max.x);
-   
-        float   y = Random.Range(min.y, cd.bounds.max.y);
+
+        float y = Random.Range(min.y, cd.bounds.max.y);
 
         return new Vector3(x, y, 0);
     }
@@ -210,10 +213,9 @@ public class MeteoriteSpawnerController : MonoBehaviour {
         meteorite.GetComponent<MeteoriteController>().touchCount = this.touchCount;
     }
 
-    public void SetGravityControl(GameObject meteorite)
-    {
+    public void SetGravityControl(GameObject meteorite) {
         meteorite.GetComponent<MeteoriteController>().SetGravityScale(this.gravityScale);
     }
 
-    
+
 }

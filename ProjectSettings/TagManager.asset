@@ -15,6 +15,7 @@ TagManager:
   - Village
   - Powerup
   - MeteoriteSpawner
+  - Debris
   layers:
   - Default
   - TransparentFX
@@ -28,9 +29,8 @@ TagManager:
   - Low
   - Shield
   - ItemBox
-  - 
-  - 
-  - 
+  - Village
+  - Island
   - 
   - 
   - 

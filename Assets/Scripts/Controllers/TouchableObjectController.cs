@@ -60,6 +60,7 @@ public class TouchableObjectController : MonoBehaviour {
 
 
     public void BlowUp() {
+        
         Destroy(gameObject);
     }
 

@@ -8,8 +8,14 @@ public class VillageController : MonoBehaviour {
     public GameObject difficultyManager;
     private DifficultyManagerController difficultyManagerController;
     public Sprite[] sprites;
+    public GameObject[] destroyedVersions;
     private int latestSeconds;
-    private int growthCount;
+
+    public GameObject explosion;
+
+    [HideInInspector]
+    public int growthCount;
+
     private SpriteRenderer spriteRenderer;
     public AudioClip audio;
     //public AudioSource source;
@@ -57,10 +63,12 @@ public class VillageController : MonoBehaviour {
         if (growthCount < 2) {
             Debug.Log("Village growth triggered!");
             spriteRenderer.sprite = sprites[growthCount + 1];
+            growthCount++;
+            Debug.Log("GROWTH COUNT: " + growthCount);
             UpdateCollider();
             return true;
         }
-        growthCount++;
+        
         return false;
     }
 
@@ -69,6 +77,11 @@ public class VillageController : MonoBehaviour {
             if (!godMode) {
                 MeteoriteController meteorite = collision.gameObject.GetComponent<MeteoriteController>();
                 meteorite.BlowUp();
+                GameController gameController = GameObject.Find("GameManager").GetComponent<GameController>();
+                if (gameController != null) {
+                    gameController.StartMenuTimer();
+                }
+                BlowUp();
                 PlayExplosion();
                 isDestroyed = true;
                 //				float a = timer;
@@ -76,10 +89,19 @@ public class VillageController : MonoBehaviour {
                 //				while (b < 2) {
                 //					b = timer - a;
                 //				}
-                Invoke("ChangeScene", 0.55f);
-
+                
             }
         }
+    }
+
+    private void BlowUp() {
+        Vector3 pos = GetComponent<Transform>().position;
+        // pos.x += 0.81f;
+        // pos.y += 0.48f;
+        Instantiate(destroyedVersions[growthCount], pos, Quaternion.identity);
+        //pos.y -= 1f;
+        Instantiate(explosion, pos, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     /**
