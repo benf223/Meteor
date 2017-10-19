@@ -25,8 +25,6 @@ public class AlternateSpawner : MonoBehaviour
 			if (mainMenu)
 				if (rand.Next(60) == 3)
 					SpawnMeteorites();
-			else
-				SpawnMeteorites();
 
 		spawn = !spawn;
 	}
