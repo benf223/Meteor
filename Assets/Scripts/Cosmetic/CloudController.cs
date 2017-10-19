@@ -12,8 +12,8 @@ public class CloudController : MonoBehaviour
 	[HideInInspector]
 	public int direction;
 	
-	private float speed;
 	private Rigidbody2D rb;
+	private float speed;
 	private int timer;
 	
 	private void Start()

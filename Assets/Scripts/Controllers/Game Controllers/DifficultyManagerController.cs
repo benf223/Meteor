@@ -3,47 +3,38 @@ using UnityEngine.Assertions;
 
 public class DifficultyManagerController : MonoBehaviour
 {
-	// condition to keep the time continuing
-	public bool timeFlowing;
-
 	public GameController gameCont;
+	public float initialDifficultyTime;
+	public float maxDifficultyTime;
+	public bool timeFlowing;		// condition to keep the time continuing
 
-	// time
-//	private int minutes;
 	private int seconds;
+	private int interval = 1;		// Time to update (seconds)
+	private int secondsToIncreaseDifficulty;
+	private int timeRemoved;		// used to minus the duration time frames
 	private float startTimer;
 	private float countTime;
-	private int interval = 1; // Time to update (seconds)
-	private float elapsedTime = 0;
-	private int secondsToIncreaseDifficulty;
-
-	// used to minus the duration time frames
-	private int timeRemoved;
-
+	private float elapsedTime;
 	private float spawnDelayMultiplier;
 	private float speedMultiplier;
-    private float directionChangeMultiplier;
+	private float directionChangeMultiplier;
 	private bool difficultyUpdated;
-
-	public float initialDifficultyTime;
-	public float maxDifficultyTime;	
 
 	// Use this for initialization
 	private void Start()
 	{
-//		minutes = 0;
 		seconds = 0;
 		elapsedTime = 0f;
-		
+
 		timeFlowing = false;
 		secondsToIncreaseDifficulty = 0;
 		timeRemoved = 0;
 
-        spawnDelayMultiplier = 0.90f;
-        speedMultiplier = 1.0f;
-        directionChangeMultiplier = 0.4f;
+		spawnDelayMultiplier = 0.90f;
+		speedMultiplier = 1.0f;
+		directionChangeMultiplier = 0.4f;
 
-        difficultyUpdated = false;
+		difficultyUpdated = false;
 	}
 
 	// Update is called once per frame
@@ -53,7 +44,7 @@ public class DifficultyManagerController : MonoBehaviour
 		{
 			UpdateTime();
 			DifficultyTimeFrame();
-			
+
 			// Updates every second (or based on interval variable)
 			if (Time.timeSinceLevelLoad >= elapsedTime)
 			{
@@ -67,8 +58,10 @@ public class DifficultyManagerController : MonoBehaviour
 	private void UpdateEverySecond()
 	{
 		gameCont.AddScore(1);
-		secondsToIncreaseDifficulty++; // Used for the difficulty increase interval
-		Debug.Log("Seconds: "+seconds);
+		secondsToIncreaseDifficulty++;		// Used for the difficulty increase interval
+		
+		if (Debug.isDebugBuild)
+			Debug.Log("Seconds: " + seconds);
 	}
 
 	private void DifficultyTimeFrame()
@@ -77,47 +70,44 @@ public class DifficultyManagerController : MonoBehaviour
 		// Note: Default values (20 - timeRemoved), (timeRemoved <= 10)
 		if (secondsToIncreaseDifficulty == initialDifficultyTime - timeRemoved)
 		{
-            Debug.Log("Difficulty Increase activated");
+			if (Debug.isDebugBuild)
+				Debug.Log("Difficulty Increase activated");
+			
 			if (timeRemoved < maxDifficultyTime)
-			{
 				timeRemoved++;
-			}
 
-            /*  
-             *  The Spawn multipler determines how much time is seperated for each meteorite to spawn.
-             *  The multipler starts at 0.75f and decreases 0.035f everytime this method is called.
-             *  The values will keep changing until it reaches 0.40f.
-             */
-
-            // starts at 0.90, decreases every .05 and maxs at 0.4 (does it 10 times)
-            if (spawnDelayMultiplier >= 0.4f)
-			{
+			/*  
+			 *  The Spawn multipler determines how much time is seperated for each meteorite to spawn.
+			 *  The multipler starts at 0.75f and decreases 0.035f everytime this method is called.
+			 *  The values will keep changing until it reaches 0.40f.
+			 *  Starts at 0.90, decreases every .05 and maxs at 0.4 (does it 10 times)
+			 */
+			if (spawnDelayMultiplier >= 0.4f)
 				spawnDelayMultiplier -= 0.1f;
-			}
 
-            /*
-            *  The Speed of meteorites will be determined by this condition.
-            *  The initial speed of the meteorites will start from x1 speed.
-            *  Each Time this method is called the meteorites speed will increase by 0.035f.
-            *  The maximum speed the meteorites will go is x1.75. 
-            */
-
-            // starts at 1.00, increases every .035 and maxs at 1.75 (does it 21-22 times)
-            if (speedMultiplier <= 1.75f)
+			/*
+			*  The Speed of meteorites will be determined by this condition.
+			*  The initial speed of the meteorites will start from x1 speed.
+			*  Each Time this method is called the meteorites speed will increase by 0.035f.
+			*  The maximum speed the meteorites will go is x1.75. 
+			*  Starts at 1.00, increases every .035 and maxs at 1.75 (does it 21-22 times)
+			*/
+			if (speedMultiplier <= 1.75f)
 			{
-                Assert.AreEqual(true, speedMultiplier <= 1.75f);
-                Debug.Log("Speed Multipler for each meteorite: " + speedMultiplier);
-                speedMultiplier += 0.035f;				
+				Assert.AreEqual(true, speedMultiplier <= 1.75f);
+				
+				if (Debug.isDebugBuild)
+					Debug.Log("Speed Multipler for each meteorite: " + speedMultiplier);
+				
+				speedMultiplier += 0.035f;
 			}
 
-            // starts at 0.40, increases every .05 and maxs at 0.80 (does it 10? times)
-            if (directionChangeMultiplier <= 0.80f)
-            {
-                directionChangeMultiplier += .05f;
-            }
+			// starts at 0.40, increases every .05 and maxs at 0.80 (does it 10? times)
+			if (directionChangeMultiplier <= 0.80f)
+				directionChangeMultiplier += .05f;
 
-			secondsToIncreaseDifficulty = 0; // Reset countdown timer for difficulty change
-			difficultyUpdated = true; // Notifies that difficulty has changed
+			secondsToIncreaseDifficulty = 0;		// Reset countdown timer for difficulty change
+			difficultyUpdated = true;				// Notifies that difficulty has changed
 
 			// Calling this in this object, because it sometimes won't call in the other
 			VillageController villageController = GameObject.Find("Village").GetComponent<VillageController>();
@@ -134,10 +124,8 @@ public class DifficultyManagerController : MonoBehaviour
 		if (difficultyUpdated)
 		{
 			if (Debug.isDebugBuild)
-			{
 				Debug.Log("Difficulty Updated");
-			}
-			
+
 			difficultyUpdated = false;
 			return true;
 		}
@@ -145,8 +133,8 @@ public class DifficultyManagerController : MonoBehaviour
 		return false;
 	}
 
-	public float GetMeteoriteSpawnDirectionMultiplier() {
-
+	public float GetMeteoriteSpawnDirectionMultiplier()
+	{
 		return directionChangeMultiplier;
 	}
 
@@ -171,7 +159,6 @@ public class DifficultyManagerController : MonoBehaviour
 	{
 		countTime = Time.timeSinceLevelLoad - startTimer;
 
-//		minutes = (int) countTime / 60;
 		seconds = (int) countTime % 60;
 	}
 

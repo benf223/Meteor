@@ -3,6 +3,7 @@
 public class PauseMenuController : MonoBehaviour
 {
 	public GameObject pauseButton;
+	
 	private GameController gc;
 
 	public void Start()
@@ -14,9 +15,7 @@ public class PauseMenuController : MonoBehaviour
 	private void OnEnable()
 	{
 		if (Time.timeSinceLevelLoad > 0.2f)
-		{
 			pauseButton.SetActive(false);
-		}
 	}
 
 	private void OnDisable()
@@ -38,8 +37,8 @@ public class PauseMenuController : MonoBehaviour
 
 	public void OnQuitPressed()
 	{
-        gc.restarting = true;
+		gc.restarting = true;
 		Time.timeScale = 1;
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+		UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
 	}
 }

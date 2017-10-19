@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingsController : MonoBehaviour
@@ -6,37 +7,46 @@ public class SettingsController : MonoBehaviour
 	public Slider music;
 	public Slider sfx;
 	public Slider master;
-	
+	public AudioMixer mixer;
+
 	private int musicVolume;
 	private int sfxVolume;
 	private int masterVolume;
-
 	private bool muted;
 	private bool resettingHighscore;
 
 
 	private void Start()
 	{
-		musicVolume = PlayerPrefs.GetInt("MusicVol", 80);
-		sfxVolume = PlayerPrefs.GetInt("SFXVolume", 80);
-		masterVolume = PlayerPrefs.GetInt("MasterVolume", 80);
+		musicVolume = PlayerPrefs.GetInt("MusicVolume", 0);
+		sfxVolume = PlayerPrefs.GetInt("SFXVolume", 0);
+		masterVolume = PlayerPrefs.GetInt("MasterVolume", 0);
+
+		mixer.SetFloat("sfxVolume", sfxVolume);
+		mixer.SetFloat("musicVolume", musicVolume);
+		mixer.SetFloat("masterVolume", masterVolume);
+
+		music.value = musicVolume;
+		sfx.value = sfxVolume;
+		master.value = masterVolume;
 
 		muted = PlayerPrefs.GetInt("Muted", 0) == 1;
 	}
 
+	
 	public void OnMute()
 	{
 		if (muted)
 		{
-			music.value = musicVolume;
-			sfx.value = sfxVolume;
-			master.value = masterVolume;
-		}
-		else
-		{
 			music.value = 0;
 			sfx.value = 0;
 			master.value = 0;
+		}
+		else
+		{
+			music.value = -80;
+			sfx.value = -80;
+			master.value = -80;
 		}
 
 		muted = !muted;
@@ -62,7 +72,7 @@ public class SettingsController : MonoBehaviour
 			PlayerPrefs.SetInt("Highscore4", 0);
 			PlayerPrefs.SetInt("Highscore5", 0);
 		}
-		
+
 		UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
 	}
 

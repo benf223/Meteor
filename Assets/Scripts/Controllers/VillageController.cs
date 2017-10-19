@@ -1,49 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 public class VillageController : MonoBehaviour {
-    public bool isDestroyed;
-    public GameObject difficultyManager;
     private DifficultyManagerController difficultyManagerController;
     public Sprite[] sprites;
     public GameObject[] destroyedVersions;
-    private int latestSeconds;
-
-    public GameObject explosion;
-
-    [HideInInspector]
-    public int growthCount;
-
-    private SpriteRenderer spriteRenderer;
     public AudioClip audio;
-    //public AudioSource source;
-    float timer = 0.0f;
+	public GameObject difficultyManager;
+	public AudioClip explosion;
+	public bool isDestroyed;
+	public bool godMode;
+	
+	private SpriteRenderer spriteRenderer;
+	private int latestSeconds;
+	private int growthCount;
+	private float timer;
 
-    public bool godMode;
+	// Use this for initialization
+	private void Start()
+	{
+		//this is what makes it so that the sprite can be changed in run time not via animation, can be swapped
+		//to animation later on
+		spriteRenderer = GetComponent<Renderer>() as SpriteRenderer;
 
-    // Use this for initialization
+		growthCount = 0;
+		UpdateCollider();
 
-    private void Start() {
-        //source = GetComponent<AudioSource>();
-        // Initialize the difficulty manager script
-        if (difficultyManager != null) {
-            difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
-        }
-
-
-        //this is what makes it so that the sprite can be changed in run time not via animation, can be swapped
-        //to animation later on
-        spriteRenderer = GetComponent<Renderer>() as SpriteRenderer;
-
-        growthCount = 0;
-        UpdateCollider();
-
-        if (Debug.isDebugBuild) {
-            Debug.Log("Village Created Succesfully");
-        }
-    }
+		if (Debug.isDebugBuild)
+			Debug.Log("Village Created Succesfully");
+	}
 
     // Update is called once per frame
     void Update() {
@@ -84,11 +69,7 @@ public class VillageController : MonoBehaviour {
                 BlowUp();
                 PlayExplosion();
                 isDestroyed = true;
-                //				float a = timer;
-                //				float b = 0;
-                //				while (b < 2) {
-                //					b = timer - a;
-                //				}
+
                 
             }
         }

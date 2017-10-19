@@ -29,7 +29,6 @@ public class CloudMakerBreaker : MonoBehaviour {
 
         if (Time.timeSinceLevelLoad >= (timeSinceLastSpawn + spawnTimer)) {
             Bounds spawnBounds = cd.bounds;
-
             Vector3 min = spawnBounds.min;
             Vector3 max = spawnBounds.max;
 

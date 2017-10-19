@@ -1,221 +1,169 @@
 ﻿using UnityEngine;
 
-public class MeteoriteSpawnerController : MonoBehaviour {
-    public int amountSpawned { get; private set; }
-    public GameObject meteorite;
-    public GameObject difficultyManager;
+public class MeteoriteSpawnerController : MonoBehaviour
+{
+	[HideInInspector] public int touchCount;
+	
+	public GameObject meteorite;
+	public GameObject difficultyManager;
+	public int amountSpawned { get; private set; }
+	public int defaultTouchCount;
+	public float defaultGravityScale;
+	public float gravityScale;
+	public float startingTimeBetweenSpawn;
+	public float minSpawnForce;				// Minimum and maximum spawn force
+	public float maxSpawnForce;
+	public float fastSpawnForceMultiplier;
+	public bool spawningEnabled = true;
+	
+	private Collider2D cd;
+	private DifficultyManagerController difficultyManagerController;
+	private float startSpawnTime = 0.75f;	// Breath time for when to start the spawning of meteorites
+	private float timeBetweenSpawn;			// Spawn delay between meteorites
+	private float startTime;				// Testing the time for first spawn
+	private float timeFirstSpawn = -1;
 
-    public int defaultTouchCount;
-    public float defaultGravityScale;
+	// Use this for initialization
+	private void Start()
+	{
+		timeBetweenSpawn = startingTimeBetweenSpawn;
+		touchCount = defaultTouchCount;
+		gravityScale = defaultGravityScale;
+		startTime = Time.timeSinceLevelLoad;
 
-    [HideInInspector]
-    public int touchCount;
-    public float gravityScale;
-    //   public float slowedGravityScale;
+		if (Debug.isDebugBuild)
+			Debug.Log("Spawn Rate: " + timeBetweenSpawn);
 
-    private Collider2D cd;
-    private DifficultyManagerController difficultyManagerController;
+		cd = GetComponent<BoxCollider2D>();
 
-    public bool spawningEnabled = true;
+		if (difficultyManager != null)
+			difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
+	}
 
-    // Breath time for when to start the spawning of meteorites
-    private float startSpawnTime = 0.75f;
+	// Update is called once per frame
+	private void Update()
+	{
+		// If difficulty has been updated, then update.
+		if (difficultyManagerController != null && difficultyManagerController.DifficultyUpdated())
+		{
+			// NOTE: Set time for spawn delay
+			timeBetweenSpawn = startingTimeBetweenSpawn * difficultyManagerController.GetMeteoriteSpawnDelayMultiplier();
 
-    // Spawn delay between meteorites
-    private float timeBetweenSpawn;
-    public float startingTimeBetweenSpawn;
+			if (Debug.isDebugBuild)
+				Debug.Log("Spawn Rate: " + timeBetweenSpawn);
+		}
+	}
 
-    // Minimum and maximum spawn force
-    public float minSpawnForce;
+	private void FixedUpdate()
+	{
+		/**
+		   * Start spawning meteorites when breathing time reached
+		   * and then set the delay for spawn times between meteorites
+		   */
+		if (Time.timeSinceLevelLoad >= startSpawnTime)
+		{
+			SpawnMeteorites();
+			startSpawnTime = Time.timeSinceLevelLoad + timeBetweenSpawn;
 
-    public float maxSpawnForce;
+			if (Debug.isDebugBuild)
+				if (timeFirstSpawn == -1)
+				{
+					timeFirstSpawn = Time.timeSinceLevelLoad;
+					Debug.Log("Delay for first spawn: " + (timeFirstSpawn - startTime));
+				}
+		}
+	}
 
-    public float fastSpawnForceMultiplier;
+	/**
+	   * Function to control the spawning of meteorites
+	   */
+	private void SpawnMeteorites()
+	{
+		// Gets the bounding box of the box collider
+		Bounds spawnBounds = cd.bounds;
 
-    // Testing tthe time for first spawn
-    private float startTime;
+		Vector3 min = spawnBounds.min; 		// Get the minimum values
+		Vector3 max = spawnBounds.max; 		// Get the maximum values
 
-    private float timeFirstSpawn = -1;
+		// Randomize a position within the spawn area
+		float x = Random.Range(min.x, max.x);
+		float y = Random.Range(min.y, max.y);
 
-    // Use this for initialization
-    private void Start() {
-        timeBetweenSpawn = startingTimeBetweenSpawn;
-        touchCount = defaultTouchCount;
-        gravityScale = defaultGravityScale;
-        startTime = Time.timeSinceLevelLoad;
+		// Instantiate the randomized location
+		Vector2 spawnLocation = new Vector3(x, y, 0);
 
-        if (Debug.isDebugBuild) {
-            Debug.Log("Spawn Rate: " + timeBetweenSpawn);
-        }
+		// Create the object in the random position
+		GameObject spawned = Instantiate(meteorite, spawnLocation, Quaternion.identity);
+		SetTouchCount(spawned);
+		SetGravityControl(spawned);
 
-        cd = GetComponent<BoxCollider2D>();
+		GameObject village = GameObject.Find("Village");
 
-        if (difficultyManager != null) {
-            difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
-        }
-    }
+		float chance = Random.Range(0.0f, 1.0f);
 
-    // Update is called once per frame
-    private void Update() {
-        // If difficulty has been updated, then update.
-        if (difficultyManagerController != null && difficultyManagerController.DifficultyUpdated()) {
-            // NOTE: Set time for spawn delay
-            timeBetweenSpawn = startingTimeBetweenSpawn * difficultyManagerController.GetMeteoriteSpawnDelayMultiplier();
+		// This will change to call from the difficulty manager
+		float chanceToAimAtVillage = difficultyManagerController.GetMeteoriteSpawnDirectionMultiplier();
 
-            if (Debug.isDebugBuild) {
-                Debug.Log("Spawn Rate: " + timeBetweenSpawn);
-            }
-        }
-    }
 
-    private void FixedUpdate() {
-        /**
-		 * Start spawning meteorites when breathing time reached
-		 * and then set the delay for spawn times between meteorites
-		 */
-        if (Time.timeSinceLevelLoad >= startSpawnTime) {
-            SpawnMeteorites();
-            startSpawnTime = Time.timeSinceLevelLoad + timeBetweenSpawn;
+		if (chance > chanceToAimAtVillage)
+			AddForceTowardsWall(spawned);
+		else
+			AddForceTowardsVillage(spawned, village);
+	}
 
-            if (Debug.isDebugBuild) {
-                /**
-				 * For Testing
-				 */
-                if (timeFirstSpawn == -1) {
-                    timeFirstSpawn = Time.timeSinceLevelLoad;
-                    Debug.Log("Delay for first spawn: " + (timeFirstSpawn - startTime));
-                }
-            }
-        }
-    }
+	private void AddForceTowardsVillage(GameObject spawned, GameObject village)
+	{
+		Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
+		Color myColor = new Color(1f, 0.3f, 0.0f);
 
-    /**
-	 * Function to controll the spawning of meteorites
-	 */
-    private void SpawnMeteorites() {
-        // Gets the bounding box of the box collider
-        Bounds spawnBounds = cd.bounds;
+		SpriteRenderer meteoriteColor = spawned.GetComponent<SpriteRenderer>();
+		meteoriteColor.color = myColor;
+		
+		Vector2 villagePos = village.GetComponent<Transform>().position;
 
-        Vector3 min = spawnBounds.min; // Get the minimum values
-        Vector3 max = spawnBounds.max; // Get the maximum values
+		rb.AddForce((villagePos - rb.position).normalized * (GetRandomForce() * fastSpawnForceMultiplier));
+		rb.AddTorque(-50.0f);		 		// Make it spin!
+	}
 
-        // Randomize a position within the spawn area
-        float x = Random.Range(min.x, max.x);
-        float y = Random.Range(min.y, max.y);
+	private void AddForceTowardsWall(GameObject spawned)
+	{
+		Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
+		GameObject[] walls = GameObject.FindGameObjectsWithTag("Wall");
 
-        // Instantiate the randomized location
-        Vector2 spawnLocation = new Vector3(x, y, 0);
+		int targetIndex = Random.Range(0, walls.Length);
+		Vector2 targetLocation = GenerateRandomLocation(walls[targetIndex]);
 
-        // Create the object in the random position
-        GameObject spawned = Instantiate(meteorite, spawnLocation, Quaternion.identity);
-        SetTouchCount(spawned);
-        SetGravityControl(spawned);
+		//normalized keeps direction, but length of 1.
+		rb.AddForce((targetLocation - rb.position).normalized * GetRandomForce());
+		rb.AddTorque(-25.0f); 				// Make it spin!
+	}
 
-        GameObject village = GameObject.Find("Village");
+	public Vector3 GenerateRandomLocation(GameObject target)
+	{
+		Bounds bounds = target.GetComponent<Collider2D>().bounds;
+		Vector3 min = bounds.min;
+		Vector3 max = bounds.max;
 
-        float chance = Random.Range(0.0f, 1.0f);
+		float x = Random.Range(min.x, max.x);
 
-        // This will change to call from the difficulty manager
-        float chanceToAimAtVillage = difficultyManagerController.GetMeteoriteSpawnDirectionMultiplier();
+		float y = Random.Range(min.y, cd.bounds.max.y);
 
-        // Debug.Log("Chance to Aim at Village: " + chanceToAimAtVillage);
-        // Debug.Log("Actual Chance" + chance);
+		return new Vector3(x, y, 0);
+	}
 
-        if (chance > chanceToAimAtVillage) {
-            //            AddRandomForce(spawned);
-            AddForceTowardsWall(spawned);
-        }
-        else {
-            AddForceTowardsVillage(spawned, village);
-        }
+	private float GetRandomForce()
+	{
+		return Random.Range(minSpawnForce, maxSpawnForce) * difficultyManagerController.GetMeteoriteSpeedMultiplier();
+	}
 
-    }
+	public void SetTouchCount(GameObject meteorite)
+	{
+		meteorite.GetComponent<MeteoriteController>().touchCount = touchCount;
+	}
 
-    private void AddForceTowardsVillage(GameObject spawned, GameObject village) {
-        Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
-        Color myColor = new Color(1f, 0.3f, 0.0f);
-
-        SpriteRenderer meteoriteColor = spawned.GetComponent<SpriteRenderer>();
-        meteoriteColor.color = myColor;
-        // meteoriteColor.r = 244;
-        // meteoriteColor.g = 152;
-        // meteoriteColor.b = 66;
-
-        if (village != null) {
-            Vector2 villagePos = village.GetComponent<Transform>().position;
-
-            rb.AddForce((villagePos - rb.position).normalized * (GetRandomForce() * fastSpawnForceMultiplier));
-            rb.AddTorque(-50.0f); // Make it spin!
-        }
-    }
-
-    private void AddForceTowardsWall(GameObject spawned) {
-        Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
-        GameObject[] walls = GameObject.FindGameObjectsWithTag("Wall");
-
-        int targetIndex = Random.Range(0, walls.Length - 1);
-        Vector2 targetLocation = GenerateRandomLocation(walls[targetIndex]);
-
-        //.normalized keeps direction, but length of 1.
-        rb.AddForce((targetLocation - rb.position).normalized * GetRandomForce());
-        rb.AddTorque(-25.0f); // Make it spin!
-    }
-
-    public Vector3 GenerateRandomLocation(GameObject target) {
-        Bounds bounds = target.GetComponent<Collider2D>().bounds;
-        Vector3 min = bounds.min;
-        Vector3 max = bounds.max;
-
-        float x = Random.Range(min.x, max.x);
-
-        float y = Random.Range(min.y, cd.bounds.max.y);
-
-        return new Vector3(x, y, 0);
-    }
-
-    /**
-     * This function is now obselete as the meteorites will instead target a random spot
-     * in the walls.
-     */
-    private void AddRandomForce(GameObject spawned) {
-        Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
-
-        // Randomize between spawning to the left, or the right
-        // 0 = right, 180 = left
-        float angle;
-        int randomNum = Random.Range(0, 2);
-
-        if (randomNum == 0) {
-            angle = 0;
-        }
-        else {
-            angle = 180;
-        }
-
-        // Calculate the force to add
-        float addedForce = Random.Range(minSpawnForce, maxSpawnForce);
-
-        // Calculates the direction using the angle
-        // TBH, I have no idea how this actually works.
-        Vector3 dir = Quaternion.AngleAxis(angle, Vector3.up) * Vector3.right;
-
-        // Finally, add the force to the direction.
-        rb.AddForce(dir * addedForce);
-
-        rb.AddTorque(-25.0f); // Make it spin!
-    }
-
-    private float GetRandomForce() {
-        return Random.Range(minSpawnForce, maxSpawnForce) * difficultyManagerController.GetMeteoriteSpeedMultiplier();
-    }
-
-    public void SetTouchCount(GameObject meteorite) {
-        meteorite.GetComponent<MeteoriteController>().touchCount = this.touchCount;
-    }
-
-    public void SetGravityControl(GameObject meteorite) {
-        meteorite.GetComponent<MeteoriteController>().SetGravityScale(this.gravityScale);
-    }
-
+	public void SetGravityControl(GameObject meteorite)
+	{
+		meteorite.GetComponent<MeteoriteController>().SetGravityScale(gravityScale);
+	}
 
 }
