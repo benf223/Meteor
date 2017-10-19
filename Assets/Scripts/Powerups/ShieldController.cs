@@ -1,112 +1,117 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ShieldController : Powerup
 {
+	private GameObject shield;
+	private Color blue;
+	private Color yellow;
+	private Color red;
+	private float timeSinceStart;
+	private int counter;
+	private int shieldHealth;
 
-    private GameObject shield;
-    private float timeSinceStart;
-    private int counter;
-    private int shieldHealth;
+	// Update is called once per frame
+	private new void Update()
+	{
+		UpdateVisibles();
+		timeSinceStart = Time.timeSinceLevelLoad - startTime;
+		
+		if (timeSinceStart > duration || shieldHealth == 0)
+			DeactivatePowerup();
+	}
 
-    Color blue;
-    Color yellow;
-    Color red;
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.CompareTag("Meteorite"))
+		{
+			Destroy(collision.gameObject);
+			
+			shieldHealth--;
+			
+			if (shieldHealth == 2)
+				GetComponent<Renderer>().material.color = yellow;
+			else if (shieldHealth == 1)
+				GetComponent<Renderer>().material.color = red;
+		}
+	}
 
-    // Update is called once per frame
-    new void Update()
-    {
-        timeSinceStart = Time.timeSinceLevelLoad - startTime;
-        if (timeSinceStart > duration || shieldHealth == 0)
-        {
-            DeactivatePowerup();
-        }
-    }
+	public void WarningOfShield()
+	{
+		Indicator();
+		if (timeSinceStart > duration - 2)
+		{
+			CancelInvoke();
+			counter = 0;
+			InvokeRepeating("Indicator", 0, 0.25f);
+		}
+		
+		if (timeSinceStart > duration)
+			CancelInvoke();
+	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Meteorite"))
-        {
-            shieldHealth--;
-            if (shieldHealth == 2)
-            {
-                GetComponent<Renderer>().material.color = yellow;
-            }
-            else if (shieldHealth == 1)
-            {
-                GetComponent<Renderer>().material.color = red;
-            }
-        }
-    }
+	public void Indicator()
+	{
+		if (counter == 0)
+		{
+			if (timeSinceStart > 8 && shieldHealth == 1 || timeSinceStart > 8 && shieldHealth == 3)
+			{
+				if (Debug.isDebugBuild)
+					Debug.Log("Red " + timeSinceStart);
+				
+				GetComponent<Renderer>().material.color = red;
+			}
+			else if (shieldHealth > 2)
+			{
+				if (Debug.isDebugBuild)
+					Debug.Log("Yellow " + timeSinceStart);
+				
+				GetComponent<Renderer>().material.color = yellow;
+			}
+			
+			counter++;
+		}
+		else if (counter == 1)
+		{
+			if (shieldHealth == 3)
+			{
+				if (Debug.isDebugBuild)
+					Debug.Log("Blue " + timeSinceStart);
+				
+				GetComponent<Renderer>().material.color = blue;
+			}
+			else if (shieldHealth == 2)
+			{
+				if (Debug.isDebugBuild)
+					Debug.Log("Red " + timeSinceStart);
+				
+				GetComponent<Renderer>().material.color = red;
+			}
+			
+			counter--;
+		}
+	}
 
-    public void WarningOfShield()
-    {
-        Indicator();
-        if (timeSinceStart > duration - 2)
-        {
-            CancelInvoke();
-            counter = 0;
-            InvokeRepeating("Indicator", 0, 0.25f);
-        }
-        if (timeSinceStart > duration)
-        {
-            CancelInvoke();
-        }
-    }
+	protected override void ActivatePowerup()
+	{
+		transform.position = new Vector2(0.0f, -5.13f);
 
-    public void Indicator()
-    {
-        if (counter == 0)
-        {
-            if (timeSinceStart > 8 && shieldHealth == 1 || timeSinceStart > 8 && shieldHealth == 3)
-            {
-                Debug.Log("Red " + timeSinceStart);
-                GetComponent<Renderer>().material.color = red;
-            }
-            else if (shieldHealth > 2)
-            {
-                Debug.Log("Yellow " + timeSinceStart);
-                GetComponent<Renderer>().material.color = yellow;
-            }
-            counter++;
-        }
-        else if (counter == 1)
-        {
-            if (shieldHealth == 3)
-            {
-                Debug.Log("Blue " + timeSinceStart);
-                GetComponent<Renderer>().material.color = blue;
-            }
-            else if (shieldHealth == 2)
-            {
-                Debug.Log("Red " + timeSinceStart);
-                GetComponent<Renderer>().material.color = red;
-            }
-            counter--;
-        }
-    }
+		startTime = Time.timeSinceLevelLoad;
+		timeSinceStart = 0;
+		counter = 0;
+		shieldHealth = 3;
 
-    protected override void ActivatePowerup()
-    {
-        transform.position = new Vector2(0.0f, -5.13f);
+		blue = new Color(0.0f, 0.95f, 1.0f);
+		yellow = new Color(1.0f, 1.0f, 0);
+		red = new Color(1.0f, 0.2f, 0.2f);
+		
+		GetComponent<Renderer>().material.color = blue;
 
-        startTime = Time.timeSinceLevelLoad;
-        timeSinceStart = 0;
-        counter = 0;
-        shieldHealth = 3;
+		InvokeRepeating("WarningOfShield", duration - 5, 0.5f);
+	}
 
-        blue = new Color(0.0f, 0.95f, 1.0f);
-        yellow = new Color(1.0f, 1.0f, 0);
-        red = new Color(1.0f, 0.2f, 0.2f);
-        GetComponent<Renderer>().material.color = blue;
-
-        InvokeRepeating("WarningOfShield", duration-5, 0.5f);
-    }
-
-    protected override void DeactivatePowerup()
-    {
-        Destroy(gameObject);
-    }
+	protected override void DeactivatePowerup()
+	{
+		DeactivateSlider();
+		Destroy(gameObject);
+	}
 }
