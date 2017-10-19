@@ -24,6 +24,8 @@ public class ShieldController : Powerup
 	{
 		if (collision.gameObject.CompareTag("Meteorite"))
 		{
+			Destroy(collision.gameObject);
+			
 			shieldHealth--;
 			
 			if (shieldHealth == 2)

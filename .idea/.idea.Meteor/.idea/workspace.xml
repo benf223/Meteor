@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7703dfdb-788d-4a7c-9732-347b7cfb281b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.Meteor/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Meteor/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scenes/Settings.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Settings.unity" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/SettingsController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/SettingsController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Cosmetic/AlternateSpawner.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Cosmetic/AlternateSpawner.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Sound/MainMix.mixer" afterPath="$PROJECT_DIR$/Assets/Sound/MainMix.mixer" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Powerups/ShieldController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Powerups/ShieldController.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,7 +58,7 @@
       <file leaf-file-name="AlternateSpawner.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/AlternateSpawner.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="520">
               <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <marker date="1508285195344" expanded="false" signature="6:53" ph="..." />
@@ -76,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SettingsController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SettingsController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/SettingsController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
+            <state relative-caret-position="800">
               <caret line="42" column="28" lean-forward="false" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
               <folding>
                 <marker date="1508285682894" expanded="false" signature="6:65" ph="..." />
@@ -92,6 +87,32 @@
                 <marker date="1508285682894" expanded="true" signature="1100:1616" ph="{...}" />
                 <marker date="1508285682894" expanded="true" signature="1342:1550" ph="{...}" />
                 <marker date="1508285682894" expanded="true" signature="1640:1749" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShieldController.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Powerups/ShieldController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+              <folding>
+                <marker date="1508376231768" expanded="true" signature="59:2414" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="297:460" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="517:806" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="572:803" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="838:1037" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="893:979" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="1063:1892" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="1086:1509" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="1181:1316" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="1346:1487" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="1534:1889" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="1564:1701" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="1732:1867" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="1936:2315" ph="{...}" />
+                <marker date="1508376231768" expanded="true" signature="2361:2412" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -192,7 +213,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Cosmetic/CloudMakerBreaker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Cosmetic/StarController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Powerups/MultipleTouchesPowerupController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Powerups/ShieldController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Powerups/SlowDownMeteoritesController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Powerups/WallBreaker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tests/SpawnerTest.cs" />
@@ -208,6 +228,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Powerups/Powerup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Cosmetic/AlternateSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/SettingsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Powerups/ShieldController.cs" />
       </list>
     </option>
   </component>
@@ -218,10 +239,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1051" />
+    <option name="x" value="952" />
+    <option name="width" value="976" />
+    <option name="height" value="1041" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -238,7 +258,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <PATH>
@@ -255,6 +274,7 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -401,11 +421,13 @@
       <workItem from="1508274441407" duration="334000" />
       <workItem from="1508274847482" duration="4292000" />
       <workItem from="1508285150167" duration="589000" />
+      <workItem from="1508376005722" duration="95000" />
+      <workItem from="1508376113986" duration="129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51406000" />
+    <option name="totallyTimeSpent" value="51630000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -417,7 +439,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1051" extended-state="6" />
+    <frame x="952" y="0" width="976" height="1041" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -428,7 +450,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24114583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48329854" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -617,8 +639,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Powerups/ShieldController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="797">
-          <caret line="103" column="8" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+        <state relative-caret-position="340">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <marker date="1508376231768" expanded="true" signature="59:2414" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="297:460" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="517:806" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="572:803" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="838:1037" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="893:979" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="1063:1892" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="1086:1509" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="1181:1316" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="1346:1487" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="1534:1889" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="1564:1701" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="1732:1867" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="1936:2315" ph="{...}" />
+            <marker date="1508376231768" expanded="true" signature="2361:2412" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -734,7 +773,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cosmetic/AlternateSpawner.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="520">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <marker date="1508285195344" expanded="false" signature="6:53" ph="..." />
@@ -765,7 +804,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Game Controllers/SettingsController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
+        <state relative-caret-position="800">
           <caret line="42" column="28" lean-forward="false" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
           <folding>
             <marker date="1508285682894" expanded="false" signature="6:65" ph="..." />
