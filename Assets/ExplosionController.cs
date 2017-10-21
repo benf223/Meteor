@@ -16,13 +16,13 @@ public class ExplosionController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        foreach (GameObject go in collisions) {
-            Rigidbody2D rb = go.GetComponent<Rigidbody2D>();
-            Transform tf = go.GetComponent<Transform>();
-           // Vector3 direction = GetComponent<Rigidbody2D>().position-rb.position; 
-            rb.AddForce(tf.up * 100f);
+        // foreach (GameObject go in collisions) {
+        //     Rigidbody2D rb = go.GetComponent<Rigidbody2D>();
+        //     Transform tf = go.GetComponent<Transform>();
+        //    // Vector3 direction = GetComponent<Rigidbody2D>().position-rb.position; 
+        //     rb.AddForce(tf.up * 100f);
            
-        }
+        // }
     }
 
     private void Die() {
@@ -30,13 +30,13 @@ public class ExplosionController : MonoBehaviour {
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
-       // TODO: FORLOOP FIND TOUCHED OBJECTS AND APPLY THAT FUCKING FORCE
-        if (other.gameObject.CompareTag("Debris")) {
-            if (!collisions.Contains(other.gameObject)) {
-                collisions.Add(other.gameObject);
-                 Debug.Log(other.gameObject.name);
-            }
-        }
+    //    // TODO: FORLOOP FIND TOUCHED OBJECTS AND APPLY THAT FUCKING FORCE
+    //     if (other.gameObject.CompareTag("Debris")) {
+    //         if (!collisions.Contains(other.gameObject)) {
+    //             collisions.Add(other.gameObject);
+    //              Debug.Log(other.gameObject.name);
+    //         }
+    //     }
 
     }
 }

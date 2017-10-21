@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1979b199f74aa448ddc209f8957405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 5
-  minSize: 0
+  speed: 5
+  minSize: 0.35
   tf: {fileID: 4622796139615440}
   direction: 1
 --- !u!212 &212676176822198858

@@ -80,5 +80,5 @@ MonoBehaviour:
   cloud: {fileID: 1044929607250210, guid: 731f97ee18b018043a9d13c11f63eca9, type: 2}
   cd: {fileID: 61355454485830870}
   minSpawnTime: 0.5
-  maxSpawnTime: 3
+  maxSpawnTime: 5
   onLeft: 0

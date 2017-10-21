@@ -14,7 +14,10 @@ public class MeteoriteController : TouchableObjectController {
 
         if (collision.gameObject.CompareTag("Village")) {
             if (explosion != null) {
-                Instantiate(explosion, GetComponent<Transform>().position, Quaternion.identity);
+                ContactPoint2D contactPoint = collision.contacts[0];
+                Vector2 explosionPoint = contactPoint.point;
+                explosionPoint.y = collision.gameObject.GetComponent<Transform>().position.y-0.5f;
+                Instantiate(explosion, explosionPoint, Quaternion.identity);
             }
         }
     }

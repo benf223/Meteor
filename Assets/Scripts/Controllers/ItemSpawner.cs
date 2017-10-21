@@ -61,29 +61,5 @@ public class ItemSpawner : MonoBehaviour
 
 		//Create the object in the random position
 		GameObject spawned = Instantiate(itemBox, spawnLocation, Quaternion.identity);
-		Rigidbody2D rb = spawned.GetComponent<Rigidbody2D>();
-
-		// Randomize between spawning to the left, or the right
-		// 0 = right, 180 = left
-		float angle;
-		int randomNum = Random.Range(0, 2);
-		
-		if (randomNum == 0)
-		{
-			angle = 0;
-		}
-		else
-		{
-			angle = 180;
-		}
-
-		// Calculate the force to add
-		float addedForce = Random.Range(minSpawnForce, maxSpawnForce);
-
-		// Calculates the direction using the angle
-		Vector3 dir = Quaternion.AngleAxis(angle, Vector3.up) * Vector3.right;
-
-		// Finally, add the force to the direction.
-		rb.AddForce(dir * addedForce);
 	}
 }
