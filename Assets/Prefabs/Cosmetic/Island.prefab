@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4776684055056596}
   - component: {fileID: 212848603955397758}
-  m_Layer: 0
+  - component: {fileID: 60693460847499586}
+  m_Layer: 13
   m_Name: Island
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,6 +41,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60693460847499586
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1663739598991852}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.16, y: 4.16}
+    newSize: {x: 4.16, y: 4.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.4499999, y: -0.66999996}
+      - {x: 1.1899999, y: -0.66999996}
+      - {x: 1.1805838, y: -0.13024366}
+      - {x: 0.9216765, y: 0.25243905}
+      - {x: -1.1846707, y: 0.2662194}
+      - {x: -1.4405838, y: -0.07024366}
 --- !u!212 &212848603955397758
 SpriteRenderer:
   m_ObjectHideFlags: 1

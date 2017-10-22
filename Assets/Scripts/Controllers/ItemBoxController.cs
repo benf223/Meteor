@@ -5,6 +5,9 @@ public class ItemBoxController : TouchableObjectController
 	public GameObject[] powerups;
 	public Transform myTransform;
 
+	public float swayStrength = 10;
+	private float currentSway;
+
 	/**
 	 * Randomizes powerup selection
 	 */
@@ -41,6 +44,10 @@ public class ItemBoxController : TouchableObjectController
 
 	void FixedUpdate()
 	{
-		rb.AddTorque(-myTransform.rotation.z * 10);
+
+		rb.AddForceAtPosition(Vector3.up, transform.TransformPoint(Vector3.up));
+		rb.AddForceAtPosition(-Vector3.up, transform.TransformPoint(-Vector3.up));
 	}
+
+
 }

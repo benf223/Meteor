@@ -1,64 +1,65 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+public class GameController : MonoBehaviour {
+    [HideInInspector]
+    public bool restarting;
 
-public class GameController : MonoBehaviour
-{
-	[HideInInspector]
-	public bool restarting;
+    public AudioMixer mixer;
+    public Text scoreText;
+    public GameObject difficultyManager;
+    public GameObject pauseMenu;
 
-	public AudioMixer mixer;
-	public Text scoreText;
-	public GameObject difficultyManager;
-	public GameObject pauseMenu;
-	
-	private int score;
-	private DifficultyManagerController difficultyManagerControl;
-	
+    private int score;
+    private DifficultyManagerController difficultyManagerControl;
+
     // Use this for initialization
-	private void Start()
-    {
-	    mixer.SetFloat("sfxVolume", PlayerPrefs.GetInt("SFXVolume"));
-	    mixer.SetFloat("musicVolume", PlayerPrefs.GetInt("MusicVolume"));
-	    mixer.SetFloat("masterVolume", PlayerPrefs.GetInt("MasterVolume"));
-	    
+    private void Start() {
+        mixer.SetFloat("sfxVolume", PlayerPrefs.GetInt("SFXVolume"));
+        mixer.SetFloat("musicVolume", PlayerPrefs.GetInt("MusicVolume"));
+        mixer.SetFloat("masterVolume", PlayerPrefs.GetInt("MasterVolume"));
         Time.timeScale = 1f;
-	    score = -1;
-	    difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();
+        score = -1;
+        difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();
         difficultyManagerControl.StartTimer();
-	    
-	    if (Debug.isDebugBuild)
-			Debug.Log ("Start woo");
-	    
-	    restarting = false;
-	}
+        Debug.Log("Start woo");
+        restarting = false;
+    }
 
     // Update is called once per frame
-	private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape))
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        }
     }
 
-    public void AddScore()
-    {
-	    AddScore(10);
+
+
+    public void AddScore() {
+        AddScore(10);
     }
 
-    public void AddScore(int num)
-    {
-	    score += num;
-	    scoreText.text = "Score: " + score;
+    public void AddScore(int num) {
+        score += num;
+        scoreText.text = "Score: " + score;
     }
 
-    private void OnDestroy()
-    {
-	    if (!restarting)
-	    {
-		    UpdateHighscores();
-		    PlayerPrefs.SetString("score", "Score: " + score);
-		    difficultyManagerControl.PauseTimer();
-	    }
+    private void OnDestroy() {
+        if (!restarting) {
+            UpdateHighscores();
+            PlayerPrefs.SetString("score", "Score: " + score);
+            difficultyManagerControl.PauseTimer();
+        }
+    }
+
+
+    public void GoToMenu() {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameEnd");
+
+    }
+
+    public void StartMenuTimer() {
+        Invoke("GoToMenu", 3.0f);
     }
 
 	private void UpdateHighscores()
@@ -114,4 +115,5 @@ public class GameController : MonoBehaviour
 		
 		pauseMenu.SetActive(true);
 	}
+
 }
