@@ -175,6 +175,8 @@ MonoBehaviour:
   touchCount: 1
   customTag: 
   lowBounce: {fileID: 6200000, guid: 060ac08daa253b14db8b1ea4aebac2b2, type: 2}
+  destroyedVersion: {fileID: 1799888323640592, guid: 536f3f2f24fff9143bb8f67503912695,
+    type: 2}
   spriteRenderer: {fileID: 212488209702916204}
   spriteArray:
   - sprites:

@@ -14,6 +14,8 @@ public class TouchableObjectController : MonoBehaviour {
 
     public PhysicsMaterial2D lowBounce;
 
+    public GameObject destroyedVersion;
+
 
     // FOR SPRITES
     public SpriteRenderer spriteRenderer;
@@ -44,6 +46,10 @@ public class TouchableObjectController : MonoBehaviour {
             difficultyManagerController = difficultyManager.GetComponent<DifficultyManagerController>();
         }
 
+        if (rb == null) {
+            rb = GetComponent<Rigidbody2D>();
+        }
+
         //InitializeSpeed();
     }
 
@@ -60,7 +66,9 @@ public class TouchableObjectController : MonoBehaviour {
 
 
     public void BlowUp() {
-        
+        if (destroyedVersion != null) {
+            Instantiate(destroyedVersion, rb.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
 
