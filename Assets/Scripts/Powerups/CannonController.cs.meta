@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: b7d5bb05ae83e4023909baee20e80f9d
-timeCreated: 1508495241
+timeCreated: 1508991499
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - cannonBall: {fileID: 1322769918962440, guid: 9f3f39f7fa40840e8ad8d5312d5755e8,
+      type: 2}
+  - wheel: {fileID: 1527874418064790, guid: 138fea4b974894c7bb1a6f0e077d962b, type: 2}
+  - cbc: {fileID: 114213923270632178, guid: 9f3f39f7fa40840e8ad8d5312d5755e8, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

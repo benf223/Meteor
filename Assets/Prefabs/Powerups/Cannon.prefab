@@ -56,6 +56,7 @@ MonoBehaviour:
   powerupName: Cannon
   cannonBall: {fileID: 1322769918962440, guid: 9f3f39f7fa40840e8ad8d5312d5755e8, type: 2}
   wheel: {fileID: 1527874418064790, guid: 138fea4b974894c7bb1a6f0e077d962b, type: 2}
+  cbc: {fileID: 114213923270632178, guid: 9f3f39f7fa40840e8ad8d5312d5755e8, type: 2}
 --- !u!212 &212909396035874318
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd519266e070d41efbcc43971c605fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cc: {fileID: 114731350649786092, guid: 95420a0860e2148a9821e052cb70bae1, type: 2}
 --- !u!212 &212620825074331630
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -138,7 +139,7 @@ ConstantForce2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1322769918962440}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Force: {x: 0, y: 100}
   m_RelativeForce: {x: 0, y: 0}
   m_Torque: 180
