@@ -175,13 +175,16 @@ MonoBehaviour:
   touchCount: 1
   customTag: 
   lowBounce: {fileID: 6200000, guid: 060ac08daa253b14db8b1ea4aebac2b2, type: 2}
+  destroyedVersion: {fileID: 1799888323640592, guid: 536f3f2f24fff9143bb8f67503912695,
+    type: 2}
   spriteRenderer: {fileID: 212488209702916204}
   spriteArray:
   - sprites:
     - {fileID: 21300000, guid: aed8d1309f63d66409901d79bbffda22, type: 3}
     - {fileID: 21300000, guid: 8f14e11133076c244a4d705ee56a734a, type: 3}
   touching: 0
-  bounce: {fileID: 8300000, guid: 881c82c27f0d145788f7163312881515, type: 3}
+  explosion: {fileID: 1874594541457596, guid: 469795b704507694c949709482dc6cde, type: 2}
+  bounce: {fileID: 0}
   water: {fileID: 8300000, guid: 1501b355a56dd443699646286cbe20eb, type: 3}
 --- !u!212 &212488209702916204
 SpriteRenderer:

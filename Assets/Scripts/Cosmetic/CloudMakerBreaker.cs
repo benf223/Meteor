@@ -1,64 +1,63 @@
 ﻿using UnityEngine;
 
-public class CloudMakerBreaker : MonoBehaviour
-{
-	public GameObject smol;
-	public GameObject med;
-	public GameObject large;
-	public Collider2D cd;
-	public bool onLeft;
+public class CloudMakerBreaker : MonoBehaviour {
+    public GameObject cloud;
+    public Collider2D cd;
 
-	private void Update()
-	{
-		if (Random.Range(1, 200) == 17)
-		{
-			Bounds spawnBounds = cd.bounds;
+    public float minSpawnTime = 0.5f;
+    public float maxSpawnTime = 3.0f;
+    private float spawnTimer;
 
-			Vector3 min = spawnBounds.min;
-			Vector3 max = spawnBounds.max;
+	private float timeSinceLastSpawn;
 
-			float x = Random.Range(min.x, max.x);
-			float y = Random.Range(min.y, max.y);
+    public bool onLeft;
 
-			Vector2 spawnLocation = new Vector3(x, y, 0);
-			GameObject o = gameObject;
-			
-			switch (Random.Range(0, 3))
-			{
-				case 0:
-				{
-					o = Instantiate(smol, spawnLocation, Quaternion.identity);
-					break;
-				}
-				case 1:
-				{
-					o = Instantiate(med, spawnLocation, Quaternion.identity);
-					break;
-				}
-				case 2:
-				{
-					o = Instantiate(large, spawnLocation, Quaternion.identity);
-					break;
-				}
-			}
+    void Start() {
+		// Randomize the initial spawn time between
+        RandomizeSpawnTime();
+		timeSinceLastSpawn = Time.timeSinceLevelLoad;
+    }
 
-			CloudController tmp = o.GetComponent<CloudController>();
-			tmp.direction = onLeft ? 1 : -1;
-		}
+	/**
+	 * Randomizes the spawn timer
+	 */
+	private void RandomizeSpawnTime() {
+		spawnTimer = Random.Range(minSpawnTime, maxSpawnTime);
 	}
 
+    private void FixedUpdate() {
 
-	private void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.tag.Equals("Cloud"))
-		{
-			CloudController a = other.GetComponent<CloudController>();
+        if (Time.timeSinceLevelLoad >= (timeSinceLastSpawn + spawnTimer)) {
+            Bounds spawnBounds = cd.bounds;
+            Vector3 min = spawnBounds.min;
+            Vector3 max = spawnBounds.max;
 
-			if (a != null)
-				if (a.direction == 1 && !onLeft)
-					Destroy(other.gameObject);
-				else if (a.direction == -1 && onLeft)
-					Destroy(other.gameObject);
-		}
-	}
+            float x = Random.Range(min.x, max.x);
+            float y = Random.Range(min.y, max.y);
+
+            Vector2 spawnLocation = new Vector3(x, y, 0);
+            GameObject o = Instantiate(cloud, spawnLocation, Quaternion.identity);
+
+            CloudController tmp = o.GetComponent<CloudController>();
+            tmp.direction = onLeft ? 1 : -1;
+
+			timeSinceLastSpawn = Time.timeSinceLevelLoad;
+			RandomizeSpawnTime();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag.Equals("Cloud")) {
+            CloudController a = other.GetComponent<CloudController>();
+
+            if (a != null) {
+                if (a.direction == 1 && !onLeft) {
+                    Destroy(other.gameObject);
+                }
+                else if (a.direction == -1 && onLeft) {
+                    Destroy(other.gameObject);
+                }
+            }
+        }
+    }
 }
