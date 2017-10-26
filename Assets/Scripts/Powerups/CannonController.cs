@@ -1,20 +1,5 @@
 ﻿using UnityEngine;
 
-/**
- * NOTES (things I did to make it work):
- * 1. The sprite of your cannon must point UPWARDS as it's the default direction for sprites in Unity. So rotate it in GIMP or something.
- * 2. Don't need that Constant Force component, as it's only for ONE direction. Better off changing the velocity in script.
- * 3. Make sure the balls have gravity scale. I noticed you had it at 0 before. May not be needed for the constant method.
- * 4. ANYTHING moving should have a Rigidbody component. Your cannon did not.
- * 5. Anything physics related, use FixedUpdate instead of Update
- */
-
-/**
-* OTHER NOTES:
-* 1) This is your code, so change/modify whatever fits you best :)
-* 2) Make sure to despawn the cannonballs after a period of time, or when it hits something like a wall or despawner.
-* 3) Check the CannonBallController if you haven't already
-	*/
 	public class CannonController : Powerup {
 	private GameObject cannon;
 	public GameObject cannonBall;
@@ -49,7 +34,7 @@
 		timeSinceStart = Time.timeSinceLevelLoad - startTime;
 		if (timeSinceStart >= keepTrack) {
 			if (timeSinceStart >= rotateTime) {
-				rotateTime += 2f;
+				rotateTime += 4f;
 				rotationDir *= -1.0f;
 			}
 
@@ -89,10 +74,6 @@
 		Debug.Log("Called gettime())" + timeSinceStart);
 		return timeSinceStart;
 	}
-
-
-
-
 }
 
 
