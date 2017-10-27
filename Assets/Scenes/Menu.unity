@@ -956,7 +956,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4928322275913194, guid: 0d1d08e5df84e7f46874d10deac79044, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1776081054473076, guid: 0d1d08e5df84e7f46874d10deac79044, type: 2}
       propertyPath: m_Name
@@ -1419,10 +1419,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b5a63dc6b76c44aa0f1ba796064ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smol: {fileID: 1030961272557678, guid: af79fb56501d0914daf5390ddde98eec, type: 2}
-  med: {fileID: 1567065469174716, guid: fb4d55d9dd18fc84dabbe4571c4498a2, type: 2}
-  large: {fileID: 1044929607250210, guid: 731f97ee18b018043a9d13c11f63eca9, type: 2}
+  cloud: {fileID: 1044929607250210, guid: 731f97ee18b018043a9d13c11f63eca9, type: 2}
   cd: {fileID: 1488399669}
+  minSpawnTime: 0.5
+  maxSpawnTime: 3
   onLeft: 1
 --- !u!61 &1488399669
 BoxCollider2D:
@@ -1462,7 +1462,7 @@ Transform:
   m_LocalScale: {x: 1.8, y: 2.8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1503670580 stripped
 RectTransform:
@@ -1498,10 +1498,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b5a63dc6b76c44aa0f1ba796064ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smol: {fileID: 1030961272557678, guid: af79fb56501d0914daf5390ddde98eec, type: 2}
-  med: {fileID: 1567065469174716, guid: fb4d55d9dd18fc84dabbe4571c4498a2, type: 2}
-  large: {fileID: 1044929607250210, guid: 731f97ee18b018043a9d13c11f63eca9, type: 2}
+  cloud: {fileID: 1044929607250210, guid: 731f97ee18b018043a9d13c11f63eca9, type: 2}
   cd: {fileID: 1683386699}
+  minSpawnTime: 0.5
+  maxSpawnTime: 3
   onLeft: 0
 --- !u!61 &1683386699
 BoxCollider2D:
@@ -1541,7 +1541,7 @@ Transform:
   m_LocalScale: {x: 1.8, y: 2.8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1700409195 stripped
 GameObject:
@@ -2152,5 +2152,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
