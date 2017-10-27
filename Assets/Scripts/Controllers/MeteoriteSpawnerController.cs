@@ -115,9 +115,6 @@ public class MeteoriteSpawnerController : MonoBehaviour {
             rb.AddForce((villagePos - rb.position).normalized * (GetRandomForce() * fastSpawnForceMultiplier));
             rb.AddTorque(-50.0f);               // Make it spin!
         }
-
-
-
     }
 
     private void AddForceTowardsWall(GameObject spawned) {
@@ -139,7 +136,7 @@ public class MeteoriteSpawnerController : MonoBehaviour {
 
         float x = Random.Range(min.x, max.x);
 
-        float y = Random.Range(min.y, cd.bounds.max.y);
+        float y = Random.Range(min.y, cd.bounds.min.y - 10f);
 
         return new Vector3(x, y, 0);
     }
