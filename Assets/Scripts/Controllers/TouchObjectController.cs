@@ -100,6 +100,7 @@ public class TouchObjectController : MonoBehaviour
 		if (touchableObjectController.IsTouching() && touchableObjectController.touchCount >= 0)
 		{
 			// Calculating the force of the flick using the modifiable multiplier and speed of touch object
+			speed*=2;
 			float flickForce = touchController.flickForceMultiplier * speed;
 
 			// Limits the max force allowed

@@ -3035,12 +3035,12 @@ Prefab:
     - target: {fileID: 114913403887871080, guid: 2b507fa2adf46254faa8ec8d613698e7,
         type: 2}
       propertyPath: flickForceMultiplier
-      value: 100
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 114913403887871080, guid: 2b507fa2adf46254faa8ec8d613698e7,
         type: 2}
       propertyPath: maxFlickForce
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b507fa2adf46254faa8ec8d613698e7, type: 2}

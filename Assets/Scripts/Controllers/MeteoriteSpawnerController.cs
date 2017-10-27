@@ -139,17 +139,17 @@ public class MeteoriteSpawnerController : MonoBehaviour
 		rb.AddTorque(-25.0f); 				// Make it spin!
 	}
 
-	public Vector3 GenerateRandomLocation(GameObject target)
-	{
-		Bounds bounds = target.GetComponent<Collider2D>().bounds;
-		Vector3 min = bounds.min;
-		Vector3 max = bounds.max;
+	 public Vector3 GenerateRandomLocation(GameObject target) {
+        Bounds bounds = target.GetComponent<Collider2D>().bounds;
+        Vector3 min = bounds.min;
+        Vector3 max = bounds.max;
 
-		float x = Random.Range(min.x, max.x);
-		float y = Random.Range(min.y, cd.bounds.max.y);
+        float x = Random.Range(min.x, max.x);
 
-		return new Vector3(x, y, 0);
-	}
+        float y = Random.Range(min.y, cd.bounds.min.y - 10f);
+
+        return new Vector3(x, y, 0);
+    }
 
 	private float GetRandomForce()
 	{
@@ -165,4 +165,5 @@ public class MeteoriteSpawnerController : MonoBehaviour
 	{
 		meteorite.GetComponent<MeteoriteController>().SetGravityScale(gravityScale);
 	}
+
 }
