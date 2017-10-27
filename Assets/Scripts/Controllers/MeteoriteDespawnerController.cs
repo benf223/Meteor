@@ -11,7 +11,7 @@ public class MeteoriteDespawnerController : MonoBehaviour
 	{
 		if (water != null)
 			gameObject.GetComponent<AudioSource>().Play();
-		
+
 		if (other.gameObject.tag.Equals("Meteorite"))
 		{
 			Destroy(other.gameObject);

@@ -28,7 +28,10 @@ public class GameController : MonoBehaviour
 		score = -1;
 		difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();
 		difficultyManagerControl.StartTimer();
-		Debug.Log("Start woo");
+		
+		if (Debug.isDebugBuild)
+			Debug.Log("Start woo");
+		
 		restarting = false;
 	}
 
@@ -36,11 +39,8 @@ public class GameController : MonoBehaviour
 	private void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Escape))
-		{
 			UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
-		}
 	}
-
 
 	public void AddScore()
 	{
@@ -62,7 +62,6 @@ public class GameController : MonoBehaviour
 			difficultyManagerControl.PauseTimer();
 		}
 	}
-
 
 	public void GoToMenu()
 	{
@@ -91,10 +90,8 @@ public class GameController : MonoBehaviour
 			indexMin = i;
 
 			for (int j = i + 1; j < current.Length; j++)
-			{
 				if (current[j].CompareTo(current[indexMin]) < 0)
 					indexMin = j;
-			}
 
 			temp = current[indexMin];
 			current[indexMin] = current[i];

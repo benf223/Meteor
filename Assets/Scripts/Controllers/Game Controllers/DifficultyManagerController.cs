@@ -6,12 +6,12 @@ public class DifficultyManagerController : MonoBehaviour
 	public GameController gameCont;
 	public float initialDifficultyTime;
 	public float maxDifficultyTime;
-	public bool timeFlowing;		// condition to keep the time continuing
+	public bool timeFlowing; 			// condition to keep the time continuing
 
 	private int seconds;
-	private int interval = 1;		// Time to update (seconds)
+	private int interval = 1; 			// Time to update (seconds)
 	private int secondsToIncreaseDifficulty;
-	private int timeRemoved;		// used to minus the duration time frames
+	private int timeRemoved; 			// used to minus the duration time frames
 	private float startTimer;
 	private float countTime;
 	private float elapsedTime;
@@ -58,8 +58,8 @@ public class DifficultyManagerController : MonoBehaviour
 	private void UpdateEverySecond()
 	{
 		gameCont.AddScore(1);
-		secondsToIncreaseDifficulty++;		// Used for the difficulty increase interval
-		
+		secondsToIncreaseDifficulty++; 	// Used for the difficulty increase interval
+
 		if (Debug.isDebugBuild)
 			Debug.Log("Seconds: " + seconds);
 	}
@@ -72,7 +72,7 @@ public class DifficultyManagerController : MonoBehaviour
 		{
 			if (Debug.isDebugBuild)
 				Debug.Log("Difficulty Increase activated");
-			
+
 			if (timeRemoved < maxDifficultyTime)
 				timeRemoved++;
 
@@ -95,10 +95,10 @@ public class DifficultyManagerController : MonoBehaviour
 			if (speedMultiplier <= 1.75f)
 			{
 				Assert.AreEqual(true, speedMultiplier <= 1.75f);
-				
+
 				if (Debug.isDebugBuild)
 					Debug.Log("Speed Multipler for each meteorite: " + speedMultiplier);
-				
+
 				speedMultiplier += 0.035f;
 			}
 
@@ -106,16 +106,17 @@ public class DifficultyManagerController : MonoBehaviour
 			if (directionChangeMultiplier <= 0.80f)
 				directionChangeMultiplier += .05f;
 
-			secondsToIncreaseDifficulty = 0;		// Reset countdown timer for difficulty change
-			difficultyUpdated = true;				// Notifies that difficulty has changed
+			secondsToIncreaseDifficulty = 0; // Reset countdown timer for difficulty change
+			difficultyUpdated = true; // Notifies that difficulty has changed
 
 			// Calling this in this object, because it sometimes won't call in the other
-			GameObject village = GameObject.Find("Village");		
-			if (village != null) {
+			GameObject village = GameObject.Find("Village");
+			
+			if (village != null)
+			{
 				VillageController villageController = village.GetComponent<VillageController>();
 				villageController.IncreaseSize();
 			}
-			
 		}
 	}
 
@@ -143,7 +144,6 @@ public class DifficultyManagerController : MonoBehaviour
 	{
 		return spawnDelayMultiplier;
 	}
-
 
 	public float GetMeteoriteSpeedMultiplier()
 	{

@@ -7,22 +7,19 @@ using UnityEngine.UI;
  */
 public class TouchObjectController : MonoBehaviour
 {
-	// DECLARATION
 	public GameObject touchManager;
 	public float spinForce;					// The force to apply spin to the object when swiped
 	public float yPositionExtensionUp;		// Extensions for the maxY and maxX to limit the swiping of up and down
 	public float yPositionExtensionDown;
-
 	
 	private GameObject touchableObject;		// Variable to store the touchable object this touch object is interacting with Prevents the controlling of multiple meteorites in a single touch
 	private TouchController touchController;
 	private Rigidbody2D rb;
+	private Vector2 previousPosition;		// Position of the touch object in the previous and current frame Used for calculating the speed of the object
+	private Vector2 currentPosition;
 	private float startTime;
 	private float initialY;					// The Y position since creation
 	private float speed;					// Distance between current frame and last frame
-	
-	private Vector2 previousPosition;		// Position of the touch object in the previous and current frame Used for calculating the speed of the object
-	private Vector2 currentPosition;
 
 	// Use this for initialization
 	private void Start()
@@ -126,7 +123,6 @@ public class TouchObjectController : MonoBehaviour
 		if (touchableObject == null)
 		{
 			// Sets which objects can be interacted with/swiped
-
 			if (other.CompareTag("Meteorite") || other.CompareTag("ItemBox"))
 				SetTouched(other);
 		}

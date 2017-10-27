@@ -101,16 +101,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   touching: 0
   rb: {fileID: 50664612946939114}
-  touchCount: 1
-  customTag: 
   lowBounce: {fileID: 0}
+  destroyedVersion: {fileID: 0}
   spriteRenderer: {fileID: 0}
   spriteArray: []
+  touchCount: 1
+  customTag: 
   powerups:
   - {fileID: 1124683777137360, guid: 95420a0860e2148a9821e052cb70bae1, type: 2}
-  - {fileID: 1124683777137360, guid: 95420a0860e2148a9821e052cb70bae1, type: 2}
-  - {fileID: 1124683777137360, guid: 95420a0860e2148a9821e052cb70bae1, type: 2}
-  - {fileID: 1124683777137360, guid: 95420a0860e2148a9821e052cb70bae1, type: 2}
+  - {fileID: 1516270406610830, guid: f29ee2202352ef94192a559027d3c9ee, type: 2}
+  - {fileID: 1427852870836018, guid: 8538aa1343cb78f4b845fab78ee924be, type: 2}
+  - {fileID: 1489061683571032, guid: 27380abefbd60f1499fc99208d208076, type: 2}
+  - {fileID: 1346694453150558, guid: 6bf592e0df269d94fa851a3cfcf93107, type: 2}
   myTransform: {fileID: 4715190381563006}
   swayStrength: 10
 --- !u!212 &212319074647693864

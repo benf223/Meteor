@@ -13,13 +13,13 @@ public class ItemSpawner : MonoBehaviour
 	private float secondsToIncrease;
 
 	// Use this for initialization
-	void Start()
+	private void Start()
 	{
 		cd = GetComponent<BoxCollider2D>();
 	}
 
 	// Update is called once per frame
-	void Update()
+	private void Update()
 	{
 		if (Time.timeSinceLevelLoad >= elapseTime)
 		{
@@ -36,9 +36,7 @@ public class ItemSpawner : MonoBehaviour
 		{
 			// Spawn item box with powerup is NOT already active
 			if (GameObject.FindWithTag("Powerup") == null)
-			{
 				SpawnItemBox();
-			}
 
 			secondsToIncrease = 0;
 		}

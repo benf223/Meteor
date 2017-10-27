@@ -4,8 +4,8 @@ public class ItemBoxController : TouchableObjectController
 {
 	public GameObject[] powerups;
 	public Transform myTransform;
-
 	public float swayStrength = 10;
+	
 	private float currentSway;
 
 	/**
@@ -33,21 +33,16 @@ public class ItemBoxController : TouchableObjectController
 				GameObject[] existingItemBoxes = GameObject.FindGameObjectsWithTag("ItemBox");
 
 				foreach (GameObject itemBoxes in existingItemBoxes)
-				{
 					Destroy(itemBoxes);
-				}
 			}
 
 			Destroy(gameObject);
 		}
 	}
 
-	void FixedUpdate()
+	private void FixedUpdate()
 	{
-
 		rb.AddForceAtPosition(Vector3.up, transform.TransformPoint(Vector3.up));
 		rb.AddForceAtPosition(-Vector3.up, transform.TransformPoint(-Vector3.up));
 	}
-
-
 }
