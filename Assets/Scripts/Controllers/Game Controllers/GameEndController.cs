@@ -15,9 +15,12 @@ public class GameEndController : MonoBehaviour
 	// Use this for initialization
 	public void Start()
 	{
-		mixer.SetFloat("sfxVolume", PlayerPrefs.GetInt("SFXVolume"));
-		mixer.SetFloat("musicVolume", PlayerPrefs.GetInt("MusicVolume"));
-		mixer.SetFloat("masterVolume", PlayerPrefs.GetInt("MasterVolume"));
+		int tmp = PlayerPrefs.GetInt("SFXVolume");
+		mixer.SetFloat("sfxVolume", tmp == -20 ? -80 : tmp);
+		tmp = PlayerPrefs.GetInt("MusicVolume");
+		mixer.SetFloat("musicVolume", tmp == -20 ? -80 : tmp);
+		tmp = PlayerPrefs.GetInt("MasterVolume");
+		mixer.SetFloat("masterVolume", tmp == -20 ? -80 : tmp);
 
 		endText.fontSize = 2;
 		update = true;

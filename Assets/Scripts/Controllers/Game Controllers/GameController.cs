@@ -1,71 +1,83 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
-public class GameController : MonoBehaviour {
-    [HideInInspector]
-    public bool restarting;
 
-    public AudioMixer mixer;
-    public Text scoreText;
-    public GameObject difficultyManager;
-    public GameObject pauseMenu;
+public class GameController : MonoBehaviour
+{
+	[HideInInspector] public bool restarting;
 
-    private int score;
-    private DifficultyManagerController difficultyManagerControl;
+	public AudioMixer mixer;
+	public Text scoreText;
+	public GameObject difficultyManager;
+	public GameObject pauseMenu;
 
-    // Use this for initialization
-    private void Start() {
-        mixer.SetFloat("sfxVolume", PlayerPrefs.GetInt("SFXVolume"));
-        mixer.SetFloat("musicVolume", PlayerPrefs.GetInt("MusicVolume"));
-        mixer.SetFloat("masterVolume", PlayerPrefs.GetInt("MasterVolume"));
-        Time.timeScale = 1f;
-        score = -1;
-        difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();
-        difficultyManagerControl.StartTimer();
-        Debug.Log("Start woo");
-        restarting = false;
-    }
+	private int score;
+	private DifficultyManagerController difficultyManagerControl;
 
-    // Update is called once per frame
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
-        }
-    }
+	// Use this for initialization
+	private void Start()
+	{
+		int tmp = PlayerPrefs.GetInt("SFXVolume");
+		mixer.SetFloat("sfxVolume", tmp == -20 ? -80 : tmp);
+		tmp = PlayerPrefs.GetInt("MusicVolume");
+		mixer.SetFloat("musicVolume", tmp == -20 ? -80 : tmp);
+		tmp = PlayerPrefs.GetInt("MasterVolume");
+		mixer.SetFloat("masterVolume", tmp == -20 ? -80 : tmp);
 
+		Time.timeScale = 1f;
+		score = -1;
+		difficultyManagerControl = difficultyManager.GetComponent<DifficultyManagerController>();
+		difficultyManagerControl.StartTimer();
+		Debug.Log("Start woo");
+		restarting = false;
+	}
 
-
-    public void AddScore() {
-        AddScore(10);
-    }
-
-    public void AddScore(int num) {
-        score += num;
-        scoreText.text = "Score: " + score;
-    }
-
-    private void OnDestroy() {
-        if (!restarting) {
-            UpdateHighscores();
-            PlayerPrefs.SetString("score", "Score: " + score);
-            difficultyManagerControl.PauseTimer();
-        }
-    }
+	// Update is called once per frame
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+		}
+	}
 
 
-    public void GoToMenu() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameEnd");
+	public void AddScore()
+	{
+		AddScore(10);
+	}
 
-    }
+	public void AddScore(int num)
+	{
+		score += num;
+		scoreText.text = "Score: " + score;
+	}
 
-    public void StartMenuTimer() {
-        Invoke("GoToMenu", 3.0f);
-    }
+	private void OnDestroy()
+	{
+		if (!restarting)
+		{
+			UpdateHighscores();
+			PlayerPrefs.SetString("score", "Score: " + score);
+			difficultyManagerControl.PauseTimer();
+		}
+	}
+
+
+	public void GoToMenu()
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadScene("GameEnd");
+	}
+
+	public void StartMenuTimer()
+	{
+		Invoke("GoToMenu", 3.0f);
+	}
 
 	private void UpdateHighscores()
 	{
 		int[] current = new int[6];
-		
+
 		for (int i = 0; i < 5; ++i)
 			current[i] = PlayerPrefs.GetInt("Highscore" + i, 0);
 
@@ -73,22 +85,22 @@ public class GameController : MonoBehaviour {
 
 		int indexMin;
 		int temp;
-		
+
 		for (int i = 0; i < current.Length - 1; i++)
 		{
 			indexMin = i;
-			
+
 			for (int j = i + 1; j < current.Length; j++)
 			{
 				if (current[j].CompareTo(current[indexMin]) < 0)
 					indexMin = j;
 			}
-			
+
 			temp = current[indexMin];
 			current[indexMin] = current[i];
 			current[i] = temp;
 		}
-		
+
 		PlayerPrefs.SetInt("Highscore1", current[5]);
 		PlayerPrefs.SetInt("Highscore2", current[4]);
 		PlayerPrefs.SetInt("Highscore3", current[3]);
@@ -109,11 +121,10 @@ public class GameController : MonoBehaviour {
 	public void Pause()
 	{
 		Time.timeScale = 0f;
-		
+
 		if (Debug.isDebugBuild)
 			Debug.Log("Frozen?");
-		
+
 		pauseMenu.SetActive(true);
 	}
-
 }

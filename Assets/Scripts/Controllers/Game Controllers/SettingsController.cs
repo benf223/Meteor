@@ -22,9 +22,9 @@ public class SettingsController : MonoBehaviour
 		sfxVolume = PlayerPrefs.GetInt("SFXVolume", 0);
 		masterVolume = PlayerPrefs.GetInt("MasterVolume", 0);
 
-		mixer.SetFloat("sfxVolume", sfxVolume);
-		mixer.SetFloat("musicVolume", musicVolume);
-		mixer.SetFloat("masterVolume", masterVolume);
+		mixer.SetFloat("sfxVolume", sfxVolume == -20 ? -80 : sfxVolume);
+		mixer.SetFloat("musicVolume", musicVolume == -20 ? -80 : musicVolume);
+		mixer.SetFloat("masterVolume", masterVolume == -20 ? -80 : masterVolume);
 
 		music.value = musicVolume;
 		sfx.value = sfxVolume;
@@ -44,9 +44,9 @@ public class SettingsController : MonoBehaviour
 		}
 		else
 		{
-			music.value = -80;
-			sfx.value = -80;
-			master.value = -80;
+			music.value = -20;
+			sfx.value = -20;
+			master.value = -20;
 		}
 
 		muted = !muted;
