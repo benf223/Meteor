@@ -43,9 +43,7 @@ public class HighscoreManager : MonoBehaviour
 	private void WriteScores()
 	{
 		for (int i = 0; i < highscores.Length; ++i)
-		{
 			highscoreTexts[i].text = FormatNumber(highscores[i]);
-		}
 	}
 
 	private string FormatNumber(int number)

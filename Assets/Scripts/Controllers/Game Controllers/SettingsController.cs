@@ -15,7 +15,6 @@ public class SettingsController : MonoBehaviour
 	private bool muted;
 	private bool resettingHighscore;
 
-
 	private void Start()
 	{
 		musicVolume = PlayerPrefs.GetInt("MusicVolume", 0);
@@ -32,7 +31,6 @@ public class SettingsController : MonoBehaviour
 
 		muted = PlayerPrefs.GetInt("Muted", 0) == 1;
 	}
-
 	
 	public void OnMute()
 	{
