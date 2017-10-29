@@ -146,7 +146,8 @@ public class MeteoriteSpawnerController : MonoBehaviour
 
         float x = Random.Range(min.x, max.x);
 
-        float y = Random.Range(min.y, cd.bounds.min.y - 10f);
+        float y = Random.Range(min.y, cd.bounds.min.y - 1f);
+
 
         return new Vector3(x, y, 0);
     }

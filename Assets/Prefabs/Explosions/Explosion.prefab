@@ -92,6 +92,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 0.1
   rb: {fileID: 50883358521951696}
+  particleExplosion: {fileID: 1540867291083584, guid: 3e2cc4a7264a33946b561f858d9bbd42,
+    type: 2}
 --- !u!212 &212883912024612176
 SpriteRenderer:
   m_ObjectHideFlags: 1
