@@ -28,6 +28,7 @@ public class TouchableObjectController : MonoBehaviour
 	// Use this for initialization
 	protected void Start()
 	{
+		rb = GetComponent<Rigidbody2D>();
 		touchObject = null;
 		touched = false;
 		touching = false;

@@ -18,10 +18,7 @@ public class MeteoriteController : TouchableObjectController
 		{
 			if (explosion != null)
 			{
-				ContactPoint2D contactPoint = collision.contacts[0];
-				Vector2 explosionPoint = contactPoint.point;
-				explosionPoint.y = collision.gameObject.GetComponent<Transform>().position.y - 0.5f;
-				Instantiate(explosion, explosionPoint, Quaternion.identity);
+				
 			}
 		}
 	}
