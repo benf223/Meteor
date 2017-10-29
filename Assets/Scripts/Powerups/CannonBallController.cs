@@ -8,6 +8,7 @@ public class CannonBallController : MonoBehaviour
 	public Vector3 direction;
 	public CannonController cc;
 	public GameObject explosion;
+	public GameObject particleExplosion;
 	
 	private Rigidbody2D rb;
 	private float xVal = 0;
@@ -22,6 +23,9 @@ public class CannonBallController : MonoBehaviour
 			ContactPoint2D contactPoint = collision.contacts[0];
 			Vector2 explosionPoint = contactPoint.point;
 			Instantiate(explosion, explosionPoint, Quaternion.identity);
+			if (particleExplosion != null) {
+				Instantiate(particleExplosion, explosionPoint, Quaternion.identity);
+			}
 			MeteoriteController meteorite = collision.gameObject.GetComponent<MeteoriteController>();
 			Destroy(gameObject);
 		}

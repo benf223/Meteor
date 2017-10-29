@@ -60,7 +60,7 @@ public class ShieldController : Powerup
 				
 				GetComponent<Renderer>().material.color = red;
 			}
-			else if (shieldHealth > 2)
+			else if (shieldHealth >= 2)
 			{
 				if (Debug.isDebugBuild)
 					Debug.Log("Yellow " + timeSinceStart);

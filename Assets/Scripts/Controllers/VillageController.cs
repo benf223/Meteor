@@ -10,6 +10,7 @@ public class VillageController : MonoBehaviour {
     public bool isDestroyed;
     public bool godMode;
     public GameObject explosionObj;
+    public GameObject particleExplosion;
 
     private DifficultyManagerController difficultyManagerController;
     private SpriteRenderer spriteRenderer;
@@ -94,6 +95,9 @@ public class VillageController : MonoBehaviour {
             Vector2 explosionPoint = contactPoint.point;
             explosionPoint.y = collision.gameObject.GetComponent<Transform>().position.y - 0.5f;
             Instantiate(explosionObj, explosionPoint, Quaternion.identity);
+            if (particleExplosion != null) {
+                Instantiate(particleExplosion, explosionPoint, Quaternion.identity);
+            }
 			
 			//explosionObj.GetComponent<ExplosionController>().particleExplosion.transform.localScale = new Vector3(1f, 1f, 0f);
         }

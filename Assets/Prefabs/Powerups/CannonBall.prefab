@@ -90,11 +90,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd519266e070d41efbcc43971c605fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cc: {fileID: 114731350649786092, guid: 95420a0860e2148a9821e052cb70bae1, type: 2}
-  explosion: {fileID: 1874594541457596, guid: 469795b704507694c949709482dc6cde, type: 2}
   constant: 0
   speed: 0
   direction: {x: 0, y: 0, z: 0}
+  cc: {fileID: 114731350649786092, guid: 95420a0860e2148a9821e052cb70bae1, type: 2}
+  explosion: {fileID: 1874594541457596, guid: 469795b704507694c949709482dc6cde, type: 2}
+  particleExplosion: {fileID: 1540867291083584, guid: 3e2cc4a7264a33946b561f858d9bbd42,
+    type: 2}
 --- !u!212 &212620825074331630
 SpriteRenderer:
   m_ObjectHideFlags: 1
