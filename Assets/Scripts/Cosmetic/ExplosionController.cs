@@ -8,7 +8,8 @@ public class ExplosionController : MonoBehaviour
 	// Use this for initialization
 	private void Start()
 	{
-		Invoke("Die", lifeTime);
+		Invoke("Start", lifeTime);
+		//Invoke("Die", lifeTime);
 	}
 
 	private void Die()
