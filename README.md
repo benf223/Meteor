@@ -76,10 +76,11 @@ View the top 5 highscores currently stored in this device.
 (See  "Installing the Game" above)
 
 ## Authors
+- FUKANG, INC: Software Development Practice Stream 51 
+
 See the list of [contributors](https://github.com/benf223/Meteor/graphs/contributors) who participated in this project.
 
 ## Licensing
 The majority of the music were mixed by one of our developers. Other music and sound effects were found online and are Royalty-Free.
 All artwork seen in the game has been designed by our creative developers themselves.
 
-- FUKANG, INC: Software Development Practice Stream 51
