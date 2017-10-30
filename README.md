@@ -35,7 +35,7 @@ Meteorites will be falling from the sky, with some of them directly targeting th
 Does the game sound easy enough? Well here's the catch:
 * There are walls on the edges of the screen, so meteorites will bounce off them.
 * Meteorites can only be swiped ONCE!
-* Some meteorites will direcctly target the village (Aggressive meteorites, coloured RED)
+* Some meteorites will directly target the village (Aggressive meteorites, coloured RED)
 
 As the game progresses, the difficulty of the game will increase. Here are the affecting factors:
 * Increased Meteorite Speed
@@ -54,6 +54,12 @@ Every 10 seconds, an item box will parachute down from the sky. These boxes can 
 * Wall Breaker: Walls have been temporarily disabled, allowing you to swipe meteorites out of the screen.
 ### Game End
 The game ends when a meteorite has made contact with the village, causing both to explode. Highscores will be tracked locally and can be accessed in the menu.
+### Game Pause
+The game can be paused during gameplay by touching on the red pause button located at the upper right of the screen.
+The options available during game pause:
+* Resume: Unpause the game and continue gameplay
+* Restart: Restarts the game like you've just started a new game.
+* Menu: Returns to main menu.
 
 ## The Menu
 ### Main Menu
